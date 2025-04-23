@@ -1,103 +1,133 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="font-sans">
+      {/* HERO SECTION */}
+      <section
+        className="h-screen bg-cover bg-center flex items-center justify-center relative"
+        style={{ backgroundImage: "url('/bg_hero.png')", borderRadius: "0px 0px 50px 50px" }} // ganti dengan nama gambar di /public
+      >
+        <div className="absolute inset-0 bg-black/40 z-0" />
+        <div className="z-10 text-center text-white px-4">
+          <h1 className="text-2xl md:text-4xl font-bold">
+            Lorem ipsum dolor sit amet, consectetur <br />
+            adipiscing elit, sed do eiusmod tempor.
+          </h1>
+          <p className="text-orange-300 mt-2 font-semibold">#LoremIpsumDolorSitAmet</p>
+          <div className="mt-6 flex justify-center gap-4">
+            <button className="bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-700">Lorem Ipsum</button>
+            <button className="text-blue-600 border border-blue-600 px-4 py-2 rounded-full hover:bg-blue-600 hover:text-white transition">Lorem Ipsum</button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* LOREM IPSUM SECTION */}
+      <section className="py-12 text-center px-4">
+        <h2 className="text-2xl font-bold text-blue-600 mb-4">Lorem Ipsum</h2>
+        <p className="max-w-2xl mx-auto text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+        </p>
+      </section>
+
+      {/* VIDEO SECTION */}
+      <div className="flex justify-center py-6">
+        <div className="bg-black w-[90%] md:w-[70%] h-[250px] rounded-xl flex items-center justify-center">
+          <span className="text-white text-4xl">▶</span>
+        </div>
+      </div>
+
+      {/* DIVISI SECTION */}
+      <section className="px-4 py-12">
+        <h3 className="text-center text-xl font-semibold text-blue-600 mb-8">
+          Divisi Naeema DKM Paramadina 2025/2026
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {[
+            'Ketum & Waketum', 'Sekretaris', 'Bendahara',
+            'Produksi Kreatif', 'Kajian & Dakwah', 'Teknologi',
+            'Hubungan Masyarakat', 'Human Resource', 'Badan Pengawas'
+          ].map((divisi, index) => (
+            <div key={index} className="bg-white shadow-md p-5 rounded-xl text-center">
+              <div className="text-blue-600 text-3xl mb-2">📌</div>
+              <h4 className="font-semibold">{divisi}</h4>
+              <p className="text-gray-500 text-sm mt-1">Lorem ipsum dolor sit amet...</p>
+              <p className="text-xs text-blue-600 mt-2">#NaeemaDKMParamadina</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="px-4 py-12 bg-white">
+        <h3 className="text-blue-600 text-xl font-bold text-center mb-6">Testimonial</h3>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {[1, 2, 3].map((_, i) => (
+            <div key={i} className="bg-gray-100 p-6 rounded-lg shadow">
+              <div className="font-bold text-blue-600 mb-2">Hamba</div>
+              <p className="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
+        <div className="w-full md:w-1/2 h-60 bg-gray-300 rounded-xl" />
+        <div className="w-full md:w-1/2">
+          <h4 className="text-blue-600 font-bold text-lg">Lorem Ipsum</h4>
+          <p className="mt-2 text-gray-700">Lorem ipsum dolor sit amet...</p>
+          <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded">Lihat Program DKM Paramadina</button>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="px-4 py-12">
+        <h4 className="text-center text-xl font-semibold text-blue-600 mb-6">Frequently Asked Questions</h4>
+        <div className="space-y-2 max-w-4xl mx-auto">
+          {[...Array(5)].map((_, i) => (
+            <div key={i} className="flex justify-between items-center bg-white px-6 py-4 shadow rounded cursor-pointer">
+              <span>Lorem Ipsum Dolor Sit Amet</span>
+              <span className="text-gray-500">▼</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* JOIN US SECTION */}
+      <section className="bg-blue-600 text-white text-center py-12 rounded-xl max-w-6xl mx-auto my-6 px-4">
+        <h5 className="text-xl font-bold">Udah siap gaul bareng di DKM Paramadina?</h5>
+        <button className="mt-4 bg-white text-blue-600 px-4 py-2 rounded font-semibold">Yuk Ikutan</button>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-[#001f60] text-white px-6 py-12 mt-10">
+        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div>
+            <h6 className="text-xl font-bold">DKM Paramadina</h6>
+          </div>
+          <div>
+            <h6 className="font-semibold mb-2">Main Menu</h6>
+            <ul className="text-sm space-y-1">
+              <li>Beranda</li>
+              <li>Our Program</li>
+              <li>FAQs</li>
+            </ul>
+          </div>
+          <div>
+            <h6 className="font-semibold mb-2">Contact Us</h6>
+            <ul className="text-sm space-y-1">
+              <li>dkmcrew@gmail.com</li>
+              <li>@dkmparamadina</li>
+            </ul>
+          </div>
+          <div>
+            <h6 className="font-semibold mb-2">Our Home</h6>
+            <p className="text-sm">
+              Universitas Paramadina, Jl. Gatot Subroto No. 97, Jakarta Selatan
+            </p>
+          </div>
+        </div>
+        <p className="text-center text-xs mt-10">© 2025 DKM Paramadina. All Rights Reserved</p>
       </footer>
-    </div>
+    </main>
   );
 }
