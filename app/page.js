@@ -1,16 +1,25 @@
-export default function Home() {
+"use client";
 
+import { useState } from "react";
+
+export default function Home() {
   const divisiList = [
-    { title: 'Ketum & Waketum', icon: '/ketum_waketum.png' },
-    { title: 'Sekretaris', icon: '/sekre.png' },
-    { title: 'Bendahara', icon: '/bendahara.png' },
-    { title: 'Produksi Kreatif', icon: '/prokre.png' },
-    { title: 'Kajian & Dakwah', icon: '/kajian_dakwah.png' },
-    { title: 'Teknologi', icon: '/teknologi.png' },
-    { title: 'Hubungan Masyarakat', icon: '/humas.png' },
-    { title: 'Human Resource', icon: '/hrd.png' },
-    { title: 'Badan Pengawas', icon: '/bpo.png' },
+    { title: "Ketum & Waketum", icon: "/ketum_waketum.png" },
+    { title: "Sekretaris", icon: "/sekre.png" },
+    { title: "Bendahara", icon: "/bendahara.png" },
+    { title: "Produksi Kreatif", icon: "/prokre.png" },
+    { title: "Kajian & Dakwah", icon: "/kajian_dakwah.png" },
+    { title: "Teknologi", icon: "/teknologi.png" },
+    { title: "Hubungan Masyarakat", icon: "/humas.png" },
+    { title: "Human Resource", icon: "/hrd.png" },
+    { title: "Badan Pengawas", icon: "/bpo.png" },
   ];
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
     <main className="font-sans bg-[#F0F6FF]">
@@ -35,10 +44,10 @@ export default function Home() {
             #LoremIpsumDolorSitAmet
           </p>
           <div className="mt-6 flex justify-center gap-4">
-            <button className="bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-700">
+            <button className="bg-[#0066FF] px-8 py-2 rounded-full hover:bg-blue-700">
               Lorem Ipsum
             </button>
-            <button className="text-blue-600 border border-blue-600 px-4 py-2 rounded-full hover:bg-blue-600 hover:text-white transition">
+            <button className="text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-full hover:bg-[#0066FF] hover:text-white transition">
               Lorem Ipsum
             </button>
           </div>
@@ -47,23 +56,26 @@ export default function Home() {
 
       {/* LOREM IPSUM SECTION */}
       <section className="py-12 text-center px-4">
-        <h2 className="text-2xl font-bold text-blue-600 mb-4">Lorem Ipsum</h2>
-        <p className="max-w-2xl mx-auto text-gray-600">
+        <h2 className="text-4xl font-bold text-[#0066FF] mb-4">Lorem Ipsum</h2>
+        <p className="max-w-5xl mx-auto text-gray-600">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua...
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
         </p>
+        <div className="my-5 mx-auto bg-[#0066FF] w-40 h-2 rounded-full"></div>
       </section>
 
       {/* VIDEO SECTION */}
-      <div className="flex justify-center py-6">
-        <div className="bg-black w-[90%] md:w-[70%] h-[250px] rounded-xl flex items-center justify-center">
-          <span className="text-white text-4xl">▶</span>
-        </div>
+      <div className="mx-auto py-6 px-12 max-w-6xl">
+        <img src="/video.png" alt="video" className="mb-4" />
       </div>
 
       {/* DIVISI SECTION */}
       <section className="px-4 py-12">
-        <h3 className="text-center text-xl font-semibold text-blue-600 mb-8">
+        <h3 className="text-left text-3xl font-semibold text-[#0066FF] max-w-6xl mx-auto my-12">
           Divisi Naeema DKM Paramadina 2025/2026
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -86,27 +98,118 @@ export default function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt.
               </p>
-              <p className="text-xs text-blue-600 mt-6">#NaeemaDKMParamadina</p>
+              <p className="text-xs text-[#0066FF] mt-6">
+                #NaeemaDKMParamadina
+              </p>
             </div>
           ))}
         </div>
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="px-4 py-12 bg-white">
-        <h3 className="text-blue-600 text-xl font-bold text-center mb-6">
-          Testimonial
-        </h3>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {[1, 2, 3].map((_, i) => (
-            <div key={i} className="bg-gray-100 p-6 rounded-lg shadow">
-              <div className="font-bold text-blue-600 mb-2">Hamba</div>
-              <p className="text-gray-600 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt...
-              </p>
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+            Testimonial
+          </h3>
+          <p className="text-gray-500 text-sm mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+        </div>
+        <div className="space-y-10 py-10 bg-blue-50">
+          {/* ANIMASI KE KIRI */}
+          <div className="overflow-hidden group relative">
+            <div className="flex w-[200%] animate-left-marquee group-hover:[animation-play-state:paused] gap-6">
+              {[...Array(2)].map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`flex ${idx === 1 ? "pr-6" : ""} gap-6`}
+                >
+                  {[1, 2, 3, 4, 5, 6].map((num) => (
+                    <div
+                      key={`atas-${idx}-${num}`}
+                      className="min-w-[260px] bg-white p-6 rounded-2xl transition-transform duration-300 hover:scale-105 hover:bg-gray-100"
+                    >
+                      <div className="flex items-center">
+                        <img src="/user.png" width="40" height="40" />
+                        <div className="mt-2 mb-3 ms-2 flex flex-col justify-center">
+                          <h5 className="font-bold text-[#0066FF]">Hamutra</h5>
+                          <p className="text-gray-400 text-xs">Lorem ipsum</p>
+                        </div>
+                      </div>
+
+                      <p className="text-gray-600 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit...
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* ANIMASI KE KANAN */}
+          <div className="overflow-hidden group relative">
+            <div className="flex w-[200%] animate-right-marquee group-hover:[animation-play-state:paused] gap-6">
+              {[...Array(2)].map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`flex ${idx === 1 ? "pr-6" : ""} gap-6`}
+                >
+                  {[1, 2, 3, 4, 5, 6].map((num) => (
+                    <div
+                      key={`bawah-${idx}-${num}`}
+                      className="min-w-[260px] bg-white p-6 rounded-2xl transition-transform duration-300 hover:scale-105 hover:bg-gray-100"
+                    >
+                      <div className="flex items-center">
+                        <img src="/user.png" width="40" height="40" />
+                        <div className="mt-2 mb-3 ms-2 flex flex-col justify-center">
+                          <h5 className="font-bold text-[#0066FF]">Hamutra</h5>
+                          <p className="text-gray-400 text-xs">Lorem ipsum</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-600 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit...
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tambahkan style animasi */}
+          <style jsx>{`
+            @keyframes left-marquee {
+              0% {
+                transform: translateX(0%);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+
+            @keyframes right-marquee {
+              0% {
+                transform: translateX(-50%);
+              }
+              100% {
+                transform: translateX(0%);
+              }
+            }
+
+            .animate-left-marquee {
+              animation: left-marquee 40s linear infinite;
+            }
+
+            .animate-right-marquee {
+              animation: right-marquee 40s linear infinite;
+            }
+          `}</style>
         </div>
       </section>
 
@@ -114,9 +217,15 @@ export default function Home() {
       <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
         <div className="w-full md:w-1/2 h-60 bg-gray-300 rounded-xl" />
         <div className="w-full md:w-1/2">
-          <h4 className="text-blue-600 font-bold text-lg">Lorem Ipsum</h4>
-          <p className="mt-2 text-gray-700">Lorem ipsum dolor sit amet...</p>
-          <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded">
+          <img src="/program.png" width="30" height="30" className="mb-4" />
+          <h4 className="text-[#0066FF] text-2xl font-bold">Lorem Ipsum</h4>
+          <p className="mt-2 text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <button className="mt-4 bg-[#0066FF] text-white px-4 py-2 rounded-[12px]">
             Lihat Program DKM Paramadina
           </button>
         </div>
@@ -124,28 +233,67 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="px-4 py-12">
-        <h4 className="text-center text-xl font-semibold text-blue-600 mb-6">
+        <h4 className="text-center text-3xl font-semibold text-[#0066FF] mb-6">
           Frequently Asked Questions
         </h4>
         <div className="space-y-2 max-w-4xl mx-auto">
           {[...Array(5)].map((_, i) => (
-            <div
-              key={i}
-              className="flex justify-between items-center bg-white px-6 py-4 shadow rounded cursor-pointer"
-            >
-              <span>Lorem Ipsum Dolor Sit Amet</span>
-              <span className="text-gray-500">▼</span>
+            <div key={i} className="bg-[#DAE9FF] rounded-[12px]">
+              <div
+                onClick={() => toggle(i)}
+                className="flex justify-between items-center px-6 py-4 cursor-pointer"
+              >
+                <span className="text-[#0066FF] font-medium">
+                  Lorem Ipsum Dolor Sit Amet
+                </span>
+                <img
+                  src="/arrow_bottom.png"
+                  width="14"
+                  height="14"
+                  className={`transition-transform duration-300 ${
+                    openIndex === i ? "rotate-180" : ""
+                  }`}
+                  alt="arrow"
+                />
+              </div>
+
+              {openIndex === i && (
+                <div className="px-6 pb-4 text-sm text-gray-700 animate-fadein">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              )}
             </div>
           ))}
+
+          {/* Tambahkan animasi masuk */}
+          <style jsx>{`
+            .animate-fadein {
+              animation: fadein 0.3s ease-in-out;
+            }
+
+            @keyframes fadein {
+              from {
+                opacity: 0;
+                transform: translateY(-5px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          `}</style>
         </div>
       </section>
 
       {/* JOIN US SECTION */}
-      <section className="bg-blue-600 text-white text-center py-12 rounded-xl max-w-6xl mx-auto my-6 px-4">
-        <h5 className="text-xl font-bold">
+      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
-        </h5>
-        <button className="mt-4 bg-white text-blue-600 px-4 py-2 rounded font-semibold">
+        </h2>
+        <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
           Yuk Ikutan
         </button>
       </section>
