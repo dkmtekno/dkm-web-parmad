@@ -1,12 +1,11 @@
 import "./globals.css";
-import { Plus_Jakarta_Sans as FontSans } from "next/font/google"
+import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta",
   weight: "400",
-})
-
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -18,7 +17,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${fontSans.variable} antialiased`}
+        style={{ backgroundColor: "#F0F6FF" }}
       >
+        <div className="relative">
+          <img
+            loading="lazy"
+            src="/Vector_2.png"
+            alt="Garis Vector"
+            className="absolute left-0 top-0 -translate-y-6 w-full z-10"
+          />
+        </div>
         {children}
       </body>
     </html>

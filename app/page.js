@@ -39,10 +39,17 @@ export default function Home() {
 
         {/* Ornamen kiri */}
         <img
-        loading="lazy"
+          loading="lazy"
           src="/logo_left_hero.png"
           alt="Ornamen Kiri"
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
+        />
+
+        <img
+          loading="lazy"
+          src="/Vector_1.png"
+          alt="Garis Vector"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-full"
         />
 
         {/* Ornamen kanan */}
@@ -74,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* LOREM IPSUM SECTION */}
-      <section className="py-12 text-center px-4">
+      <section className="py-12 text-center px-4 z-20">
         <h2 className="text-4xl font-bold text-[#0066FF] mb-4">Lorem Ipsum</h2>
         <p className="max-w-5xl mx-auto text-gray-600">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -88,15 +95,28 @@ export default function Home() {
       </section>
 
       {/* VIDEO SECTION */}
-      <div className="mx-auto py-6 px-12 max-w-6xl">
-        <img src="/video.png" alt="video" className="mb-4" />
+      <div className="mx-auto py-6 px-12 max-w-6xl relative z-10">
+        <div className="z-10">
+          <img src="/video.png" alt="video" className="mb-4" />
+        </div>
       </div>
 
       {/* DIVISI SECTION */}
-      <section className="px-4 py-12">
+      <section className="px-4 py-12 relative z-10">
+        <div className="absolute inset-0 -z-10">
+          <img
+            loading="lazy"
+            src="/logo_2.png"
+            alt="Ornamen Kanan"
+            width="500"
+            height="500"
+            className="absolute right-0 bottom-0 pointer-events-none"
+          />
+        </div>
         <h3 className="text-left text-3xl font-semibold text-[#0066FF] max-w-6xl mx-auto my-12">
           Divisi Naeema DKM Paramadina 2025/2026
         </h3>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {divisiList.map((divisi, index) => (
             <div
@@ -184,7 +204,12 @@ export default function Home() {
                       className="min-w-[260px] bg-white p-6 rounded-2xl transition-transform duration-300 hover:scale-105 hover:bg-gray-100"
                     >
                       <div className="flex items-center">
-                        <img src="/user.png" width="40" height="40" loading="lazy" />
+                        <img
+                          src="/user.png"
+                          width="40"
+                          height="40"
+                          loading="lazy"
+                        />
                         <div className="mt-2 mb-3 ms-2 flex flex-col justify-center">
                           <h5 className="font-bold text-[#0066FF]">Hamutra</h5>
                           <p className="text-gray-400 text-xs">Lorem ipsum</p>
@@ -236,7 +261,13 @@ export default function Home() {
       <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
         <div className="w-full md:w-1/2 h-60 bg-gray-300 rounded-xl" />
         <div className="w-full md:w-1/2">
-          <img src="/program.png" width="30" height="30" className="mb-4" loading="lazy" />
+          <img
+            src="/program.png"
+            width="30"
+            height="30"
+            className="mb-4"
+            loading="lazy"
+          />
           <h4 className="text-[#0066FF] text-2xl font-bold">Lorem Ipsum</h4>
           <p className="mt-2 text-gray-700">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -251,7 +282,15 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 py-12">
+      <section className="px-4 py-12 relative z-10">
+        <div className="absolute inset-0 -z-10">
+          <img
+            loading="lazy"
+            src="/Vector_3.png"
+            alt="Garis Vector"
+            className="absolute left-0 bottom-0 -translate-y-6 w-full"
+          />
+        </div>
         <h4 className="text-center text-3xl font-semibold text-[#0066FF] mb-6">
           Frequently Asked Questions
         </h4>

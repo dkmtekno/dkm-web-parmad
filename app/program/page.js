@@ -4,13 +4,13 @@ export default function Program() {
   return (
     <main className="font-sans bg-[#F0F6FF]">
       <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
-        <div class="lg:w-1/2">
-          <h1 class="mb-4 text-2xl font-bold !leading-snug text-gray-700 lg:text-4xl">
+        <div className="lg:w-1/2">
+          <h1 className="mb-4 text-2xl font-bold !leading-snug text-gray-700 lg:text-4xl">
             Lorem ipsum dolor sit amet
             <br />
-            <span class="text-[#0066FF]"> Lorem Ipsum</span>
+            <span className="text-[#0066FF]"> Lorem Ipsum</span>
           </h1>
-          <p class="font-medium text-gray-500 lg:text-lg">
+          <p className="font-medium text-gray-500 lg:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -54,11 +54,11 @@ export default function Program() {
             height="500"
             className="rounded-3xl lg:w-2/5"
           />
-          <div class="w-full lg:w-1/2">
-            <h2 class="mt-4 text-2xl font-bold text-[#0066FF] lg:text-2xl">
+          <div className="w-full lg:w-1/2">
+            <h2 className="mt-4 text-2xl font-bold text-[#0066FF] lg:text-2xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </h2>
-            <p class="mb-6 mt-2 leading-relaxed text-gray-500">
+            <p className="mb-6 mt-2 leading-relaxed text-gray-500">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

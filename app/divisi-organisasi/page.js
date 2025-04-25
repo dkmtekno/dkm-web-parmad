@@ -5,13 +5,13 @@ export default function divisiOrganisasi() {
   return (
     <main className="font-sans bg-[#F0F6FF]">
       <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
-        <div class="lg:w-1/2">
-          <h1 class="mb-4 text-2xl font-bold !leading-snug text-gray-700 lg:text-4xl">
+        <div className="lg:w-1/2">
+          <h1 className="mb-4 text-2xl font-bold !leading-snug text-gray-700 lg:text-4xl">
             Lorem ipsum dolor sit amet
             <br />
-            <span class="text-[#0066FF]"> Lorem Ipsum</span>
+            <span className="text-[#0066FF]"> Lorem Ipsum</span>
           </h1>
-          <p class="font-medium text-gray-500 lg:text-lg">
+          <p className="font-medium text-gray-500 lg:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
