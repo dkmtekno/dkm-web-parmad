@@ -53,6 +53,7 @@ export default function tentangKami() {
             pariatur. Excepteur sint occaecat cupidatat non proident.
           </p>
           <img
+            loading="lazy"
             src="/divisi_naeemadkm.webp"
             alt="Divisi Naeemadkm"
             className="mx-auto max-w-4xl my-4"

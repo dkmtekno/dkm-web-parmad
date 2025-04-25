@@ -39,6 +39,7 @@ export default function Home() {
 
         {/* Ornamen kiri */}
         <img
+        loading="lazy"
           src="/logo_left_hero.png"
           alt="Ornamen Kiri"
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
@@ -46,6 +47,7 @@ export default function Home() {
 
         {/* Ornamen kanan */}
         <img
+          loading="lazy"
           src="/logo_right_hero.png"
           alt="Ornamen Kanan"
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
@@ -182,7 +184,7 @@ export default function Home() {
                       className="min-w-[260px] bg-white p-6 rounded-2xl transition-transform duration-300 hover:scale-105 hover:bg-gray-100"
                     >
                       <div className="flex items-center">
-                        <img src="/user.png" width="40" height="40" />
+                        <img src="/user.png" width="40" height="40" loading="lazy" />
                         <div className="mt-2 mb-3 ms-2 flex flex-col justify-center">
                           <h5 className="font-bold text-[#0066FF]">Hamutra</h5>
                           <p className="text-gray-400 text-xs">Lorem ipsum</p>
@@ -234,7 +236,7 @@ export default function Home() {
       <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
         <div className="w-full md:w-1/2 h-60 bg-gray-300 rounded-xl" />
         <div className="w-full md:w-1/2">
-          <img src="/program.png" width="30" height="30" className="mb-4" />
+          <img src="/program.png" width="30" height="30" className="mb-4" loading="lazy" />
           <h4 className="text-[#0066FF] text-2xl font-bold">Lorem Ipsum</h4>
           <p className="mt-2 text-gray-700">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -264,6 +266,7 @@ export default function Home() {
                   Lorem Ipsum Dolor Sit Amet
                 </span>
                 <img
+                  loading="lazy"
                   src="/arrow_bottom.png"
                   width="14"
                   height="14"
