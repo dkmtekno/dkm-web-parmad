@@ -29,13 +29,30 @@ export default function Home() {
         style={{
           backgroundImage: "url('/bg_hero.png')",
           borderRadius: "0px 0px 50px 50px",
-        }} // ganti dengan nama gambar di /public
+        }}
       >
+        {/* Overlay hitam transparan */}
         <div
           className="absolute inset-0 bg-black/40 z-0"
           style={{ borderRadius: "0px 0px 50px 50px" }}
         />
-        <div className="z-10 text-center text-white px-4">
+
+        {/* Ornamen kiri */}
+        <img
+          src="/logo_left_hero.png"
+          alt="Ornamen Kiri"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
+        />
+
+        {/* Ornamen kanan */}
+        <img
+          src="/logo_right_hero.png"
+          alt="Ornamen Kanan"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
+        />
+
+        {/* Konten tengah */}
+        <div className="z-20 text-center text-white px-4">
           <h1 className="text-2xl md:text-4xl font-bold">
             Lorem ipsum dolor sit amet, consectetur <br />
             adipiscing elit, sed do eiusmod tempor.
