@@ -1,10 +1,11 @@
+import Navbar from "./component/Navbar";
 import "./globals.css";
 import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta",
-  weight: "400",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
             className="absolute left-0 top-1/2 -translate-y-1/2 w-full -z-10"
           />
         </div>
+        <Navbar />
         {children}
       </body>
     </html>

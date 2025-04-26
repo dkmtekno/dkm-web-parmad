@@ -9,7 +9,7 @@ export default function Program() {
         alt="Garis Vector"
         className="absolute left-0 top-0 -translate-y-6 w-full -z-10"
       />
-      <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
+      <section className="px-4 py-24 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
         <div className="lg:w-1/2">
           <h1 className="mb-4 text-2xl font-bold !leading-snug text-gray-700 lg:text-4xl">
             Lorem ipsum dolor sit amet

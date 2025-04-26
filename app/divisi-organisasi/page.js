@@ -11,7 +11,7 @@ export default function divisiOrganisasi() {
         alt="Garis Vector"
         className="absolute left-0 top-0 -translate-y-6 w-full -z-10"
       />
-      <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
+      <section className="px-4 py-24 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
         <div className="lg:w-1/2">
           <h1 className="mb-4 text-2xl font-bold !leading-snug text-gray-700 lg:text-4xl">
             Lorem ipsum dolor sit amet
@@ -411,7 +411,41 @@ export default function divisiOrganisasi() {
             subtitle="Anggota Teknologi"
             imageUrl="/uzi.png"
           />
-         
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+            Badan Pengawas Organisasi DKM
+          </h3>
+          <p className="text-gray-500 text-sm mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+        </div>
+        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+          <ProfileCard
+            name="Muhammad Alif Akbar"
+            subtitle="Badan Pengawas Organisasi DKM"
+            imageUrl="/alif.png"
+          />
+          <ProfileCard
+            name="Fitri Aisyah Mahdiyah"
+            subtitle="Badan Pengawas Organisasi DKM"
+            imageUrl="/aisyah.png"
+          />
+          <ProfileCard
+            name="Salsa Mukminah"
+            subtitle="Badan Pengawas Organisasi DKM"
+            imageUrl="/salsa.png"
+          />
+          <ProfileCard
+            name="Hatfina Maula"
+            subtitle="Badan Pengawas Organisasi DKM"
+            imageUrl="/hatfina.png"
+          />
         </div>
       </section>
 

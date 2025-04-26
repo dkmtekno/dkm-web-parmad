@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
@@ -258,8 +259,14 @@ export default function Home() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
-        <div className="w-full md:w-1/2 h-60 bg-gray-300 rounded-xl" />
+      <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10 relative z-20">
+        <img
+          src="/program_naeema.png"
+          loading="lazy"
+          width="500"
+          height="500"
+          className="rounded-3xl lg:w-2/5"
+        />
         <div className="w-full md:w-1/2">
           <img
             src="/program.png"
@@ -275,9 +282,11 @@ export default function Home() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <button className="mt-4 bg-[#0066FF] text-white px-4 py-2 rounded-[12px]">
-            Lihat Program DKM Paramadina
-          </button>
+          <Link href="/tentang-kami">
+            <button className="mt-4 bg-[#0066FF] text-white px-4 py-2 rounded-[12px] hover:bg-blue-700">
+              Lihat Program DKM Paramadina
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -288,7 +297,7 @@ export default function Home() {
             loading="lazy"
             src="/Vector_3.png"
             alt="Garis Vector"
-            className="absolute left-0 bottom-0 -translate-y-6 w-full"
+            className="absolute left-0 bottom-0 -translate-y-6 w-full -z-10"
           />
         </div>
         <h4 className="text-center text-3xl font-semibold text-[#0066FF] mb-6">
