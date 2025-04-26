@@ -56,14 +56,17 @@ export default function tentangKami() {
             loading="lazy"
             src="/divisi_naeemadkm.webp"
             alt="Divisi Naeemadkm"
-            className="mx-auto max-w-4xl my-4"
+            className="mx-auto my-4 lg:w-4xl"
           />
         </div>
       </section>
 
       {/* LOREM IPSUM SECTION */}
       <section className="py-12 text-center px-4">
-        <h2 className="text-4xl font-bold text-[#0066FF] mb-4">Lorem Ipsum</h2>
+        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#DAE9FF] via-[#0066FF] to-[#DAE9FF] bg-clip-text text-transparent">
+          Naeema DKM Paramadina
+        </h2>
+
         <p className="max-w-5xl mx-auto text-gray-600">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
