@@ -24,7 +24,14 @@ export default function RootLayout({ children }) {
             loading="lazy"
             src="/Vector_2.png"
             alt="Garis Vector"
-            className="absolute left-0 top-0 -translate-y-6 w-full z-10"
+            className="absolute left-0 top-0 -translate-y-6 w-full -z-10"
+          />
+
+          <img
+            loading="lazy"
+            src="/Vector_1.png"
+            alt="Garis Vector"
+            className="absolute left-0 top-1/2 -translate-y-1/2 w-full -z-10"
           />
         </div>
         {children}
