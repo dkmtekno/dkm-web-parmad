@@ -1,24 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function tentangKami() {
-  const divisiList = [
-    { title: "Ketum & Waketum", icon: "/ketum_waketum.png" },
-    { title: "Sekretaris", icon: "/sekre.png" },
-    { title: "Bendahara", icon: "/bendahara.png" },
-    { title: "Produksi Kreatif", icon: "/prokre.png" },
-    { title: "Kajian & Dakwah", icon: "/kajian_dakwah.png" },
-    { title: "Teknologi", icon: "/teknologi.png" },
-    { title: "Hubungan Masyarakat", icon: "/humas.png" },
-    { title: "Human Resource", icon: "/hrd.png" },
-    { title: "Badan Pengawas", icon: "/bpo.png" },
-  ];
-
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeRight = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0 },
   };
 
   return (
@@ -28,19 +27,23 @@ export default function tentangKami() {
         {/* Ornamen kiri */}
         <img
           src="/logo_left_hero.png"
-          alt="Ornamen Kiri"
+          alt="Left Ornament"
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
         />
-
         {/* Ornamen kanan */}
         <img
           src="/logo_right_hero.png"
-          alt="Ornamen Kanan"
+          alt="Right Ornament"
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
         />
 
         {/* Konten tengah */}
-        <div className="z-20 text-center text-white px-4 flex flex-col items-center">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="z-20 text-center text-white px-4 flex flex-col items-center"
+        >
           <h2 className="text-4xl font-bold text-[#0066FF] mb-4">
             Tentang Kami
           </h2>
@@ -58,36 +61,58 @@ export default function tentangKami() {
             alt="Divisi Naeemadkm"
             className="mx-auto my-4 lg:w-4xl"
           />
-        </div>
+        </motion.div>
       </section>
 
       {/* LOREM IPSUM SECTION */}
       <section className="py-12 text-center px-4">
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#DAE9FF] via-[#0066FF] to-[#DAE9FF] bg-clip-text text-transparent">
+        <motion.h2
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#DAE9FF] via-[#0066FF] to-[#DAE9FF] bg-clip-text text-transparent"
+        >
           Naeema DKM Paramadina
-        </h2>
+        </motion.h2>
 
-        <p className="max-w-5xl mx-auto text-gray-600">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto text-gray-600"
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident.
-        </p>
+        </motion.p>
         <div className="my-5 mx-auto bg-[#0066FF] w-40 h-2 rounded-full"></div>
       </section>
 
       {/* KETUM & WAKETUM SECTION */}
       <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
-        <img
+        <motion.img
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           src="/syalki.png"
           loading="lazy"
           width="500"
           height="500"
           className="rounded-3xl lg:w-2/5"
         />
-        <div className="w-full md:w-1/2">
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="w-full md:w-1/2"
+        >
           <p className="mb-2 text-lg font-medium text-[#0066FF] lg:text-xl">
             Ketua Umum DKM Paramadina
           </p>
@@ -146,11 +171,17 @@ export default function tentangKami() {
               </svg>
             </a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
-        <div className="w-full md:w-1/2 text-right">
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="w-full md:w-1/2 text-right"
+        >
           <p className="mb-2 text-lg font-medium text-[#0066FF] lg:text-xl">
             Wakil Ketua Umum DKM Paramadina
           </p>
@@ -209,7 +240,7 @@ export default function tentangKami() {
               </svg>
             </a>
           </div>
-        </div>
+        </motion.div>
         <img
           src="/syaka.png"
           loading="lazy"
@@ -220,7 +251,7 @@ export default function tentangKami() {
       </section>
 
       {/* JOIN US SECTION */}
-      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6">
+      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6 relative z-20">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
@@ -229,8 +260,21 @@ export default function tentangKami() {
         </button>
       </section>
 
+      <div className="relative z-10">
+      <div className="absolute inset-0 -z-10">
+          <img
+            loading="lazy"
+            src="/logo_3.png"
+            alt="Ornamen bawah"
+            width="500"
+            height="500"
+            className="absolute left-0 bottom-0 pointer-events-none"
+          />
+        </div>
+      </div>
+
       {/* FOOTER */}
-      <footer className="bg-[#001f60] text-white px-6 py-12 mt-10">
+      <footer className="bg-[#001f60] text-white px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div>
             <h6 className="text-xl font-bold">DKM Paramadina</h6>

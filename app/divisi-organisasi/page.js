@@ -1,18 +1,42 @@
+"use client";
 import React from "react";
 import ProfileCard from "../component/ProfileCard";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function divisiOrganisasi() {
   return (
     <main className="font-sans bg-[#F0F6FF] relative z-10">
-      <img
+      <motion.img
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         loading="lazy"
         src="/Vector_2.png"
         alt="Garis Vector"
         className="absolute left-0 top-0 -translate-y-6 w-full -z-10"
       />
-      <section className="px-4 py-24 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10">
-        <div className="lg:w-1/2">
+
+      {/* Ornamen kiri */}
+      <img
+        src="/logo_left_hero.png"
+        alt="Left Ornament"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
+      />
+      {/* Ornamen kanan */}
+      <img
+        src="/logo_right_hero.png"
+        alt="Right Ornament"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
+      />
+      <section className="px-4 py-24 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10 relative z-10">
+        <motion.div
+          className="lg:w-1/2"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h1 className="mb-4 text-2xl font-bold !leading-snug text-gray-700 lg:text-4xl">
             Lorem ipsum dolor sit amet
             <br />
@@ -29,28 +53,38 @@ export default function divisiOrganisasi() {
               Lorem Ipsum
             </button>
           </Link>
-        </div>
-        <img
+        </motion.div>
+        <motion.img
           src="/divisi_organisasi.png"
           loading="lazy"
           width="700"
           height="700"
           className="rounded-3xl lg:w-2/5"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         />
       </section>
 
-      <section className="py-12">
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+      <motion.section
+        className="py-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="max-w-6xl mx-auto lg:text-left text-center">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
             Ketum & Waketum
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto lg:mx-0"></div>
         </div>
-        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+        <div className="flex lg:justify-start justify-center gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Muhammad Syalki"
             subtitle="Ketua Umum DKM Paramadina"
@@ -62,9 +96,15 @@ export default function divisiOrganisasi() {
             imageUrl="/syaka.png"
           />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="py-12">
+      <motion.section
+        className="py-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-6xl mx-auto">
           <h3 className="text-[#0066FF] text-3xl font-bold text-left">
             Sekretaris
@@ -81,15 +121,22 @@ export default function divisiOrganisasi() {
             subtitle="Sekretaris I"
             imageUrl="/alan.png"
           />
+
           <ProfileCard
             name="Farida Maimunah"
             subtitle="Sekretaris II"
             imageUrl="/faridah.png"
           />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="py-12">
+      <motion.section
+        className="py-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-6xl mx-auto">
           <h3 className="text-[#0066FF] text-3xl font-bold text-left">
             Bendahara
@@ -112,9 +159,15 @@ export default function divisiOrganisasi() {
             imageUrl="/ratu.png"
           />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="py-12">
+      <motion.section
+        className="py-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-6xl mx-auto">
           <h3 className="text-[#0066FF] text-3xl font-bold text-left">
             Kajian & Dakwah
@@ -192,9 +245,9 @@ export default function divisiOrganisasi() {
             imageUrl="/shofa.png"
           />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="py-12">
+      <section className="py-12 relative z-20">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-[#0066FF] text-3xl font-bold text-left">
             Hubungan Masyarakat
@@ -279,7 +332,17 @@ export default function divisiOrganisasi() {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-12 relative z-10">
+        <div className="absolute inset-0 -z-10">
+          <img
+            loading="lazy"
+            src="/logo_2.png"
+            alt="Ornamen Kanan"
+            width="500"
+            height="500"
+            className="absolute right-0 bottom-0 pointer-events-none"
+          />
+        </div>
         <div className="max-w-6xl mx-auto">
           <h3 className="text-[#0066FF] text-3xl font-bold text-left">
             Human Resource
@@ -374,7 +437,15 @@ export default function divisiOrganisasi() {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-12 relative z-10">
+        <div className="absolute inset-0 -z-10">
+          <img
+            loading="lazy"
+            src="/Vector_3.png"
+            alt="Garis Vector"
+            className="absolute left-0 bottom-0 -translate-y-6 w-full -z-10"
+          />
+        </div>
         <div className="max-w-6xl mx-auto">
           <h3 className="text-[#0066FF] text-3xl font-bold text-left">
             Teknologi
@@ -448,8 +519,7 @@ export default function divisiOrganisasi() {
           />
         </div>
       </section>
-
-      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6">
+      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6 relative z-20">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
@@ -458,8 +528,21 @@ export default function divisiOrganisasi() {
         </button>
       </section>
 
+      <div className="relative z-10">
+      <div className="absolute inset-0 -z-10">
+          <img
+            loading="lazy"
+            src="/logo_3.png"
+            alt="Ornamen bawah"
+            width="500"
+            height="500"
+            className="absolute left-0 bottom-0 pointer-events-none"
+          />
+        </div>
+      </div>
+
       {/* FOOTER */}
-      <footer className="bg-[#001f60] text-white px-6 py-12 mt-10">
+      <footer className="bg-[#001f60] text-white px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div>
             <h6 className="text-xl font-bold">DKM Paramadina</h6>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const divisiList = [
@@ -22,6 +23,16 @@ export default function Home() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeRight = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
     <main className="font-sans bg-[#F0F6FF]">
       {/* HERO SECTION */}
@@ -39,11 +50,22 @@ export default function Home() {
         />
 
         {/* Ornamen kiri */}
-        <img
-          loading="lazy"
+        <motion.img
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeLeft}
+          transition={{ duration: 0.8 }}
           src="/logo_left_hero.png"
-          alt="Ornamen Kiri"
+          alt="Left Ornament"
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
+        />
+
+<img
+          loading="lazy"
+          src="/Vector_2.png"
+          alt="Garis Vector"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-full"
         />
 
         <img
@@ -54,10 +76,14 @@ export default function Home() {
         />
 
         {/* Ornamen kanan */}
-        <img
-          loading="lazy"
+        <motion.img
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeRight}
+          transition={{ duration: 0.8 }}
           src="/logo_right_hero.png"
-          alt="Ornamen Kanan"
+          alt="Right Ornament"
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
         />
 
@@ -82,7 +108,14 @@ export default function Home() {
       </section>
 
       {/* LOREM IPSUM SECTION */}
-      <section className="py-12 text-center px-4 z-20">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeLeft}
+        transition={{ duration: 0.8 }}
+        className="py-12 text-center px-4 z-20"
+      >
         <h2 className="text-4xl font-bold text-[#0066FF] mb-4">Lorem Ipsum</h2>
         <p className="max-w-5xl mx-auto text-gray-600">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -93,7 +126,7 @@ export default function Home() {
           pariatur. Excepteur sint occaecat cupidatat non proident.
         </p>
         <div className="my-5 mx-auto bg-[#0066FF] w-40 h-2 rounded-full"></div>
-      </section>
+      </motion.section>
 
       {/* VIDEO SECTION */}
       <div className="mx-auto py-6 px-12 max-w-6xl relative z-10">
@@ -114,15 +147,26 @@ export default function Home() {
             className="absolute right-0 bottom-0 pointer-events-none"
           />
         </div>
-        <h3 className="text-left text-3xl font-semibold text-[#0066FF] max-w-6xl mx-auto my-12">
+        <motion.h3
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeRight}
+          transition={{ duration: 0.8 }}
+          className="text-left text-3xl font-semibold text-[#0066FF] max-w-6xl mx-auto my-12"
+        >
           Divisi Naeema DKM Paramadina 2025/2026
-        </h3>
+        </motion.h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {divisiList.map((divisi, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-white shadow-md p-8 rounded-xl text-left"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <img
                 src={divisi.icon}
@@ -141,13 +185,20 @@ export default function Home() {
               <p className="text-xs text-[#0066FF] mt-6">
                 #NaeemaDKMParamadina
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-12">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeLeft}
+        transition={{ duration: 0.8 }}
+        className="py-12"
+      >
         <div className="max-w-6xl mx-auto">
           <h3 className="text-[#0066FF] text-3xl font-bold text-left">
             Testimonial
@@ -168,9 +219,14 @@ export default function Home() {
                   className={`flex ${idx === 1 ? "pr-6" : ""} gap-6`}
                 >
                   {[1, 2, 3, 4, 5, 6].map((num) => (
-                    <div
+                    <motion.div
                       key={`atas-${idx}-${num}`}
-                      className="min-w-[260px] bg-white p-6 rounded-2xl transition-transform duration-300 hover:scale-105 hover:bg-gray-100"
+                      // transition-transform duration-300 hover:scale-105 hover:bg-gray-100
+                      className="min-w-[260px] bg-white p-6 rounded-2xl"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: num * 0.1 }}
                     >
                       <div className="flex items-center">
                         <img src="/user.png" width="40" height="40" />
@@ -184,7 +240,7 @@ export default function Home() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit...
                       </p>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               ))}
@@ -200,9 +256,14 @@ export default function Home() {
                   className={`flex ${idx === 1 ? "pr-6" : ""} gap-6`}
                 >
                   {[1, 2, 3, 4, 5, 6].map((num) => (
-                    <div
+                    <motion.div
                       key={`bawah-${idx}-${num}`}
-                      className="min-w-[260px] bg-white p-6 rounded-2xl transition-transform duration-300 hover:scale-105 hover:bg-gray-100"
+                      // transition-transform duration-300 hover:scale-105 hover:bg-gray-100
+                      className="min-w-[260px] bg-white p-6 rounded-2xl"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: num * 0.1 }}
                     >
                       <div className="flex items-center">
                         <img
@@ -220,7 +281,7 @@ export default function Home() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit...
                       </p>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               ))}
@@ -256,16 +317,26 @@ export default function Home() {
             }
           `}</style>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA SECTION */}
-      <section className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10 relative z-20">
-        <img
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeRight}
+        transition={{ duration: 0.8 }}
+        className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10 relative z-20"
+      >
+        <motion.img
           src="/program_naeema.png"
           loading="lazy"
           width="500"
           height="500"
           className="rounded-3xl lg:w-2/5"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
         />
         <div className="w-full md:w-1/2">
           <img
@@ -288,7 +359,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
-      </section>
+      </motion.section>
 
       {/* FAQ */}
       <section className="px-4 py-12 relative z-10">
@@ -357,7 +428,7 @@ export default function Home() {
       </section>
 
       {/* JOIN US SECTION */}
-      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6">
+      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6 relative z-20">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
@@ -366,8 +437,21 @@ export default function Home() {
         </button>
       </section>
 
+      <div className="relative z-10">
+      <div className="absolute inset-0 -z-10">
+          <img
+            loading="lazy"
+            src="/logo_3.png"
+            alt="Ornamen bawah"
+            width="500"
+            height="500"
+            className="absolute left-0 bottom-0 pointer-events-none"
+          />
+        </div>
+      </div>
+
       {/* FOOTER */}
-      <footer className="bg-[#001f60] text-white px-6 py-12 mt-10">
+      <footer className="bg-[#001f60] text-white px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div>
             <h6 className="text-xl font-bold">DKM Paramadina</h6>

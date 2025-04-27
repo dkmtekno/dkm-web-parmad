@@ -77,7 +77,7 @@ export default function Program() {
         </div>
       </section>
 
-      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6">
+      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6 relative z-20">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
@@ -86,8 +86,22 @@ export default function Program() {
         </button>
       </section>
 
+      <div className="relative z-10">
+      <div className="absolute inset-0 -z-10">
+          <img
+            loading="lazy"
+            src="/logo_3.png"
+            alt="Ornamen bawah"
+            width="500"
+            height="500"
+            className="absolute left-0 bottom-0 pointer-events-none"
+          />
+        </div>
+      </div>
+
+
       {/* FOOTER */}
-      <footer className="bg-[#001f60] text-white px-6 py-12 mt-10">
+      <footer className="bg-[#001f60] text-white px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div>
             <h6 className="text-xl font-bold">DKM Paramadina</h6>
