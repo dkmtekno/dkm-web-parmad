@@ -107,8 +107,8 @@ export default function tentangKami() {
           className="rounded-3xl lg:w-2/5"
         />
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="w-full lg:w-1/2"
@@ -176,8 +176,8 @@ export default function tentangKami() {
 
       <section className="px-4 py-12 flex flex-col-reverse lg:flex-row items-center max-w-6xl mx-auto gap-10">
         <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="w-full lg:w-1/2 text-left lg:text-right"

@@ -1,4 +1,5 @@
 import Navbar from "./component/Navbar";
+import BackgroundVector from "./component/BackgroundVector"; // Import komponen baru
 import "./globals.css";
 import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
 
@@ -20,21 +21,7 @@ export default function RootLayout({ children }) {
         className={`${fontSans.variable} antialiased`}
         style={{ backgroundColor: "#F0F6FF" }}
       >
-        <div className="relative">
-          <img
-            loading="lazy"
-            src="/Vector_2.png"
-            alt="Garis Vector"
-            className="absolute left-0 top-0 -translate-y-6 w-full -z-10"
-          />
-
-          <img
-            loading="lazy"
-            src="/Vector_1.png"
-            alt="Garis Vector"
-            className="absolute left-0 top-1/2 -translate-y-1/2 w-full -z-10"
-          />
-        </div>
+        <BackgroundVector /> {/* Ganti ini */}
         <Navbar />
         {children}
       </body>
