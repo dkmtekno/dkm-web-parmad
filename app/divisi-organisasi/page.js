@@ -29,7 +29,7 @@ export default function divisiOrganisasi() {
         alt="Right Ornament"
         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
       />
-      <section className="px-4 py-24 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10 relative z-10">
+      <section className="px-4 py-24 flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10 relative z-10">
         <motion.div
           className="lg:w-1/2"
           initial={{ opacity: 0, y: 50 }}
@@ -82,7 +82,7 @@ export default function divisiOrganisasi() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto lg:mx-0"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
         <div className="flex lg:justify-start justify-center gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
@@ -105,17 +105,17 @@ export default function divisiOrganisasi() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+        <div className="max-w-6xl mx-auto lg:text-left text-center">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
             Sekretaris
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
-        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+        <div className="flex lg:justify-start justify-center gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Ahmad Maulana"
             subtitle="Sekretaris I"
@@ -137,17 +137,17 @@ export default function divisiOrganisasi() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+        <div className="max-w-6xl mx-auto lg:text-left text-center">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
             Bendahara
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto lg:mx-0"></div>
         </div>
-        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+        <div className="flex lg:justify-start justify-center gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Sofia Nuril Fairuzi"
             subtitle="Bendahara I"
@@ -168,17 +168,17 @@ export default function divisiOrganisasi() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+        <div className="max-w-6xl mx-auto lg:text-left text-center">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
             Kajian & Dakwah
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
-        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+        <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Novita Fitri Apriliana"
             subtitle="Kepala Divisi Kajian & Dakwah"
@@ -248,17 +248,17 @@ export default function divisiOrganisasi() {
       </motion.section>
 
       <section className="py-12 relative z-20">
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+        <div className="max-w-6xl mx-auto text-center lg:text-left">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
             Hubungan Masyarakat
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
-        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+        <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Aqila Irza Ghania"
             subtitle="Kepala Divisi Hubungan Masyarakat"
@@ -343,17 +343,17 @@ export default function divisiOrganisasi() {
             className="absolute right-0 bottom-0 pointer-events-none"
           />
         </div>
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+        <div className="max-w-6xl mx-auto text-center lg:text-left">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
             Human Resource
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
-        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+        <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Destria Maharani"
             subtitle="Kepala Divisi Human Resource"
@@ -393,17 +393,17 @@ export default function divisiOrganisasi() {
       </section>
 
       <section className="py-12">
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+        <div className="max-w-6xl mx-auto text-center lg:text-left">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
             Produksi Digital
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
-        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+        <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Muhammad Ariel Dien"
             subtitle="Kepala Divisi Digital"
@@ -446,17 +446,17 @@ export default function divisiOrganisasi() {
             className="absolute left-0 bottom-0 -translate-y-6 w-full -z-10"
           />
         </div>
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+        <div className="max-w-6xl mx-auto text-center lg:text-left">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
             Teknologi
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx:auto md:mx-auto lg:mx-0"></div>
         </div>
-        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+        <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Muhammad Ariel Dien"
             subtitle="Kepala Divisi Digital"
@@ -486,17 +486,17 @@ export default function divisiOrganisasi() {
       </section>
 
       <section className="py-12">
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+        <div className="max-w-6xl mx-auto text-center lg:text-left">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
             Badan Pengawas Organisasi DKM
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
-        <div className="flex gap-6 flex-wrap max-w-6xl mx-auto my-6">
+        <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Muhammad Alif Akbar"
             subtitle="Badan Pengawas Organisasi DKM"
