@@ -23,45 +23,26 @@ export default function Home() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 },
-  };
-
-  const fadeRight = {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   return (
     <main className="font-sans bg-[#F0F6FF]">
       {/* HERO SECTION */}
       <section
-        className="h-screen bg-cover bg-center flex items-center justify-center relative"
+        className="h-screen bg-cover bg-center flex items-center justify-center relative rounded-bl-[20px] rounded-br-[20px] lg:rounded-bl-[50px] lg:rounded-br-[50px]"
         style={{
           backgroundImage: "url('/bg_hero.png')",
-          borderRadius: "0px 0px 50px 50px",
         }}
       >
         {/* Overlay hitam transparan */}
-        <div
-          className="absolute inset-0 bg-black/40 z-0"
-          style={{ borderRadius: "0px 0px 50px 50px" }}
-        />
+        <div className="absolute inset-0 bg-black/40 z-0 rounded-bl-[20px] rounded-br-[20px] lg:rounded-bl-[50px] lg:rounded-br-[50px]" />
 
         {/* Ornamen kiri */}
-        <motion.img
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeLeft}
-          transition={{ duration: 0.8 }}
+        <img
           src="/logo_left_hero.png"
           alt="Left Ornament"
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
         />
 
-<img
+        <img
           loading="lazy"
           src="/Vector_2.png"
           alt="Garis Vector"
@@ -76,12 +57,7 @@ export default function Home() {
         />
 
         {/* Ornamen kanan */}
-        <motion.img
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeRight}
-          transition={{ duration: 0.8 }}
+        <img
           src="/logo_right_hero.png"
           alt="Right Ornament"
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
@@ -109,10 +85,9 @@ export default function Home() {
 
       {/* LOREM IPSUM SECTION */}
       <motion.section
-        initial="hidden"
-        whileInView="visible"
         viewport={{ once: true }}
-        variants={fadeLeft}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         className="py-12 text-center px-4 z-20"
       >
@@ -148,10 +123,9 @@ export default function Home() {
           />
         </div>
         <motion.h3
-          initial="hidden"
-          whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeRight}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           className="text-left text-3xl font-semibold text-[#0066FF] max-w-6xl mx-auto my-12"
         >
@@ -191,23 +165,16 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeLeft}
-        transition={{ duration: 0.8 }}
-        className="py-12"
-      >
+      <section className="py-12">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-[#0066FF] text-3xl font-bold text-left">
+          <h3 className="text-[#0066FF] text-3xl font-bold text-left px-6 lg:px-0">
             Testimonial
           </h3>
-          <p className="text-gray-500 text-sm mt-2">
+          <p className="text-gray-500 text-sm mt-2 px-6 lg:px-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4"></div>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-6 lg:mx-0"></div>
         </div>
         <div className="space-y-10 py-10 bg-blue-50">
           {/* ANIMASI KE KIRI */}
@@ -317,16 +284,15 @@ export default function Home() {
             }
           `}</style>
         </div>
-      </motion.section>
+      </section>
 
       {/* CTA SECTION */}
       <motion.section
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={fadeRight}
         transition={{ duration: 0.8 }}
-        className="px-4 py-12 flex flex-col md:flex-row items-center max-w-6xl mx-auto gap-10 relative z-20"
+        className="px-4 py-12 flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10 relative z-20"
       >
         <motion.img
           src="/program_naeema.png"
@@ -338,7 +304,7 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         />
-        <div className="w-full md:w-1/2">
+        <div className="w-full lg:w-1/2">
           <img
             src="/program.png"
             width="30"
@@ -428,17 +394,23 @@ export default function Home() {
       </section>
 
       {/* JOIN US SECTION */}
-      <section className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 rounded-[37.5px] max-w-5xl mx-auto my-8 px-6 relative z-20">
+      <motion.section
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 lg:rounded-[37.5px] rounded-[20px] max-w-5xl mx-auto my-8 px-6 relative z-20"
+      >
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
         <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
           Yuk Ikutan
         </button>
-      </section>
+      </motion.section>
 
       <div className="relative z-10">
-      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 -z-10">
           <img
             loading="lazy"
             src="/logo_3.png"
