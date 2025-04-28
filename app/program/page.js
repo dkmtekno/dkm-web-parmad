@@ -36,7 +36,7 @@ export default function Program() {
             aliquip ex ea commodo consequat.
           </p>
           <div className="mt-6 flex gap-4">
-            <button className="bg-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-blue-700">
+            <button className="bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700">
               Lorem Ipsum
             </button>
             <button className="text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-[#0066FF] hover:text-white transition">
