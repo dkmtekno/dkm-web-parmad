@@ -84,7 +84,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex gap-6 text-sm font-semibold">
+      <div className="hidden lg:flex gap-6 text-sm font-semibold">
         <Link href="/" className={getLinkClass("/")}>
           Beranda
         </Link>
@@ -106,7 +106,7 @@ export default function Navbar() {
       </div>
 
       {/* Sosial Media */}
-      <div className="hidden md:flex gap-4 items-center">
+      <div className="hidden lg:flex gap-4 items-center">
         <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
           <img src={ytIcon} alt="YouTube" className="h-6 w-6" />
         </a>
@@ -128,7 +128,7 @@ export default function Navbar() {
 
       {/* Hamburger Menu */}
       <button
-        className={`md:hidden focus:outline-none transition-colors duration-300 ${
+        className={`lg:hidden focus:outline-none transition-colors duration-300 ${
           scrolled ? "text-white" : isHome ? "text-white" : "text-[#0066FF]"
         }`}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -160,7 +160,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-20 right-8 bg-black/70 rounded-lg py-4 px-6 flex flex-col gap-4 text-white text-sm font-semibold md:hidden">
+        <div className="absolute top-20 right-8 bg-black/70 rounded-lg py-4 px-6 flex flex-col gap-4 text-white text-sm font-semibold lg:hidden">
           <Link
             href="/"
             className={getLinkClass("/")}
