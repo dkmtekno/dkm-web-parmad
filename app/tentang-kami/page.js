@@ -23,7 +23,7 @@ export default function tentangKami() {
   return (
     <main className="font-sans bg-[#F0F6FF]">
       {/* HERO SECTION */}
-      <section className="py-24 min-h-screen flex items-center justify-center relative">
+      <section className="py-24 lg:py-[150px] min-h-screen flex items-center justify-center relative">
         {/* Ornamen kiri */}
         <img
           src="/logo_left_hero.png"
@@ -278,39 +278,6 @@ export default function tentangKami() {
           />
         </div>
       </div>
-
-      {/* FOOTER */}
-      <footer className="bg-[#001f60] text-white px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <div>
-            <h6 className="text-xl font-bold">DKM Paramadina</h6>
-          </div>
-          <div>
-            <h6 className="font-semibold mb-2">Main Menu</h6>
-            <ul className="text-sm space-y-1">
-              <li>Beranda</li>
-              <li>Our Program</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
-          <div>
-            <h6 className="font-semibold mb-2">Contact Us</h6>
-            <ul className="text-sm space-y-1">
-              <li>dkmcrew@gmail.com</li>
-              <li>@dkmparamadina</li>
-            </ul>
-          </div>
-          <div>
-            <h6 className="font-semibold mb-2">Our Home</h6>
-            <p className="text-sm">
-              Universitas Paramadina, Jl. Gatot Subroto No. 97, Jakarta Selatan
-            </p>
-          </div>
-        </div>
-        <p className="text-center text-xs mt-10">
-          © 2025 DKM Paramadina. All Rights Reserved
-        </p>
-      </footer>
     </main>
   );
 }

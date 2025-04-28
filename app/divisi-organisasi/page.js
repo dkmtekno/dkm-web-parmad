@@ -29,7 +29,7 @@ export default function divisiOrganisasi() {
         alt="Right Ornament"
         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
       />
-      <section className="px-4 py-24 flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10 relative z-10">
+      <section className="px-4 py-24 lg:py-[150px] flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10 relative z-10">
         <motion.div
           className="lg:w-1/2"
           initial={{ opacity: 0, y: 50 }}
@@ -534,39 +534,6 @@ export default function divisiOrganisasi() {
           />
         </div>
       </div>
-
-      {/* FOOTER */}
-      <footer className="bg-[#001f60] text-white px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <div>
-            <h6 className="text-xl font-bold">DKM Paramadina</h6>
-          </div>
-          <div>
-            <h6 className="font-semibold mb-2">Main Menu</h6>
-            <ul className="text-sm space-y-1">
-              <li>Beranda</li>
-              <li>Our Program</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
-          <div>
-            <h6 className="font-semibold mb-2">Contact Us</h6>
-            <ul className="text-sm space-y-1">
-              <li>dkmcrew@gmail.com</li>
-              <li>@dkmparamadina</li>
-            </ul>
-          </div>
-          <div>
-            <h6 className="font-semibold mb-2">Our Home</h6>
-            <p className="text-sm">
-              Universitas Paramadina, Jl. Gatot Subroto No. 97, Jakarta Selatan
-            </p>
-          </div>
-        </div>
-        <p className="text-center text-xs mt-10">
-          © 2025 DKM Paramadina. All Rights Reserved
-        </p>
-      </footer>
     </main>
   );
 }

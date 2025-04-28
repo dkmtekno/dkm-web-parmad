@@ -16,7 +16,7 @@ export default function Program() {
         alt="Garis Vector"
         className="absolute left-0 top-0 -translate-y-6 w-full -z-10"
       />
-      <section className="px-4 py-24 flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10">
+      <section className="px-4 py-24 lg:py-[100px] flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -148,39 +148,6 @@ export default function Program() {
           />
         </div>
       </div>
-
-      {/* FOOTER */}
-      <footer className="bg-[#001f60] text-white px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <div>
-            <h6 className="text-xl font-bold">DKM Paramadina</h6>
-          </div>
-          <div>
-            <h6 className="font-semibold mb-2">Main Menu</h6>
-            <ul className="text-sm space-y-1">
-              <li>Beranda</li>
-              <li>Our Program</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
-          <div>
-            <h6 className="font-semibold mb-2">Contact Us</h6>
-            <ul className="text-sm space-y-1">
-              <li>dkmcrew@gmail.com</li>
-              <li>@dkmparamadina</li>
-            </ul>
-          </div>
-          <div>
-            <h6 className="font-semibold mb-2">Our Home</h6>
-            <p className="text-sm">
-              Universitas Paramadina, Jl. Gatot Subroto No. 97, Jakarta Selatan
-            </p>
-          </div>
-        </div>
-        <p className="text-center text-xs mt-10">
-          © 2025 DKM Paramadina. All Rights Reserved
-        </p>
-      </footer>
     </main>
   );
 }
