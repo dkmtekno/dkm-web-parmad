@@ -3,6 +3,7 @@ import BackgroundVector from "./component/BackgroundVector"; // Import komponen 
 import "./globals.css";
 import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
 import Footer from "./component/Footer";
+import BubbleMenu from "./component/BubbleMenu";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <BackgroundVector /> {/* Ganti ini */}
         <Navbar />
         {children}
+        <BubbleMenu />
         <Footer />
       </body>
     </html>
