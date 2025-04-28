@@ -385,7 +385,7 @@ export default function divisiOrganisasi() {
       <section className="py-12 px-6 lg:px-0">
         <div className="max-w-6xl mx-auto text-center lg:text-left">
           <h3 className="text-[#0066FF] text-3xl font-bold">
-            Produksi Digital
+            Produksi Kreatif
           </h3>
           <p className="text-gray-500 text-sm mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -401,27 +401,27 @@ export default function divisiOrganisasi() {
           />
           <ProfileCard
             name="Muhammad Rafiq Mizan"
-            subtitle="Anggota Produksi Digital"
+            subtitle="Anggota Produksi Kreatif"
             imageUrl="/mizan.png"
           />
           <ProfileCard
             name="Muhammad Farhan"
-            subtitle="Anggota Produksi Digital"
+            subtitle="Anggota Produksi Kreatif"
             imageUrl="/farhan.png"
           />
           <ProfileCard
             name="Hilya Aufa Mufida"
-            subtitle="Anggota Produksi Digital"
+            subtitle="Anggota Produksi Kreatif"
             imageUrl="/hilya.png"
           />
           <ProfileCard
             name="Gde Reval Ariefa Antariksa"
-            subtitle="Anggota Produksi Digital"
+            subtitle="Anggota Produksi Kreatif"
             imageUrl="/reval.png"
           />
           <ProfileCard
             name="Aldi Muhammad Fadhilah"
-            subtitle="Anggota Produksi Digital"
+            subtitle="Anggota Produksi Kreatif"
             imageUrl="/aldi.png"
           />
         </div>
