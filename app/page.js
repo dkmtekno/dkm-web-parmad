@@ -399,7 +399,7 @@ export default function Home() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 lg:rounded-[37.5px] rounded-[20px] max-w-5xl mx-auto my-8 px-6 relative z-20"
+        className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 lg:rounded-[37.5px] rounded-[20px] max-w-5xl mx-auto my-8 lg:my-28 px-6 relative z-20"
       >
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?

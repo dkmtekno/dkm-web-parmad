@@ -38,7 +38,7 @@ export default function KontakKami() {
             aliquip ex ea commodo consequat.
           </p>
           <div className="mt-6 flex gap-4">
-            <button className="flex items-center gap-2 bg-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-blue-700">
+            <button className="flex items-center gap-2 bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700">
               <FaWhatsapp className="text-white" />
               Hubungi Whatsapp
             </button>
@@ -62,7 +62,7 @@ export default function KontakKami() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 lg:rounded-[37.5px] rounded-[20px] max-w-5xl mx-auto my-8 px-6 relative z-20"
+        className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 lg:rounded-[37.5px] rounded-[20px] max-w-5xl mx-auto my-8 lg:my-28 px-6 relative z-20"
       >
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
