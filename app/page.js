@@ -6,15 +6,51 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const divisiList = [
-    { title: "Ketum & Waketum", icon: "/ketum_waketum.png" },
-    { title: "Sekretaris", icon: "/sekre.png" },
-    { title: "Bendahara", icon: "/bendahara.png" },
-    { title: "Produksi Kreatif", icon: "/prokre.png" },
-    { title: "Kajian & Dakwah", icon: "/kajian_dakwah.png" },
-    { title: "Teknologi", icon: "/teknologi.png" },
-    { title: "Hubungan Masyarakat", icon: "/humas.png" },
-    { title: "Human Resource", icon: "/hrd.png" },
-    { title: "Badan Pengawas", icon: "/bpo.png" },
+    {
+      title: "Ketum & Waketum",
+      icon: "/ketum_waketum.png",
+      task: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    {
+      title: "Sekretaris",
+      icon: "/sekre.png",
+      task: "Mengelola administrasi dan membantu memastikan kelancaran operasional DKM.",
+    },
+    {
+      title: "Bendahara",
+      icon: "/bendahara.png",
+      task: "Mengelola keuangan DKM, termasuk pengelolaan anggaran, pengeluaran DKM.",
+    },
+    {
+      title: "Produksi Kreatif",
+      icon: "/prokre.png",
+      task: "Mengembangkan konsep dan ide kreatif untuk DKM, termasuk desain, pembuatan dan editing video, serta strategi branding.",
+    },
+    {
+      title: "Kajian & Dakwah",
+      icon: "/kajian_dakwah.png",
+      task: "Mengadakan dan mengelola kajian rutin, mengembangkan konsep dan jadwal kegiatan kajian dan dakwah sesuai kebutuhan, membentuk dan memfasilitasi komunitas penghafal Al-Quran dan menyediakan bimbingan terkait keagamaan di DKM Paramadina",
+    },
+    {
+      title: "Teknologi",
+      icon: "/teknologi.png",
+      task: "Mengelola dan mengembangkan teknologi informasi dan sistem yang digunakan DKM, meliputi perancangan, pengembangan, dan pemeliharaan sistem teknologi informasi.",
+    },
+    {
+      title: "Hubungan Masyarakat",
+      icon: "/humas.png",
+      task: "Menjalin hubungan baik dengan publik dan media, serta mempromosikan citra positif DKM di internal dan eksternal kampus Paramadina.",
+    },
+    {
+      title: "Human Resource",
+      icon: "/hrd.png",
+      task: "Mengelola sumber daya manusia DKM termasuk pengembangan dan pengelolaan anggota serta mengadakan kegiatan PHBI. ",
+    },
+    {
+      title: "Badan Pengawas",
+      icon: "/bpo.png",
+      task: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -65,20 +101,24 @@ export default function Home() {
 
         {/* Konten tengah */}
         <div className="z-20 text-center text-white px-4">
-          <h1 className="text-2xl md:text-4xl font-bold">
-            Lorem ipsum dolor sit amet, consectetur <br />
-            adipiscing elit, sed do eiusmod tempor.
+          <h1 className="text-2xl md:text-5xl font-bold">
+            Bergabung bersama DKM, raih pengalaman <br /> berorganisasi yang
+            luar biasa.
           </h1>
-          <p className="text-orange-300 mt-2 font-semibold">
-            #LoremIpsumDolorSitAmet
+          <p className="text-1xl md:text-2xl text-orange-300  mt-2 font-semibold">
+            #NaeemaDKMParamadina
           </p>
-          <div className="mt-6 flex justify-center gap-4">
-            <button className="bg-[#0066FF] px-8 py-2 rounded-full hover:bg-blue-700">
-              Lorem Ipsum
-            </button>
-            <button className="text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-full hover:bg-[#0066FF] hover:text-white transition">
-              Lorem Ipsum
-            </button>
+          <div className="mt-6 md:mt-12 flex flex-col md:flex-row justify-center gap-4">
+            <Link href="#lihatselengkapnya">
+              <button className="bg-[#0066FF] px-8 py-2 rounded-full hover:bg-blue-700 w-full md:w-auto">
+                Lihat Selengkapnya
+              </button>
+            </Link>
+            <Link href="/tentang-kami">
+              <button className="text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-full hover:bg-[#0066FF] hover:text-white transition w-full md:w-auto">
+                Tentang Kami
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -90,15 +130,22 @@ export default function Home() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         className="py-12 text-center px-4 z-20"
+        id="lihatselengkapnya"
       >
-        <h2 className="text-4xl font-bold text-[#0066FF] mb-4">Lorem Ipsum</h2>
+        <h2 className="text-2xl lg:text-4xl font-bold text-[#0066FF] mb-4">
+          Selamat Datang di Naeema DKM Paramadina
+        </h2>
         <p className="max-w-5xl mx-auto text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident.
+          DKM Paramadina adalah organisasi kerohanian Islam yang menjadi wadah
+          bagi mahasiswa untuk memperdalam nilai-nilai Islam, memperkuat
+          solidaritas antar civitas kampus dan mewujudkan Islam sebagai rahmat
+          bagi seluruh alam melalui program-program positif dan inspiratif.
+          Sebagai bagian dari Universitas Paramadina yang menjunjung tinggi
+          Islam inklusif, berkeadaban, dan berbasis akal sehat, DKM Paramadina
+          hadir dengan pendekatan dakwah yang moderat, terbuka terhadap dialog,
+          dan berpijak pada semangat keberagaman. Kami percaya bahwa Islam
+          adalah agama yang memuliakan ilmu, menjunjung keadilan dan mendorong
+          kemajuan umat.
         </p>
         <div className="my-5 mx-auto bg-[#0066FF] w-40 h-2 rounded-full"></div>
       </motion.section>
@@ -152,10 +199,7 @@ export default function Home() {
               <h1 className="font-semibold text-[#2C2F33] text-xl">
                 {divisi.title}
               </h1>
-              <p className="text-gray-500 text-sm mt-1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
-              </p>
+              <p className="text-gray-500 text-sm mt-1">{divisi.task}</p>
               <p className="text-xs text-[#0066FF] mt-6">
                 #NaeemaDKMParamadina
               </p>

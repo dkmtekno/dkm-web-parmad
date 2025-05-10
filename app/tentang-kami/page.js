@@ -44,16 +44,20 @@ export default function tentangKami() {
           transition={{ duration: 1 }}
           className="z-20 text-center text-white px-4 flex flex-col items-center"
         >
-          <h2 className="text-4xl font-bold text-[#0066FF] mb-4">
+          <h2 className="lg:text-6xl text-3xl font-bold text-[#0066FF] mb-4">
             Tentang Kami
           </h2>
           <p className="max-w-5xl text-gray-600 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident.
+            DKM Paramadina adalah organisasi kerohanian Islam yang menjadi wadah
+            bagi mahasiswa untuk memperdalam nilai-nilai Islam, memperkuat
+            solidaritas antar civitas kampus dan mewujudkan Islam sebagai rahmat
+            bagi seluruh alam melalui program-program positif dan inspiratif.
+            Sebagai bagian dari Universitas Paramadina yang menjunjung tinggi
+            Islam inklusif, berkeadaban, dan berbasis akal sehat, DKM Paramadina
+            hadir dengan pendekatan dakwah yang moderat, terbuka terhadap
+            dialog, dan berpijak pada semangat keberagaman. Kami percaya bahwa
+            Islam adalah agama yang memuliakan ilmu, menjunjung keadilan dan
+            mendorong kemajuan umat.
           </p>
           <img
             loading="lazy"
@@ -71,7 +75,7 @@ export default function tentangKami() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#DAE9FF] via-[#0066FF] to-[#DAE9FF] bg-clip-text text-transparent"
+          className="lg:text-5xl text-3xl font-bold mb-4 bg-gradient-to-r from-[#DAE9FF] via-[#0066FF] to-[#DAE9FF] bg-clip-text text-transparent"
         >
           Naeema DKM Paramadina
         </motion.h2>
@@ -83,12 +87,12 @@ export default function tentangKami() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto text-gray-600"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident.
+          Naeema memiliki konotasi positif yang sering dikaitkan dengan berkah,
+          kebaikan, kenyamanan atau kesenangan. Kabinet "Naeema" diharapkan
+          menjadi organisasi yang membawa rahmat dan manfaat, tidak hanya bagi
+          anggotanya tetapi juga bagi seluruh umat dan lingkungan sekitar.
+          Keberkahan bukan hanya tentang hasil, tetapi juga tentang proses yang
+          dilakukan dengan niat yang tulus dan cara yang benar.
         </motion.p>
         <div className="my-5 mx-auto bg-[#0066FF] w-40 h-2 rounded-full"></div>
       </section>

@@ -37,20 +37,20 @@ export default function divisiOrganisasi() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="mb-4 text-2xl font-bold !leading-snug text-gray-700 lg:text-4xl">
-            Lorem ipsum dolor sit amet
+          <h1 className="mb-4 text-1xl lg:text-2xl font-bold !leading-snug text-gray-700">
+            2025/2026
             <br />
-            <span className="text-[#0066FF]"> Lorem Ipsum</span>
+            <span className="text-[#0066FF] lg:text-6xl text-3xl"> Kabinet Naeema</span>
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            DKM Paramadina memiliki beberapa divisi yang saling bersinergi untuk
+            mewujudkan visi dan misi dakwah kampus. Setiap divisi memiliki peran
+            penting dalam menunjang kegiatan keislaman yang aktif, kreatif dan
+            berdampak.
           </p>
-          <Link href="/">
+          <Link href="#divisi">
             <button className="mt-6 bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700">
-              Lorem Ipsum
+              Lihat Selengkapnya
             </button>
           </Link>
         </motion.div>
@@ -73,6 +73,7 @@ export default function divisiOrganisasi() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
+        id="divisi"
       >
         <div className="max-w-6xl mx-auto lg:text-left text-center">
           <h3 className="text-[#0066FF] text-3xl font-bold">Ketum & Waketum</h3>
@@ -106,8 +107,8 @@ export default function divisiOrganisasi() {
         <div className="max-w-6xl mx-auto lg:text-left text-center">
           <h3 className="text-[#0066FF] text-3xl font-bold">Sekretaris</h3>
           <p className="text-gray-500 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Mengelola administrasi dan membantu memastikan kelancaran
+            operasional DKM.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
@@ -136,8 +137,8 @@ export default function divisiOrganisasi() {
         <div className="max-w-6xl mx-auto lg:text-left text-center">
           <h3 className="text-[#0066FF] text-3xl font-bold">Bendahara</h3>
           <p className="text-gray-500 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Mengelola keuangan DKM, termasuk pengelolaan anggaran, pengeluaran
+            DKM.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto lg:mx-0"></div>
         </div>
@@ -165,8 +166,10 @@ export default function divisiOrganisasi() {
         <div className="max-w-6xl mx-auto lg:text-left text-center">
           <h3 className="text-[#0066FF] text-3xl font-bold">Kajian & Dakwah</h3>
           <p className="text-gray-500 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Mengadakan dan mengelola kajian rutin, mengembangkan konsep dan
+            jadwal kegiatan kajian dan dakwah sesuai kebutuhan, membentuk dan
+            memfasilitasi komunitas penghafal Al-Quran dan menyediakan bimbingan
+            terkait keagamaan di DKM Paramadina.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
@@ -245,8 +248,8 @@ export default function divisiOrganisasi() {
             Hubungan Masyarakat
           </h3>
           <p className="text-gray-500 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Menjalin hubungan baik dengan publik dan media, serta mempromosikan
+            citra positif DKM di internal dan eksternal kampus Paramadina.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
@@ -338,8 +341,8 @@ export default function divisiOrganisasi() {
         <div className="max-w-6xl mx-auto text-center lg:text-left">
           <h3 className="text-[#0066FF] text-3xl font-bold">Human Resource</h3>
           <p className="text-gray-500 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Mengelola sumber daya manusia DKM termasuk pengembangan dan
+            pengelolaan anggota serta mengadakan kegiatan PHBI.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
@@ -388,8 +391,8 @@ export default function divisiOrganisasi() {
             Produksi Kreatif
           </h3>
           <p className="text-gray-500 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Mengembangkan konsep dan ide kreatif untuk DKM, termasuk desain,
+            pembuatan dan editing video, serta strategi branding.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
@@ -439,8 +442,9 @@ export default function divisiOrganisasi() {
         <div className="max-w-6xl mx-auto text-center lg:text-left">
           <h3 className="text-[#0066FF] text-3xl font-bold">Teknologi</h3>
           <p className="text-gray-500 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Mengelola dan mengembangkan teknologi informasi dan sistem yang
+            digunakan DKM, meliputi perancangan, pengembangan, dan pemeliharaan
+            sistem teknologi informasi.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
