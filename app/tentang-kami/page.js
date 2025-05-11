@@ -47,7 +47,7 @@ export default function tentangKami() {
           <h2 className="lg:text-6xl text-3xl font-bold text-[#0066FF] mb-4">
             Tentang Kami
           </h2>
-          <p className="max-w-5xl text-gray-600 mb-6">
+          <p className="max-w-6xl text-gray-600 mb-6">
             DKM Paramadina adalah organisasi kerohanian Islam yang menjadi wadah
             bagi mahasiswa untuk memperdalam nilai-nilai Islam, memperkuat
             solidaritas antar civitas kampus dan mewujudkan Islam sebagai rahmat

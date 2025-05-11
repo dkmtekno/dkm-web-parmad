@@ -101,21 +101,21 @@ export default function Home() {
 
         {/* Konten tengah */}
         <div className="z-20 text-center text-white px-4">
-          <h1 className="text-2xl md:text-5xl font-bold">
-            Bergabung bersama DKM, raih pengalaman <br /> berorganisasi yang
+          <h1 className="text-2xl md:text-5xl font-bold mx-0 lg:mx-12">
+            Bergabung bersama DKM, raih pengalaman berorganisasi yang
             luar biasa.
           </h1>
           <p className="text-1xl md:text-2xl text-orange-300  mt-2 font-semibold">
             #NaeemaDKMParamadina
           </p>
-          <div className="mt-6 md:mt-12 flex flex-col md:flex-row justify-center gap-4">
+          <div className="mt-6 md:mt-12 flex flex-col md:flex-row mx-auto items-center justify-center gap-4">
             <Link href="#lihatselengkapnya">
-              <button className="bg-[#0066FF] px-8 py-2 rounded-full hover:bg-blue-700 w-full md:w-auto">
+              <button className="bg-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-blue-700 w-full md:w-auto">
                 Lihat Selengkapnya
               </button>
             </Link>
             <Link href="/tentang-kami">
-              <button className="text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-full hover:bg-[#0066FF] hover:text-white transition w-full md:w-auto">
+              <button className="text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-[#0066FF] hover:text-white transition w-full md:w-auto">
                 Tentang Kami
               </button>
             </Link>

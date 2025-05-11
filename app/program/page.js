@@ -37,9 +37,9 @@ export default function Program() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <div className="mt-6 flex gap-4">
+          <div className="mt-6 md:mt-12 flex flex-col md:flex-row gap-4">
             <Link href="#program">
-              <button className="bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700">
+              <button className="bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700 w-full md:w-auto">
                 Lihat Selengkapnya
               </button>
             </Link>
@@ -47,7 +47,7 @@ export default function Program() {
               href="https://docs.google.com/document/d/1o8zyKVDxZqfVq7MqUxFpd97i5EXUrkPKy1NPBVJa8kc/edit?usp=sharing"
               target="_blank"
             >
-              <button className="flex items-center text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-[#0066FF] hover:text-white transition">
+              <button className="flex items-center justify-center text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-[#0066FF] w-full md:w-auto hover:text-white transition">
                 <FaDownload className="pr-2 text-2xl" /> Unduh Program Naeema
               </button>
             </Link>
@@ -66,7 +66,10 @@ export default function Program() {
         />
       </section>
 
-      <section className="py-12 text-center lg:text-left px-4 lg:px-0" id="program">
+      <section
+        className="py-12 text-center lg:text-left px-4 lg:px-0"
+        id="program"
+      >
         <div className="max-w-6xl mx-auto">
           <motion.h3
             initial={{ opacity: 0, x: -50 }}
@@ -123,7 +126,7 @@ export default function Program() {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <button className="bg-[#0066FF] px-6 py-2 rounded-[12px] hover:bg-blue-700">
+            <button className="bg-[#0066FF] px-6 py-2 rounded-[12px] text-white hover:bg-blue-700">
               Lihat selengkapnya
             </button>
           </motion.div>
