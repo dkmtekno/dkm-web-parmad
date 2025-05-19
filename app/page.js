@@ -4,12 +4,35 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+function TestimonialCard({ name }) {
+  return (
+    <motion.div
+      className="min-w-[260px] bg-white p-6 rounded-2xl"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="flex items-center">
+        <img src="/user.png" width="40" height="40" loading="lazy" />
+        <div className="mt-2 mb-3 ms-2 flex flex-col justify-center">
+          <h5 className="font-bold text-[#0066FF]">{name}</h5>
+          <p className="text-gray-400 text-xs">Lorem ipsum</p>
+        </div>
+      </div>
+      <p className="text-gray-600 text-sm">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+      </p>
+    </motion.div>
+  );
+}
+
 export default function Home() {
   const divisiList = [
     {
       title: "Ketum & Waketum",
       icon: "/ketum_waketum.png",
-      task: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      task: "Pemimpin organisasi yang bertanggung jawab mengarahkan kebijakan, mengelola operasional dan memastikan seluruh program berjalan selaras dengan visi dakwah kampus.",
     },
     {
       title: "Sekretaris",
@@ -29,7 +52,7 @@ export default function Home() {
     {
       title: "Kajian & Dakwah",
       icon: "/kajian_dakwah.png",
-      task: "Mengadakan dan mengelola kajian rutin, mengembangkan konsep dan jadwal kegiatan kajian dan dakwah sesuai kebutuhan, membentuk dan memfasilitasi komunitas penghafal Al-Quran dan menyediakan bimbingan terkait keagamaan di DKM Paramadina",
+      task: "Mengadakan dan mengelola kajian rutin, mengembangkan konsep dan jadwal kegiatan kajian dan dakwah sesuai kebutuhan, membentuk dan memfasilitasi komunitas penghafal Al-Quran dan menyediakan bimbingan terkait keagamaan di DKM Paramadina.",
     },
     {
       title: "Teknologi",
@@ -49,7 +72,7 @@ export default function Home() {
     {
       title: "Badan Pengawas",
       icon: "/bpo.png",
-      task: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      task: "Badan Pengawas adalah elemen struktural dalam DKM yang berfungsi untuk memastikan seluruh kegiatan organisasi berjalan sesuai prinsip, visi dan aturan organisasi, serta berperan sebagai pengontrol internal.",
     },
   ];
 
@@ -102,8 +125,8 @@ export default function Home() {
         {/* Konten tengah */}
         <div className="z-20 text-center text-white px-4">
           <h1 className="text-2xl md:text-5xl font-bold mx-0 lg:mx-12">
-            Bergabung bersama DKM, raih pengalaman berorganisasi yang
-            luar biasa.
+            Bergabung bersama DKM, raih pengalaman berorganisasi yang luar
+            biasa.
           </h1>
           <p className="text-1xl md:text-2xl text-orange-300  mt-2 font-semibold">
             #NaeemaDKMParamadina
@@ -220,86 +243,52 @@ export default function Home() {
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-6 lg:mx-0"></div>
         </div>
+
         <div className="space-y-10 py-10 bg-blue-50">
           {/* ANIMASI KE KIRI */}
           <div className="overflow-hidden group relative">
             <div className="flex w-[200%] animate-left-marquee group-hover:[animation-play-state:paused] gap-6">
-              {[...Array(2)].map((_, idx) => (
-                <div
-                  key={idx}
-                  className={`flex ${idx === 1 ? "pr-6" : ""} gap-6`}
-                >
-                  {[1, 2, 3, 4, 5, 6].map((num) => (
-                    <motion.div
-                      key={`atas-${idx}-${num}`}
-                      // transition-transform duration-300 hover:scale-105 hover:bg-gray-100
-                      className="min-w-[260px] bg-white p-6 rounded-2xl"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: num * 0.1 }}
-                    >
-                      <div className="flex items-center">
-                        <img src="/user.png" width="40" height="40" />
-                        <div className="mt-2 mb-3 ms-2 flex flex-col justify-center">
-                          <h5 className="font-bold text-[#0066FF]">Hamutra</h5>
-                          <p className="text-gray-400 text-xs">Lorem ipsum</p>
-                        </div>
-                      </div>
-
-                      <p className="text-gray-600 text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit...
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              ))}
+              <div className="flex gap-6">
+                <TestimonialCard key="t1" name="Hamutra" />
+                <TestimonialCard key="t2" name="Budi" />
+                <TestimonialCard key="t3" name="Siti" />
+                <TestimonialCard key="t4" name="Andi" />
+                <TestimonialCard key="t5" name="Rani" />
+                <TestimonialCard key="t6" name="Dewi" />
+              </div>
+              <div className="flex gap-6 pr-6">
+                <TestimonialCard key="t7" name="Hamutra" />
+                <TestimonialCard key="t8" name="Budi" />
+                <TestimonialCard key="t9" name="Siti" />
+                <TestimonialCard key="t10" name="Andi" />
+                <TestimonialCard key="t11" name="Rani" />
+                <TestimonialCard key="t12" name="Dewi" />
+              </div>
             </div>
           </div>
 
           {/* ANIMASI KE KANAN */}
           <div className="overflow-hidden group relative">
             <div className="flex w-[200%] animate-right-marquee group-hover:[animation-play-state:paused] gap-6">
-              {[...Array(2)].map((_, idx) => (
-                <div
-                  key={idx}
-                  className={`flex ${idx === 1 ? "pr-6" : ""} gap-6`}
-                >
-                  {[1, 2, 3, 4, 5, 6].map((num) => (
-                    <motion.div
-                      key={`bawah-${idx}-${num}`}
-                      // transition-transform duration-300 hover:scale-105 hover:bg-gray-100
-                      className="min-w-[260px] bg-white p-6 rounded-2xl"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: num * 0.1 }}
-                    >
-                      <div className="flex items-center">
-                        <img
-                          src="/user.png"
-                          width="40"
-                          height="40"
-                          loading="lazy"
-                        />
-                        <div className="mt-2 mb-3 ms-2 flex flex-col justify-center">
-                          <h5 className="font-bold text-[#0066FF]">Hamutra</h5>
-                          <p className="text-gray-400 text-xs">Lorem ipsum</p>
-                        </div>
-                      </div>
-                      <p className="text-gray-600 text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit...
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              ))}
+              <div className="flex gap-6">
+                <TestimonialCard key="t13" name="Rio" />
+                <TestimonialCard key="t14" name="Nina" />
+                <TestimonialCard key="t15" name="Zaki" />
+                <TestimonialCard key="t16" name="Lia" />
+                <TestimonialCard key="t17" name="Tomo" />
+                <TestimonialCard key="t18" name="Dina" />
+              </div>
+              <div className="flex gap-6 pr-6">
+                <TestimonialCard key="t19" name="Rio" />
+                <TestimonialCard key="t20" name="Nina" />
+                <TestimonialCard key="t21" name="Zaki" />
+                <TestimonialCard key="t22" name="Lia" />
+                <TestimonialCard key="t23" name="Tomo" />
+                <TestimonialCard key="t24" name="Dina" />
+              </div>
             </div>
           </div>
 
-          {/* Tambahkan style animasi */}
           <style jsx>{`
             @keyframes left-marquee {
               0% {
@@ -385,37 +374,140 @@ export default function Home() {
           Frequently Asked Questions
         </h4>
         <div className="space-y-2 max-w-4xl mx-auto">
-          {[...Array(5)].map((_, i) => (
-            <div key={i} className="bg-[#DAE9FF] rounded-[12px]">
-              <div
-                onClick={() => toggle(i)}
-                className="flex justify-between items-center px-6 py-4 cursor-pointer"
-              >
-                <span className="text-[#0066FF] font-medium">
-                  Lorem Ipsum Dolor Sit Amet
-                </span>
-                <img
-                  loading="lazy"
-                  src="/arrow_bottom.png"
-                  width="14"
-                  height="14"
-                  className={`transition-transform duration-300 ${
-                    openIndex === i ? "rotate-180" : ""
-                  }`}
-                  alt="arrow"
-                />
-              </div>
-
-              {openIndex === i && (
-                <div className="px-6 pb-4 text-sm text-gray-700 animate-fadein">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-              )}
+          <div className="bg-[#DAE9FF] rounded-[12px]">
+            <div
+              onClick={() => toggle(0)}
+              className="flex justify-between items-center px-6 py-4 cursor-pointer"
+            >
+              <span className="text-[#0066FF] font-medium">
+                Bagaimana cara bergabung dengan DKM?
+              </span>
+              <img
+                loading="lazy"
+                src="/arrow_bottom.png"
+                width="14"
+                height="14"
+                className={`transition-transform duration-300 ${
+                  openIndex === 0 ? "rotate-180" : ""
+                }`}
+                alt="arrow"
+              />
             </div>
-          ))}
+            {openIndex === 0 && (
+              <div className="px-6 pb-4 text-sm text-gray-700 animate-fadein">
+                DKM membuka pendaftaran kepengurusan secara terbuka dimulai dari
+                OKUP Day dan informasinya diumumkan di media sosial resmi.
+              </div>
+            )}
+          </div>
+
+          <div className="bg-[#DAE9FF] rounded-[12px]">
+            <div
+              onClick={() => toggle(1)}
+              className="flex justify-between items-center px-6 py-4 cursor-pointer"
+            >
+              <span className="text-[#0066FF] font-medium">
+                Apakah DKM hanya fokus pada kegiatan keagamaan?
+              </span>
+              <img
+                loading="lazy"
+                src="/arrow_bottom.png"
+                width="14"
+                height="14"
+                className={`transition-transform duration-300 ${
+                  openIndex === 1 ? "rotate-180" : ""
+                }`}
+                alt="arrow"
+              />
+            </div>
+            {openIndex === 1 && (
+              <div className="px-6 pb-4 text-sm text-gray-700 animate-fadein">
+                Tidak. DKM juga aktif dalam kegiatan sosial, kemanusiaan, serta
+                pembangunan karakter dan kepemimpinan Islami.
+              </div>
+            )}
+          </div>
+
+          <div className="bg-[#DAE9FF] rounded-[12px]">
+            <div
+              onClick={() => toggle(2)}
+              className="flex justify-between items-center px-6 py-4 cursor-pointer"
+            >
+              <span className="text-[#0066FF] font-medium">
+                Apakah kegiatan DKM terbuka untuk umum?
+              </span>
+              <img
+                loading="lazy"
+                src="/arrow_bottom.png"
+                width="14"
+                height="14"
+                className={`transition-transform duration-300 ${
+                  openIndex === 2 ? "rotate-180" : ""
+                }`}
+                alt="arrow"
+              />
+            </div>
+            {openIndex === 2 && (
+              <div className="px-6 pb-4 text-sm text-gray-700 animate-fadein">
+                Ya, sebagian besar kegiatan DKM terbuka untuk umum, baik
+                mahasiswa Paramadina maupun luar kampus.
+              </div>
+            )}
+          </div>
+
+          <div className="bg-[#DAE9FF] rounded-[12px]">
+            <div
+              onClick={() => toggle(3)}
+              className="flex justify-between items-center px-6 py-4 cursor-pointer"
+            >
+              <span className="text-[#0066FF] font-medium">
+                Bagaimana cara mengetahui jadwal kajian DKM?
+              </span>
+              <img
+                loading="lazy"
+                src="/arrow_bottom.png"
+                width="14"
+                height="14"
+                className={`transition-transform duration-300 ${
+                  openIndex === 3 ? "rotate-180" : ""
+                }`}
+                alt="arrow"
+              />
+            </div>
+            {openIndex === 3 && (
+              <div className="px-6 pb-4 text-sm text-gray-700 animate-fadein">
+                Jadwal kajian DKM biasanya diumumkan melalui Instagram resmi dan
+                grup WhatsApp DKM.
+              </div>
+            )}
+          </div>
+
+          <div className="bg-[#DAE9FF] rounded-[12px]">
+            <div
+              onClick={() => toggle(4)}
+              className="flex justify-between items-center px-6 py-4 cursor-pointer"
+            >
+              <span className="text-[#0066FF] font-medium">
+                Siapa yang bisa menjadi pengurus DKM?
+              </span>
+              <img
+                loading="lazy"
+                src="/arrow_bottom.png"
+                width="14"
+                height="14"
+                className={`transition-transform duration-300 ${
+                  openIndex === 4 ? "rotate-180" : ""
+                }`}
+                alt="arrow"
+              />
+            </div>
+            {openIndex === 4 && (
+              <div className="px-6 pb-4 text-sm text-gray-700 animate-fadein">
+                Mahasiswa aktif Universitas Paramadina yang memiliki semangat
+                berdakwah dan kontribusi positif bisa menjadi pengurus DKM.
+              </div>
+            )}
+          </div>
 
           {/* Tambahkan animasi masuk */}
           <style jsx>{`
