@@ -88,11 +88,15 @@ export default function divisiOrganisasi() {
             name="Muhammad Syalki"
             subtitle="Ketua Umum DKM Paramadina"
             imageUrl="/syalki.png"
+            instagramUrl={"muhammadsyalki"}
+            tiktokUrl={"muhammadsyalki"}
+            linkedinUrl={""}
           />
           <ProfileCard
             name="Nur'izzah Syakaromansyah"
             subtitle="Wakil Ketua Umum DKM Paramadina"
             imageUrl="/syaka.png"
+            instagramUrl={"syakaromansyh"}
           />
         </div>
       </motion.section>
@@ -117,12 +121,14 @@ export default function divisiOrganisasi() {
             name="Ahmad Maulana"
             subtitle="Sekretaris I"
             imageUrl="/alan.png"
+            instagramUrl={"lanslogy"}
           />
 
           <ProfileCard
             name="Farida Maimunah"
             subtitle="Sekretaris II"
             imageUrl="/faridah.png"
+            instagramUrl={"faridam12_"}
           />
         </div>
       </motion.section>
@@ -147,11 +153,13 @@ export default function divisiOrganisasi() {
             name="Sofia Nuril Fairuzi"
             subtitle="Bendahara I"
             imageUrl="/sofia.png"
+            instagramUrl={"sofianurilfrzi"}
           />
           <ProfileCard
             name="Ratu Islam Al-Kautsar"
             subtitle="Bendahara II"
             imageUrl="/ratu.png"
+            instagramUrl={"ratuuktsrr"}
           />
         </div>
       </motion.section>
@@ -178,66 +186,85 @@ export default function divisiOrganisasi() {
             name="Novita Fitri Apriliana"
             subtitle="Kepala Divisi Kajian & Dakwah"
             imageUrl="/novita.png"
+            instagramUrl={"novitanfa_"}
           />
           <ProfileCard
             name="Adjie Putra Wijaya"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/adjie.png"
+            instagramUrl={"djiewy"}
           />
           <ProfileCard
             name="Muhammad Rayan Bramantyo"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/bram.png"
+            instagramUrl={"askingtheo"}
           />
           <ProfileCard
             name="Fathi Ainurabbani"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/fathi.png"
+            instagramUrl={"fathi.ainur"}
           />
           <ProfileCard
             name="Tubagus Arya"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/arya.png"
+            instagramUrl={"7.alqdry_"}
           />
           <ProfileCard
             name="Hasbin Najib"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/hasbi.png"
+            instagramUrl={"hahaasbinajib"}
           />
           <ProfileCard
             name="Muhammad Raihan Ramadhan"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/dhan.png"
+            instagramUrl={"mrhan.dhan"}
           />
           <ProfileCard
             name="Muhammad Elvan Rosyadi"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/elvan.png"
+            instagramUrl={"elvan_rosyadi"}
           />
           <ProfileCard
             name="Azmi Fairuz Habibi"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/azmi.png"
+            instagramUrl={"mi_fairuzh"}
           />
           <ProfileCard
             name="Hafizudin"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/hafiz.png"
+            instagramUrl={"hafizudin.1301"}
           />
           <ProfileCard
             name="Diaz Badrussalam"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/diaz.png"
+            instagramUrl={"yas_assalam"}
           />
           <ProfileCard
             name="Tsaqilah Azri"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/tsaqillah.png"
+            instagramUrl={"tsazri23"}
           />
           <ProfileCard
             name="Fayyaza Shofa Zakiyah"
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/shofa.png"
+            instagramUrl={"shopa.aa"}
+          />
+          <ProfileCard
+            name="Aufa Zuhada"
+            subtitle="Anggota Kajian & Dakwah"
+            imageUrl="/default_profile.png"
+            instagramUrl={"aufazh_"}
           />
         </div>
       </motion.section>
@@ -258,61 +285,76 @@ export default function divisiOrganisasi() {
             name="Aqila Irza Ghania"
             subtitle="Kepala Divisi Hubungan Masyarakat"
             imageUrl="/aqillah.png"
+            instagramUrl={"aqilairzag"}
           />
           <ProfileCard
             name="Osama Hisbullah"
             subtitle="Anggota Humas Internal"
             imageUrl="/osama.png"
+            instagramUrl={"mr_osem_3"}
           />
           <ProfileCard
             name="Nazwa Siti Fadhilah"
             subtitle="Anggota Humas Internal"
             imageUrl="/nazwa.png"
+            instagramUrl={"nazwasfadilah"}
           />
           <ProfileCard
             name="Rizki Aulia Ramadhani"
             subtitle="Anggota Humas Internal"
             imageUrl="/rizki.png"
+            instagramUrl={"llia.zk"}
           />
           <ProfileCard
             name="Rahmaisa Aulia"
             subtitle="Anggota Humas Internal"
             imageUrl="/rahma.png"
+            instagramUrl={"rrahmawl"}
           />
           <ProfileCard
             name="Sheiza Istiana Ashri"
             subtitle="Anggota Humas Internal"
             imageUrl="/sheiza.png"
+            instagramUrl={"caacaicaa_"}
           />
           <ProfileCard
             name="Ahmad Haikal Wahab"
             subtitle="Anggota Humas Eksternal"
             imageUrl="/haikal.png"
+            instagramUrl={"ahmdhaikal15"}
           />
           <ProfileCard
             name="Muhammad Valen Akmal Fatnadi"
             subtitle="Anggota Humas Eksternal"
             imageUrl="/valen.png"
+            instagramUrl={"mvalenaf"}
           />
           <ProfileCard
             name="Akmal Raudhi"
             subtitle="Anggota Humas Eksternal"
             imageUrl="/akmal.png"
+            instagramUrl={"akmalraudhi"}
+            tiktokUrl={"susumilkteaa"}
           />
           <ProfileCard
             name="Salma Benina"
             subtitle="Anggota Humas Eksternal"
             imageUrl="/salma.png"
+            instagramUrl={"sallmaao"}
           />
           <ProfileCard
             name="Sabrina Shafa Salsabila"
             subtitle="Anggota Humas Eksternal"
             imageUrl="/shafa.png"
+            instagramUrl={"salssabrinas"}
+            tiktokUrl={"saltedcamellenak"}
           />
           <ProfileCard
             name="Willyan Afif"
             subtitle="Anggota Humas Eksternal"
             imageUrl="/willy.png"
+            instagramUrl={"willyanafif"}
+            tiktokUrl={"willynn_"}
           />
           <ProfileCard
             name="Syahrul Naufal Effendy"
@@ -323,6 +365,7 @@ export default function divisiOrganisasi() {
             name="Fathur Rizqie Saepudin Septrya"
             subtitle="Anggota Humas Eksternal"
             imageUrl="/default_profile.png"
+            instagramUrl={"fathrzqie"}
           />
         </div>
       </section>
@@ -351,36 +394,43 @@ export default function divisiOrganisasi() {
             name="Destria Maharani"
             subtitle="Kepala Divisi Human Resource"
             imageUrl="/destria.png"
+            instagramUrl={"dstr.mhrni"}
           />
           <ProfileCard
             name="Alifvia Mandalika"
             subtitle="Anggota Human Resource"
             imageUrl="/alifvia.png"
+            instagramUrl={"813vy"}
           />
           <ProfileCard
             name="Muhammad Afif Ardiansyah"
             subtitle="Anggota Human Resource"
             imageUrl="/ardian.png"
+            instagramUrl={"aarrdiiann_"}
           />
           <ProfileCard
             name="Fadil Rizky Hapta"
             subtitle="Anggota Human Resource"
             imageUrl="/fadil.png"
+            instagramUrl={"rzhpt_"}
           />
           <ProfileCard
             name="Aulia Puspa Negara"
             subtitle="Anggota Human Resource"
             imageUrl="/puspa.png"
+            instagramUrl={"puspa_595"}
           />
           <ProfileCard
             name="Suci Ramadhani"
             subtitle="Anggota Human Resource"
             imageUrl="/suci.png"
+            instagramUrl={"_vbsuciwa"}
           />
           <ProfileCard
             name="Fadelia Nabila Aisyah Putri"
             subtitle="Anggota Human Resource"
             imageUrl="/fadel.png"
+            instagramUrl={"usala.fiyah"}
           />
         </div>
       </section>
@@ -401,31 +451,37 @@ export default function divisiOrganisasi() {
             name="Muhammad Ariel Dien"
             subtitle="Kepala Divisi Digital"
             imageUrl="/ariel.png"
+            instagramUrl={"dienariel"}
           />
           <ProfileCard
             name="Muhammad Rafiq Mizan"
             subtitle="Anggota Produksi Kreatif"
             imageUrl="/mizan.png"
+            instagramUrl={"rafiq_mizan"}
           />
           <ProfileCard
             name="Muhammad Farhan"
             subtitle="Anggota Produksi Kreatif"
             imageUrl="/farhan.png"
+            instagramUrl={"mf_habsyi"}
           />
           <ProfileCard
             name="Hilya Aufa Mufida"
             subtitle="Anggota Produksi Kreatif"
             imageUrl="/hilya.png"
+            instagramUrl={"hlyyyaaah"}
           />
           <ProfileCard
             name="Gde Reval Ariefa Antariksa"
             subtitle="Anggota Produksi Kreatif"
             imageUrl="/reval.png"
+            instagramUrl={"gde.reval"}
           />
           <ProfileCard
             name="Aldi Muhammad Fadhilah"
             subtitle="Anggota Produksi Kreatif"
             imageUrl="/aldi.png"
+            instagramUrl={"aldimfadh_"}
           />
         </div>
       </section>
@@ -453,26 +509,31 @@ export default function divisiOrganisasi() {
             name="Muhammad Ariel Dien"
             subtitle="Kepala Divisi Digital"
             imageUrl="/ariel.png"
+            instagramUrl={"dienariel"}
           />
           <ProfileCard
             name="Ilham Saputra"
             subtitle="Anggota Teknologi"
             imageUrl="/ilham.png"
+            instagramUrl={"_ilham.spt"}
           />
           <ProfileCard
             name="Akmal Abdiel Dewa Mutawakkil"
             subtitle="Anggota Teknologi"
             imageUrl="/abdiel.png"
+            instagramUrl={"akmal_abdiel"}
           />
           <ProfileCard
             name="Fadhil Husein"
             subtitle="Anggota Teknologi"
             imageUrl="/husein.png"
+            instagramUrl={"fadhilhusein"}
           />
           <ProfileCard
             name="Fauziah Nurulfarhi"
             subtitle="Anggota Teknologi"
             imageUrl="/uzi.png"
+            instagramUrl={"fziahnrll"}
           />
         </div>
       </section>

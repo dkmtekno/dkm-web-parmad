@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-function TestimonialCard({ name }) {
+function TestimonialCard({ name, prodi, testimoni }) {
   return (
     <motion.div
       className="min-w-[260px] bg-white p-6 rounded-2xl"
@@ -17,12 +17,10 @@ function TestimonialCard({ name }) {
         <img src="/user.png" width="40" height="40" loading="lazy" />
         <div className="mt-2 mb-3 ms-2 flex flex-col justify-center">
           <h5 className="font-bold text-[#0066FF]">{name}</h5>
-          <p className="text-gray-400 text-xs">Lorem ipsum</p>
+          <p className="text-gray-400 text-xs">{prodi}</p>
         </div>
       </div>
-      <p className="text-gray-600 text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-      </p>
+      <p className="text-gray-600 text-sm">{testimoni}</p>
     </motion.div>
   );
 }
@@ -249,20 +247,80 @@ export default function Home() {
           <div className="overflow-hidden group relative">
             <div className="flex w-[200%] animate-left-marquee group-hover:[animation-play-state:paused] gap-6">
               <div className="flex gap-6">
-                <TestimonialCard key="t1" name="Hamutra" />
-                <TestimonialCard key="t2" name="Budi" />
-                <TestimonialCard key="t3" name="Siti" />
-                <TestimonialCard key="t4" name="Andi" />
-                <TestimonialCard key="t5" name="Rani" />
-                <TestimonialCard key="t6" name="Dewi" />
+                <TestimonialCard
+                  key="t1"
+                  name="Fayyaza Shofa Zakiyah"
+                  prodi="Psikologi 2023"
+                  testimoni="aku merasa nyaman dan lebih santai dari beberapa proker yang diadakan dan yang aku ikuti juga membantu aku lebih produktif dan sambil belajar. Terima Kasih DKM 🫶🏻"
+                />
+                <TestimonialCard
+                  key="t2"
+                  name="Karisya Alya Husna"
+                  prodi="Psikologi 2023"
+                  testimoni=" Selain menambah ilmu, kegiatan ini juga jadi ajang silaturahmi antar mahasiswa. Mungkin kedepannya bisa lebih aktif lagi dalam promosi biar makin banyak yang ikut dan terlibat langsung."
+                />
+                <TestimonialCard
+                  key="t3"
+                  name="Aqila Irza Ghania"
+                  prodi="Psikologi 2023"
+                  testimoni="menurutku DKM bukan sekedar organisasi, but it's also a space for me to grow, learn and find my second family 🥹🤍✨"
+                />
+                <TestimonialCard
+                  key="t4"
+                  name="Ahmad Maulana"
+                  prodi="Manajemen 2024"
+                  testimoni="selain seru, bisa jadi wadah mengasah berbagai skill"
+                />
+                <TestimonialCard
+                  key="t5"
+                  name="Nur’izzah Syakaromansyah"
+                  prodi="Psikologi 2023"
+                  testimoni="proker dkm banyak yang makin fresh, semoga orang-orang di dalamnya bisa bertumbuh lebih baik juga"
+                />
+                <TestimonialCard
+                  key="t6"
+                  name="Nadya Isma Radhiani"
+                  prodi="Psikologi 2022"
+                  testimoni="DKM kekeluargaannya dapet banget si, dan wadah yang cocok untuk kalian tumbuh dan mengembangkan skill yang kalian punya 🤗.. Sekali masuk DKM, dijamin kamu akan tercandu², xixixi"
+                />
               </div>
               <div className="flex gap-6 pr-6">
-                <TestimonialCard key="t7" name="Hamutra" />
-                <TestimonialCard key="t8" name="Budi" />
-                <TestimonialCard key="t9" name="Siti" />
-                <TestimonialCard key="t10" name="Andi" />
-                <TestimonialCard key="t11" name="Rani" />
-                <TestimonialCard key="t12" name="Dewi" />
+                <TestimonialCard
+                  key="t7"
+                  name="Destria Maharani"
+                  prodi="Psikologi 2023"
+                  testimoni="DKM bener-bener jadi tempat buat rehat dari segala kepusingan duniawi di perkuliahan😻kehangatan yang ada didalamnya bikin sadar kalo ini ternyata bukan sekedar organisasi tapi jadi keluargaa🥺"
+                />
+                <TestimonialCard
+                  key="t8"
+                  name="Novita Fitri Apriliana"
+                  prodi="Psikologi 2023"
+                  testimoni="Sebagai alumni pesantren, Seneng karena di DKM tuh aku merasa semua orang punya tempat, semua suara dihargai, dan setiap kontribusi, besar atau kecilnya, berarti 🥹🤍"
+                />
+                <TestimonialCard
+                  key="t9"
+                  name="Ratu Islam Al-Kautsar"
+                  prodi="Ilmu Komunikasi 2024"
+                  testimoni="gapernah nyesel buat gabung di DKM, ternyata banyak hal kecil yg dilakuin tapi berdampak besar buat sekitar"
+                />
+                <TestimonialCard
+                  key="t10"
+                  name="Farida Maimunah"
+                  prodi="Desain Produk 2024"
+                  testimoni="Dkm ini sangat seruuu, banyak kegiatan menarik juga tapi ga keluar dari batasan agama."
+                />
+                <TestimonialCard
+                  key="t11"
+                  name="Salma Benina"
+                  prodi="Psikologi 2023"
+                  testimoni="saya merasa sangat senang dapat bergabung dengan DKM Paramadina di tahun ini. Dari organisasi ini, saya mendapat banyak teman, pengalaman, dan berbagai macam sudut pandang yang menarik untuk dipelajari lebih dalam. DKM bukan hanya tempat berorganisasi, tetapi juga tempat tumbuh baik secara spiritual maupun sosial."
+                />
+                <TestimonialCard
+                  key="t12"
+                  name="Sofia Nuril Fairuzi"
+                  prodi="Psikologi 2023"
+                  testimoni="It was such a fun experience being part of DKM. I met new people, learned a lot of things, and grew through every challenge we faced together🥹🤍"
+                />
               </div>
             </div>
           </div>
@@ -271,20 +329,80 @@ export default function Home() {
           <div className="overflow-hidden group relative">
             <div className="flex w-[200%] animate-right-marquee group-hover:[animation-play-state:paused] gap-6">
               <div className="flex gap-6">
-                <TestimonialCard key="t13" name="Rio" />
-                <TestimonialCard key="t14" name="Nina" />
-                <TestimonialCard key="t15" name="Zaki" />
-                <TestimonialCard key="t16" name="Lia" />
-                <TestimonialCard key="t17" name="Tomo" />
-                <TestimonialCard key="t18" name="Dina" />
+                <TestimonialCard
+                  key="t13"
+                  name="Rio"
+                  prodi="teknik"
+                  testimoni="lorem ipsum"
+                />
+                <TestimonialCard
+                  key="t14"
+                  name="Nina"
+                  prodi="teknik"
+                  testimoni="lorem ipsum"
+                />
+                <TestimonialCard
+                  key="t15"
+                  name="Zaki"
+                  prodi="teknik"
+                  testimoni="lorem ipsum"
+                />
+                <TestimonialCard
+                  key="t16"
+                  name="Lia"
+                  prodi="teknik"
+                  testimoni="lorem ipsum"
+                />
+                <TestimonialCard
+                  key="t17"
+                  name="Tomo"
+                  prodi="teknik"
+                  testimoni="lorem ipsum"
+                />
+                <TestimonialCard
+                  key="t18"
+                  name="Dina"
+                  prodi="teknik"
+                  testimoni="lorem ipsum"
+                />
               </div>
               <div className="flex gap-6 pr-6">
-                <TestimonialCard key="t19" name="Rio" />
-                <TestimonialCard key="t20" name="Nina" />
-                <TestimonialCard key="t21" name="Zaki" />
-                <TestimonialCard key="t22" name="Lia" />
-                <TestimonialCard key="t23" name="Tomo" />
-                <TestimonialCard key="t24" name="Dina" />
+                <TestimonialCard
+                  key="t19"
+                  name="Rio"
+                  prodi="teknik"
+                  testimoni="kontol"
+                />
+                <TestimonialCard
+                  key="t20"
+                  name="Nina"
+                  prodi="teknik"
+                  testimoni="kontol"
+                />
+                <TestimonialCard
+                  key="t21"
+                  name="Zaki"
+                  prodi="teknik"
+                  testimoni="kontol"
+                />
+                <TestimonialCard
+                  key="t22"
+                  name="Lia"
+                  prodi="teknik"
+                  testimoni="kontol"
+                />
+                <TestimonialCard
+                  key="t23"
+                  name="Tomo"
+                  prodi="teknik"
+                  testimoni="kontol"
+                />
+                <TestimonialCard
+                  key="t24"
+                  name="Dina"
+                  prodi="teknik"
+                  testimoni="kontol"
+                />
               </div>
             </div>
           </div>
