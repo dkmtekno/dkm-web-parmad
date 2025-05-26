@@ -5,7 +5,89 @@ import React, { useState } from "react";
 import { FaDownload, FaCalendar, FaMapPin, FaClock } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 export default function Program() {
+  const [page, setPage] = useState(1);
+
+  const dataPage1 = [
+    {
+      title: "Peringatan Isra Mi’raj",
+      desc: "Peringatan Isra Mi’raj DKM Paramadina: Kajian, hadroh, dan refleksi keimanan bersama.",
+      date: "21 Februari 2025",
+      time: "15.00 - 18.00 WIB",
+      location: "Aula Gedung TP Rachmat",
+    },
+    {
+      title: "Tayangan Konten Wawasan Islami",
+      desc: "Konten islami harian selama Ramadhan di Instagram DKM Paramadina.",
+      date: "28 Februari 2025 - 30 Maret 2025",
+      time: "13.00 - 15.00 WIB",
+      location: "Universitas Paramadina",
+    },
+    {
+      title: "Qur’an Menjelang Maghrib (QURMA)",
+      desc: "Tilawah bersama harian Ramadhan untuk khatam Al-Qur’an berjamaah tujuh juz.",
+      date: "28 Februari 2025 - 30 Maret 2025",
+      time: "15.30 - 17.00 WIB",
+      location: "Gedung A Selasar Lantai 3",
+    },
+    {
+      title: "Bedah Buku & Bukber DKM",
+      desc: "Bedah Buku & Buka Bersama: Pererat ukhuwah, kajian, tilawah, dan kebersamaan Ramadhan.",
+      date: "21 Maret 2025",
+      time: "16.00 - 20.00 WIB",
+      location: "Aula Gedung TP Rachmat",
+    },
+    {
+      title: "Konten PHBI",
+      desc: "Konten PHBI: Wawasan islami hari besar Islam dan nasional via Instagram.",
+      date: "Waktu fleksibel",
+      time: "13.00 - 15.00",
+      location: "Universitas Paramadina",
+    },
+    {
+      title: "Kajian Kitab Turats",
+      desc: "Diskusi bulanan kitab klasik Islam dengan pendekatan kontemporer kampus.",
+      date: "8 Mei 2025",
+      time: "18.15 - selesai",
+      location: "Ruangan Toledo Lantai 5",
+    },
+  ];
+
+  const dataPage2 = [
+    {
+      title: "Yaasiinan & Muhadoroh",
+      desc: "Yasinan dan Muhadoroh rutin Jumat malam, tingkatkan spiritual, ukhuwah, dan dakwah.",
+      date: "Setiap Malam Jum'at",
+      time: "Ba'da Maghrib",
+      location: "Universitas Paramadina",
+    },
+    {
+      title: "Qurban Idul Adha 1446 H",
+      desc: "Idul Adha: Makna ikhlas, pengorbanan, dan ketaatan Nabi Ibrahim-Ismail.",
+      date: "7 Juni 2025",
+      time: "09.00 - Selesai",
+      location: "Universitas Paramadina",
+    },
+  ];
+
+  const pageData = page === 1 ? dataPage1 : dataPage2;
+
   return (
     <main className="font-sans bg-[#F0F6FF] relative z-10">
       <img
@@ -92,50 +174,53 @@ export default function Program() {
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto lg:mx-0"></div>
         </div>
 
-        <motion.div
-          viewport={{ once: true }}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="py-12 flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10"
-        >
-          <motion.img
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            src="/program_qurban.png"
-            loading="lazy"
-            width="500"
-            height="500"
-            className="rounded-3xl lg:w-2/5"
-          />
+        <div className="max-w-6xl mx-auto mt-10">
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="w-full lg:w-1/2 text-center lg:text-left"
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            <h2 className="mt-4 text-2xl font-bold text-[#0066FF] lg:text-2xl">
-              Qurban Idul Adha 1446 H DKM Paramadina
-            </h2>
-            <p className="mb-6 mt-2 leading-relaxed text-gray-500">
-              Qurban Idul Adha 1446 H merupakan program tahunan DKM dalam rangka
-              Hari Raya Idul Adha yang bertujuan memfasilitasi mahasiswa dan
-              civitas akademika Paramadina untuk berkurban serta menyalurkannya
-              kepada yang membutuhkan. Yuk, jangan sia-siakan kesempatan emas
-              ini untuk mempersembahkan ibadah qurban terbaik kita hanya karena
-              Allah.
-            </p>
-            <p className="text-gray-600 mb-4">
-              Lihat selengkapnya di Instagram kami di{" "}
-              <Link href="https://www.instagram.com/dkmparamadina/">
-                <strong>@dkmparamadina</strong>
-              </Link>
-              .
-            </p>
+            {pageData.map((item, i) => (
+              <motion.div
+                key={i}
+                variants={itemVariants}
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300"
+              >
+                <h3 className="text-[#0066FF] font-bold text-lg mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-3">{item.desc}</p>
+                <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
+                  <FaCalendar className="text-[#0066FF]" /> {item.date}
+                </div>
+                <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
+                  <FaClock className="text-[#0066FF]" /> {item.time}
+                </div>
+                <div className="text-sm text-gray-500 flex items-center gap-2">
+                  <FaMapPin className="text-[#0066FF]" /> {item.location}
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
-        </motion.div>
+
+          {/* Pagination */}
+          <div className="flex justify-center mt-8 gap-2">
+            {[1, 2].map((num) => (
+              <button
+                key={num}
+                onClick={() => setPage(num)}
+                className={`w-9 h-9 flex items-center justify-center border rounded-full transition ${
+                  page === num
+                    ? "bg-[#0066FF] text-white border-[#0066FF]"
+                    : "text-[#0066FF] border-[#0066FF] hover:bg-[#0066FF] hover:text-white"
+                }`}
+              >
+                {num}
+              </button>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section
