@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function tentangKami() {
   const [openIndex, setOpenIndex] = useState(null);
