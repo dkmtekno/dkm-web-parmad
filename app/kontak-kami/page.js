@@ -26,16 +26,18 @@ export default function KontakKami() {
           viewport={{ once: true }}
           className="lg:w-1/2"
         >
-          <h1 className="mb-4 text-2xl font-bold !leading-snug text-gray-700 lg:text-4xl">
-            Lorem ipsum dolor sit amet
+          <h1 className="mb-4 text-1xl lg:text-2xl font-bold !leading-snug text-gray-700">
+            Naeema DKM Paramadina
             <br />
-            <span className="text-[#0066FF]"> Lorem Ipsum</span>
+            <span className="text-[#0066FF] lg:text-4xl text-3xl">
+              Siap Mendengar dan Membantu
+            </span>
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Kami dari Dewan Kemakmuran Masjid (DKM) Paramadina siap melayani
+            pertanyaan, masukan, maupun aspirasi dari civitas akademika
+            Universitas Paramadina. Baik seputar kegiatan keislaman, kajian,
+            donasi, hingga program sosial. Silakan hubungi kami kapan saja.
           </p>
           <div className="mt-6 flex gap-4">
             <button className="flex items-center gap-2 bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700">

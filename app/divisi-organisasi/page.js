@@ -40,7 +40,10 @@ export default function divisiOrganisasi() {
           <h1 className="mb-4 text-1xl lg:text-2xl font-bold !leading-snug text-gray-700">
             2025/2026
             <br />
-            <span className="text-[#0066FF] lg:text-6xl text-3xl"> Kabinet Naeema</span>
+            <span className="text-[#0066FF] lg:text-6xl text-3xl">
+              {" "}
+              Kabinet Naeema
+            </span>
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
             DKM Paramadina memiliki beberapa divisi yang saling bersinergi untuk
@@ -77,9 +80,10 @@ export default function divisiOrganisasi() {
       >
         <div className="max-w-6xl mx-auto lg:text-left text-center">
           <h3 className="text-[#0066FF] text-3xl font-bold">Ketum & Waketum</h3>
-          <p className="text-gray-500 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+          <p className="text-gray-500 text-sm mt-2 lg:w-4/5">
+            Pemimpin organisasi yang bertanggung jawab mengarahkan kebijakan,
+            mengelola operasional dan memastikan seluruh program berjalan
+            selaras dengan visi dakwah kampus.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
@@ -90,13 +94,14 @@ export default function divisiOrganisasi() {
             imageUrl="/syalki.png"
             instagramUrl={"muhammadsyalki"}
             tiktokUrl={"muhammadsyalki"}
-            linkedinUrl={""}
+            linkedinUrl={"muhammad-syalky-3aabb3277"}
           />
           <ProfileCard
             name="Nur'izzah Syakaromansyah"
             subtitle="Wakil Ketua Umum DKM Paramadina"
             imageUrl="/syaka.png"
             instagramUrl={"syakaromansyh"}
+            linkedinUrl={"nur-izzah-syakaromansyah-145392289"}
           />
         </div>
       </motion.section>
@@ -129,6 +134,7 @@ export default function divisiOrganisasi() {
             subtitle="Sekretaris II"
             imageUrl="/faridah.png"
             instagramUrl={"faridam12_"}
+            linkedinUrl={"farida-maimunah-141465252"}
           />
         </div>
       </motion.section>
@@ -154,6 +160,7 @@ export default function divisiOrganisasi() {
             subtitle="Bendahara I"
             imageUrl="/sofia.png"
             instagramUrl={"sofianurilfrzi"}
+            linkedinUrl={"sofia-nuril-fairuzi-60a1b4314"}
           />
           <ProfileCard
             name="Ratu Islam Al-Kautsar"
@@ -211,6 +218,7 @@ export default function divisiOrganisasi() {
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/arya.png"
             instagramUrl={"7.alqdry_"}
+            tiktokUrl={"tubagusaryahaidar"}
           />
           <ProfileCard
             name="Hasbin Najib"
@@ -286,6 +294,7 @@ export default function divisiOrganisasi() {
             subtitle="Kepala Divisi Hubungan Masyarakat"
             imageUrl="/aqillah.png"
             instagramUrl={"aqilairzag"}
+            linkedinUrl={"aqila-irza-ghania-20618a271"}
           />
           <ProfileCard
             name="Osama Hisbullah"
@@ -298,6 +307,7 @@ export default function divisiOrganisasi() {
             subtitle="Anggota Humas Internal"
             imageUrl="/nazwa.png"
             instagramUrl={"nazwasfadilah"}
+            linkedinUrl={"nazwa-f-b86a5a238"}
           />
           <ProfileCard
             name="Rizki Aulia Ramadhani"
