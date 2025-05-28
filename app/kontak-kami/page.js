@@ -8,6 +8,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import React from "react";
+import Link from "next/link";
 
 export default function KontakKami() {
   return (
@@ -34,16 +35,18 @@ export default function KontakKami() {
             </span>
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
-            Kami dari Dewan Kemakmuran Masjid (DKM) Paramadina siap melayani
+            Kami dari Dewan Keluarga Masjid (DKM) Paramadina siap melayani
             pertanyaan, masukan, maupun aspirasi dari civitas akademika
             Universitas Paramadina. Baik seputar kegiatan keislaman, kajian,
             donasi, hingga program sosial. Silakan hubungi kami kapan saja.
           </p>
           <div className="mt-6 flex gap-4">
-            <button className="flex items-center gap-2 bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700">
-              <FaWhatsapp className="text-white" />
-              Hubungi Whatsapp
-            </button>
+            <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
+              <button className="flex items-center gap-2 bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700">
+                <FaWhatsapp className="text-white" />
+                Hubungi Whatsapp
+              </button>
+            </Link>
           </div>
         </motion.div>
         <motion.img
@@ -69,9 +72,11 @@ export default function KontakKami() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
-        <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
-          Yuk Ikutan
-        </button>
+        <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
+          <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
+            Yuk Ikutan
+          </button>
+        </Link>
       </motion.section>
 
       <div className="relative z-10">

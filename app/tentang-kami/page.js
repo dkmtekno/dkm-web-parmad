@@ -124,15 +124,19 @@ export default function tentangKami() {
             Muhammad Syalky
           </h2>
           <p className="mt-2 mb-4 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident.
+            Syalky merupakan mahasiswa aktif Program Studi Ilmu Komunikasi
+            angkatan 2023 yang berpengalaman di berbagai organisasi kampus
+            maupun luar kampus. Sebagai Ketua Umum DKM Paramadina, ia bertugas
+            memimpin seluruh kegiatan organisasi, mengarahkan program strategis,
+            serta memastikan DKM hadir sebagai rumah dakwah yang ramah, terbuka
+            dan berdampak luas di lingkungan kampus.
           </p>
           <div className="flex gap-4 text-gray-600">
-            <a target="_blank" className="text-3xl">
+            <a
+              href="https://www.instagram.com/muhammadsyalki"
+              target="_blank"
+              className="text-3xl"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -146,7 +150,11 @@ export default function tentangKami() {
                 />
               </svg>
             </a>
-            <a target="_blank" className="text-3xl">
+            <a
+              href="https://www.tiktok.com/@muhammadsyalki"
+              target="_blank"
+              className="text-3xl"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -160,7 +168,11 @@ export default function tentangKami() {
                 />
               </svg>
             </a>
-            <a target="_blank" className="text-3xl">
+            <a
+              href="https://www.linkedin.com/in/muhammad-syalky-3aabb3277/"
+              target="_blank"
+              className="text-3xl"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -193,15 +205,19 @@ export default function tentangKami() {
             Nur'izzah Syakaromansyah
           </h2>
           <p className="mt-2 mb-4 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident.
+            Syaka merupakan mahasiswa aktif di Program Studi Psikologi angkatan
+            2023 yang berpengalaman di berbagai organisasi kampus maupun luar
+            kampus. Sebagai Wakil Ketua Umum, Syaka berperan dalam mengelola
+            operasional organisasi, mengkoordinasikan antar divisi, serta
+            menjaga keharmonisan kerja tim agar seluruh program berjalan efektif
+            dan selaras dengan nilai-nilai Islam.
           </p>
           <div className="flex justify-start lg:justify-end gap-4 text-gray-600">
-            <a target="_blank" className="text-3xl">
+            <a
+              href="https://www.instagram.com/syakaromansyh"
+              target="_blank"
+              className="text-3xl"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -215,7 +231,7 @@ export default function tentangKami() {
                 />
               </svg>
             </a>
-            <a target="_blank" className="text-3xl">
+            <a style={{ opacity: "0.3" }} target="_blank" className="text-3xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -229,7 +245,11 @@ export default function tentangKami() {
                 />
               </svg>
             </a>
-            <a target="_blank" className="text-3xl">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/nur-izzah-syakaromansyah-145392289/"
+              className="text-3xl"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -265,9 +285,11 @@ export default function tentangKami() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
-        <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
-          Yuk Ikutan
-        </button>
+        <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
+          <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
+            Yuk Ikutan
+          </button>
+        </Link>
       </motion.section>
 
       <div className="relative z-10">

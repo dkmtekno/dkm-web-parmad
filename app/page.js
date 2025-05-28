@@ -3,24 +3,25 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
-
 function TestimonialCard({ name, prodi, testimoni }) {
   return (
     <motion.div
-      className="min-w-[260px] bg-white p-6 rounded-2xl"
+      className="min-w-[260px] bg-white p-6 rounded-2xl flex flex-col justify-between h-auto"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="flex items-center">
-        <img src="/user.png" width="40" height="40" loading="lazy" />
-        <div className="mt-2 mb-3 ms-2 flex flex-col justify-center">
-          <h5 className="font-bold text-[#0066FF]">{name}</h5>
-          <p className="text-gray-400 text-xs">{prodi}</p>
+      <div>
+        <div className="flex items-center mb-3">
+          <img src="/user.png" width="40" height="40" loading="lazy" />
+          <div className="ms-2 flex flex-col justify-center">
+            <h5 className="font-bold text-[#0066FF]">{name}</h5>
+            <p className="text-gray-400 text-xs">{prodi}</p>
+          </div>
         </div>
+        <p className="text-gray-600 text-sm">{testimoni}</p>
       </div>
-      <p className="text-gray-600 text-sm">{testimoni}</p>
     </motion.div>
   );
 }
@@ -235,9 +236,10 @@ export default function Home() {
           <h3 className="text-[#0066FF] text-3xl font-bold text-left px-6 lg:px-0">
             Testimonial
           </h3>
-          <p className="text-gray-500 text-sm mt-2 px-6 lg:px-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+          <p className="text-gray-500 text-sm mt-2 px-6 lg:px-0 lg:w-2/3">
+            Pernyataan atau kesaksian dari seseorang biasanya pengguna, peserta,
+            atau anggota yang menceritakan pengalaman positif mereka terhadap
+            suatu organiasi.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-6 lg:mx-0"></div>
         </div>
@@ -245,23 +247,23 @@ export default function Home() {
         <div className="space-y-10 py-10 bg-blue-50">
           {/* ANIMASI KE KIRI */}
           <div className="overflow-hidden group relative">
-            <div className="flex w-[200%] animate-left-marquee group-hover:[animation-play-state:paused] gap-6">
+            <div className="flex w-[200%] animate-left-marquee group-hover:[animation-play-state:paused] gap-6 items-center">
               <div className="flex gap-6">
                 <TestimonialCard
                   key="t1"
-                  name="Fayyaza Shofa Zakiyah"
+                  name="Fayyaza Shofa Z."
                   prodi="Psikologi 2023"
                   testimoni="aku merasa nyaman dan lebih santai dari beberapa proker yang diadakan dan yang aku ikuti juga membantu aku lebih produktif dan sambil belajar. Terima Kasih DKM 🫶🏻"
                 />
                 <TestimonialCard
                   key="t2"
-                  name="Karisya Alya Husna"
+                  name="Karisya Alya H."
                   prodi="Psikologi 2023"
                   testimoni=" Selain menambah ilmu, kegiatan ini juga jadi ajang silaturahmi antar mahasiswa. Mungkin kedepannya bisa lebih aktif lagi dalam promosi biar makin banyak yang ikut dan terlibat langsung."
                 />
                 <TestimonialCard
                   key="t3"
-                  name="Aqila Irza Ghania"
+                  name="Aqila Irza G."
                   prodi="Psikologi 2023"
                   testimoni="menurutku DKM bukan sekedar organisasi, but it's also a space for me to grow, learn and find my second family 🥹🤍✨"
                 />
@@ -273,18 +275,16 @@ export default function Home() {
                 />
                 <TestimonialCard
                   key="t5"
-                  name="Nur’izzah Syakaromansyah"
+                  name="N. Syakaromansyah"
                   prodi="Psikologi 2023"
                   testimoni="proker dkm banyak yang makin fresh, semoga orang-orang di dalamnya bisa bertumbuh lebih baik juga"
                 />
                 <TestimonialCard
                   key="t6"
-                  name="Nadya Isma Radhiani"
+                  name="Nadya Isma R."
                   prodi="Psikologi 2022"
                   testimoni="DKM kekeluargaannya dapet banget si, dan wadah yang cocok untuk kalian tumbuh dan mengembangkan skill yang kalian punya 🤗.. Sekali masuk DKM, dijamin kamu akan tercandu², xixixi"
                 />
-              </div>
-              <div className="flex gap-6 pr-6">
                 <TestimonialCard
                   key="t7"
                   name="Destria Maharani"
@@ -293,13 +293,13 @@ export default function Home() {
                 />
                 <TestimonialCard
                   key="t8"
-                  name="Novita Fitri Apriliana"
+                  name="Novita Fitri A."
                   prodi="Psikologi 2023"
                   testimoni="Sebagai alumni pesantren, Seneng karena di DKM tuh aku merasa semua orang punya tempat, semua suara dihargai, dan setiap kontribusi, besar atau kecilnya, berarti 🥹🤍"
                 />
                 <TestimonialCard
                   key="t9"
-                  name="Ratu Islam Al-Kautsar"
+                  name="Ratu Islam A."
                   prodi="Ilmu Komunikasi 2024"
                   testimoni="gapernah nyesel buat gabung di DKM, ternyata banyak hal kecil yg dilakuin tapi berdampak besar buat sekitar"
                 />
@@ -309,99 +309,73 @@ export default function Home() {
                   prodi="Desain Produk 2024"
                   testimoni="Dkm ini sangat seruuu, banyak kegiatan menarik juga tapi ga keluar dari batasan agama."
                 />
-                <TestimonialCard
-                  key="t11"
-                  name="Salma Benina"
-                  prodi="Psikologi 2023"
-                  testimoni="saya merasa sangat senang dapat bergabung dengan DKM Paramadina di tahun ini. Dari organisasi ini, saya mendapat banyak teman, pengalaman, dan berbagai macam sudut pandang yang menarik untuk dipelajari lebih dalam. DKM bukan hanya tempat berorganisasi, tetapi juga tempat tumbuh baik secara spiritual maupun sosial."
-                />
-                <TestimonialCard
-                  key="t12"
-                  name="Sofia Nuril Fairuzi"
-                  prodi="Psikologi 2023"
-                  testimoni="It was such a fun experience being part of DKM. I met new people, learned a lot of things, and grew through every challenge we faced together🥹🤍"
-                />
               </div>
             </div>
           </div>
 
           {/* ANIMASI KE KANAN */}
           <div className="overflow-hidden group relative">
-            <div className="flex w-[200%] animate-right-marquee group-hover:[animation-play-state:paused] gap-6">
+            <div className="flex w-[200%] animate-right-marquee group-hover:[animation-play-state:paused] gap-6 items-center">
               <div className="flex gap-6">
                 <TestimonialCard
+                  key="t11"
+                  name="Filzah Aisyah A."
+                  prodi="Psikologi 2022"
+                  testimoni=" konten konten dkm makin unik dan bervariatif jadi ga monoton, semoga dkm baik proker dan anggotanya menjadi lebih baik lagi "
+                />
+                <TestimonialCard
+                  key="t12"
+                  name="Muhammad Ariel D."
+                  prodi="Teknik Informatika 2023"
+                  testimoni="Dkm seru abiss, prokernya keren keren, setiap kegiatanya selalu dibalut dengan semangat kebersamaan dan kekeluargaan. Sukses terus DKM Paramadina!"
+                />
+                <TestimonialCard
                   key="t13"
-                  name="Rio"
-                  prodi="teknik"
-                  testimoni="lorem ipsum"
+                  name="M. Alif Akbar"
+                  prodi="H. Internasional 2022"
+                  testimoni="Sebagai mantan ketua umum DKM Paramadina, saya bangga pernah menjadi bagian dari DKM Paramadina. DKM Paramadina bukan sekedar organisasi kerohanian, tetapi sebagai rumah kedua bagi saya, yang membentuk karakter dan kepedulian saya."
                 />
                 <TestimonialCard
                   key="t14"
-                  name="Nina"
-                  prodi="teknik"
-                  testimoni="lorem ipsum"
+                  name="Hatfina Maula"
+                  prodi="Psikologi 2022"
+                  testimoni="Dkm sekarang lebih berkembang dan aktif apa lagi di media sosialnya untuk kontennya sangat bervariatif ya juga lebih aktif dan kompak. Prokernya juga lebih jauh lebih menarik apalagi mampu bekerjasama dengan beberapa brand.. Waww luar biasaa kerenn bgtt 😍. Sukses selalu ya buat dkm semakin meningkat lebih baik 🫶🏻"
                 />
                 <TestimonialCard
                   key="t15"
-                  name="Zaki"
-                  prodi="teknik"
-                  testimoni="lorem ipsum"
+                  name="Sheiza Istiana A."
+                  prodi="Teknik Informatika 2024"
+                  testimoni="berada di organisasi yang nyaman seperti DKM sungguh beruntung, struktur-struktur pembagian tugas yang terstruktur, dan alur kerja yang jelas. Ketika rapat diisi dengan pembahasan yang baik, bertemu hasil dari rapat tersebut, dan tidak hanya kosong semata."
                 />
                 <TestimonialCard
                   key="t16"
-                  name="Lia"
-                  prodi="teknik"
-                  testimoni="lorem ipsum"
+                  name="Rahmaisha Aulia"
+                  prodi="Desain Produk 2024"
+                  testimoni="jadi bagian dari DKM bikin hidup lebih berwarna, karena orang² di dkm seru² dan dapat ruang untuk bertumbuh dan berkembang."
                 />
                 <TestimonialCard
                   key="t17"
-                  name="Tomo"
-                  prodi="teknik"
-                  testimoni="lorem ipsum"
+                  name="Nazwa Siti F."
+                  prodi="Ilmu Komunikasi 2024"
+                  testimoni="salah satu UKM yang paling berasa bangett kekeluargaannya!! Mulai dari anggota nya yang saling support, lingkungan yang positif, and it feels like a safe space buat kita grow together. Karena disini kita bukan cuman belajar berogranisasi aja, tapi juga belajar secara spritual. Love the energy here! 🫶🏻"
                 />
                 <TestimonialCard
                   key="t18"
-                  name="Dina"
-                  prodi="teknik"
-                  testimoni="lorem ipsum"
+                  name="Tsaqilah Azri"
+                  prodi="H. Internasional 2024"
+                  testimoni="Sangat bangga bergabung dengan keluarga hangat ini, ketika dunia kampus kadang membuat kita lalai dalam banyak hal, di Dkm membuat saya semangat kembali dalam memperbaiki semuanya kembali seperti dulu, dengan teman-teman yang saling mengingatkan dan saling membantu,lop sekebonnnnnn Dkm✨"
                 />
-              </div>
-              <div className="flex gap-6 pr-6">
                 <TestimonialCard
                   key="t19"
-                  name="Rio"
-                  prodi="teknik"
-                  testimoni="kontol"
+                  name="Ilham Saputra"
+                  prodi="Teknik Informatika 2024"
+                  testimoni="Teknologi yang digunakan DKM benar-benar keren dan memudahkan! Semua serba digital, terstruktur, dan bikin kerja jadi efisien. Selain itu, kegiatan di DKM tuh beda banget dan seru, kekeluargaan, tapi tetap produktif. Nggak kayak organisasi lain yang kadang kaku, di DKM semuanya terasa hidup dan bermakna!"
                 />
                 <TestimonialCard
                   key="t20"
-                  name="Nina"
-                  prodi="teknik"
-                  testimoni="kontol"
-                />
-                <TestimonialCard
-                  key="t21"
-                  name="Zaki"
-                  prodi="teknik"
-                  testimoni="kontol"
-                />
-                <TestimonialCard
-                  key="t22"
-                  name="Lia"
-                  prodi="teknik"
-                  testimoni="kontol"
-                />
-                <TestimonialCard
-                  key="t23"
-                  name="Tomo"
-                  prodi="teknik"
-                  testimoni="kontol"
-                />
-                <TestimonialCard
-                  key="t24"
-                  name="Dina"
-                  prodi="teknik"
-                  testimoni="kontol"
+                  name="Muhammad Syalky"
+                  prodi="Ilmu Komunikasi 2023"
+                  testimoni="lorem ipsum"
                 />
               </div>
             </div>
@@ -463,14 +437,15 @@ export default function Home() {
             className="mb-4"
             loading="lazy"
           />
-          <h4 className="text-[#0066FF] text-2xl font-bold">Lorem Ipsum</h4>
+          <h4 className="text-[#0066FF] text-2xl font-bold">
+            Yuk Kenal DKM Paramadina!
+          </h4>
           <p className="mt-2 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Tempatnya mahasiswa keren yang pengen tumbuh bareng lewat kegiatan
+            keislaman, sosial, dan pengembangan diri. Ada banyak kegiatan seru
+            dan bermanfaat loh!
           </p>
-          <Link href="/tentang-kami">
+          <Link href="/program">
             <button className="mt-4 bg-[#0066FF] text-white px-4 py-2 rounded-[12px] hover:bg-blue-700">
               Lihat Program DKM Paramadina
             </button>
@@ -658,9 +633,11 @@ export default function Home() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
-        <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
-          Yuk Ikutan
-        </button>
+        <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
+          <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
+            Yuk Ikutan
+          </button>
+        </Link>
       </motion.section>
 
       <div className="relative z-10">
