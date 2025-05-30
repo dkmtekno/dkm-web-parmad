@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 function TestimonialCard({ name, prodi, testimoni }) {
   return (
@@ -27,6 +27,24 @@ function TestimonialCard({ name, prodi, testimoni }) {
 }
 
 export default function Home() {
+  const fullText =
+    "Bergabung bersama DKM, raih pengalaman berorganisasi yang luar biasa.";
+  const [displayedText, setDisplayedText] = useState("");
+  const [i, setI] = useState(0);
+  const [typingDone, setTypingDone] = useState(false);
+
+  useEffect(() => {
+    if (i < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + fullText[i]);
+        setI(i + 1);
+      }, 40);
+      return () => clearTimeout(timeout);
+    } else {
+      setTypingDone(true); // Menandai bahwa ketikan sudah selesai
+    }
+  }, [i, fullText]);
+
   const divisiList = [
     {
       title: "Ketum & Waketum",
@@ -123,10 +141,23 @@ export default function Home() {
 
         {/* Konten tengah */}
         <div className="z-20 text-center text-white px-4">
-          <h1 className="text-2xl md:text-5xl font-bold mx-0 lg:mx-12">
-            Bergabung bersama DKM, raih pengalaman berorganisasi yang luar
-            biasa.
-          </h1>
+          <motion.h1
+            className="text-2xl md:text-5xl font-bold mx-0 lg:mx-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            {displayedText}
+            {!typingDone && (
+              <motion.span
+                className="inline-block"
+                animate={{ opacity: [0, 1] }}
+                transition={{ repeat: Infinity, duration: 0.6 }}
+              >
+                |
+              </motion.span>
+            )}
+          </motion.h1>
           <p className="text-1xl md:text-2xl text-orange-300  mt-2 font-semibold">
             #NaeemaDKMParamadina
           </p>
