@@ -31,18 +31,23 @@ export default function Home() {
     "Bergabung bersama DKM, raih pengalaman berorganisasi yang luar biasa.";
   const [displayedText, setDisplayedText] = useState("");
   const [i, setI] = useState(0);
-  const [typingDone, setTypingDone] = useState(false);
 
   useEffect(() => {
+    let timeout;
     if (i < fullText.length) {
-      const timeout = setTimeout(() => {
+      timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + fullText[i]);
-        setI(i + 1);
-      }, 40);
-      return () => clearTimeout(timeout);
+        setI((prev) => prev + 1);
+      }, 80);
     } else {
-      setTypingDone(true); // Menandai bahwa ketikan sudah selesai
+      // Setelah selesai ngetik, tunggu lalu reset ulang
+      timeout = setTimeout(() => {
+        setDisplayedText("");
+        setI(0);
+      }, 1500); // Delay 1.5 detik sebelum mengulang
     }
+
+    return () => clearTimeout(timeout);
   }, [i, fullText]);
 
   const divisiList = [
@@ -145,18 +150,17 @@ export default function Home() {
             className="text-2xl md:text-5xl font-bold mx-0 lg:mx-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1.5 }}
           >
             {displayedText}
-            {!typingDone && (
-              <motion.span
-                className="inline-block"
-                animate={{ opacity: [0, 1] }}
-                transition={{ repeat: Infinity, duration: 0.6 }}
-              >
-                |
-              </motion.span>
-            )}
+            {/* Kursor selalu muncul setelah teks yang sedang diketik */}
+            <motion.span
+              className="inline-block"
+              animate={{ opacity: [0, 1] }}
+              transition={{ repeat: Infinity, duration: 0.6 }}
+            >
+              |
+            </motion.span>
           </motion.h1>
           <p className="text-1xl md:text-2xl text-orange-300  mt-2 font-semibold">
             #NaeemaDKMParamadina
