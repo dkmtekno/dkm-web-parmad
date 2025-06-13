@@ -410,7 +410,7 @@ export default function Home() {
                   key="t20"
                   name="Muhammad Syalky"
                   prodi="Ilmu Komunikasi 2023"
-                  testimoni="lorem ipsum"
+                  testimoni="Menjadi bagian dari kepengurusan DKM Paramadina bukan hanya soal amanah organisasi, tetapi juga perjalanan untuk beristiqomah di jalan agama. Setiap program yang dilaksanakan Insya Allah menjadi ladang pahala dan sarana belajar yang luar biasa. Ini adalah tempat bertumbuh bersama dalam kebaikan."
                 />
               </div>
             </div>
