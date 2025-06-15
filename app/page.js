@@ -208,11 +208,11 @@ export default function Home() {
       </motion.section>
 
       {/* VIDEO SECTION */}
-      <div className="mx-auto py-6 px-12 max-w-6xl relative z-10">
+      {/* <div className="mx-auto py-6 px-12 max-w-6xl relative z-10">
         <div className="z-10">
           <img src="/video.png" alt="video" className="mb-4" />
         </div>
-      </div>
+      </div> */}
 
       {/* DIVISI SECTION */}
       <section className="px-4 py-12 relative z-10">
