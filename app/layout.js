@@ -1,9 +1,6 @@
-import Navbar from "./component/Navbar";
-import BackgroundVector from "./component/BackgroundVector"; // Import komponen baru
 import "./globals.css";
 import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
-import Footer from "./component/Footer";
-import BubbleMenu from "./component/BubbleMenu";
+import ClientLayout from "./ClientLayout";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,11 +21,7 @@ export default function RootLayout({ children }) {
         className={`${fontSans.variable} antialiased`}
         style={{ backgroundColor: "#F0F6FF" }}
       >
-        <BackgroundVector /> {/* Ganti ini */}
-        <Navbar />
-        {children}
-        <BubbleMenu />
-        <Footer />
+         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
