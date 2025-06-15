@@ -231,6 +231,7 @@ export default function divisiOrganisasi() {
             subtitle="Anggota Kajian & Dakwah"
             imageUrl="/dhan.png"
             instagramUrl={"mrhan.dhan"}
+            linkedinUrl={"muhammadraihanramadhan"}
           />
           <ProfileCard
             name="Muhammad Elvan Rosyadi"
@@ -351,6 +352,7 @@ export default function divisiOrganisasi() {
             subtitle="Anggota Humas Eksternal"
             imageUrl="/salma.png"
             instagramUrl={"sallmaao"}
+            linkedinUrl={"salma-benina-8857622a0"}
           />
           <ProfileCard
             name="Sabrina Shafa Salsabila"
@@ -405,12 +407,14 @@ export default function divisiOrganisasi() {
             subtitle="Kepala Divisi Human Resource"
             imageUrl="/destria.png"
             instagramUrl={"dstr.mhrni"}
+            linkedinUrl={"destria-maharani-84a99134b"}
           />
           <ProfileCard
             name="Alifvia Mandalika"
             subtitle="Anggota Human Resource"
             imageUrl="/alifvia.png"
             instagramUrl={"813vy"}
+            linkedinUrl={"alifvia-mandalika-5713b7276"}
           />
           <ProfileCard
             name="Muhammad Afif Ardiansyah"
@@ -526,6 +530,7 @@ export default function divisiOrganisasi() {
             subtitle="Anggota Teknologi"
             imageUrl="/ilham.png"
             instagramUrl={"_ilham.spt"}
+            linkedinUrl={"ilham-saputra-b39b5b1b8"}
           />
           <ProfileCard
             name="Akmal Abdiel Dewa Mutawakkil"
