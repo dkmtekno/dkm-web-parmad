@@ -139,7 +139,7 @@ export default function Program() {
               </button>
             </Link>
             <Link
-              href="https://docs.google.com/document/d/1o8zyKVDxZqfVq7MqUxFpd97i5EXUrkPKy1NPBVJa8kc/edit?usp=sharing"
+              href="https://docs.google.com/document/d/1bkpf7kJdR1HSJKrXHyx_bLyCtTARPQNYxF8gfVbmFWY/edit?usp=sharing"
               target="_blank"
             >
               <button className="flex items-center justify-center text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-[#0066FF] w-full md:w-auto hover:text-white transition">
