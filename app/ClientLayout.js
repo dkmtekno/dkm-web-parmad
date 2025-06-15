@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -11,18 +11,28 @@ import BackgroundVector from "./component/BackgroundVector";
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
   const [loading, setLoading] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    // Tunggu sampai client mount, untuk hindari hydration error
+    setHasMounted(true);
+  }, []);
 
-    return () => clearTimeout(timer);
-  }, [pathname]);
+  useEffect(() => {
+    if (hasMounted) { // Loading hanya dijalankan setelah client siap
+      setLoading(true);
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [pathname, hasMounted]);
+
+  if (!hasMounted) return null; // Jangan render apapun sampai client siap
 
   return (
-    <div className="antialiased">
+    <div className="relative antialiased min-h-screen">
       {loading ? (
         <Loader />
       ) : (
