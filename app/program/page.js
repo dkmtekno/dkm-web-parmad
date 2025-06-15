@@ -84,6 +84,20 @@ export default function Program() {
       time: "09.00 - Selesai",
       location: "Universitas Paramadina",
     },
+    {
+      title: "Curhat DKM Paramadina",
+      desc: "Sampaikan curhat dan saranmu di sini! Kunjungi websitenya ya! <a href='https://curhat-dkm.vercel.app/' target='_blank' rel='noopener noreferrer' style='color: #0066FF;'>Website Curhat DKM</a>",
+      date: "Setiap hari Jum'at",
+      time: "11.00 - Selesai",
+      location: "Universitas Paramadina",
+    },
+    {
+      title: "Muharram 1447 H",
+      desc: "Jalan Menuju Cahaya, momen hijrah dan ukhuwah untuk tumbuh bersama.",
+      date: "Coming Soon",
+      time: "Not yet",
+      location: "Universitas Paramadina",
+    },
   ];
 
   const pageData = page === 1 ? dataPage1 : dataPage2;
@@ -190,7 +204,10 @@ export default function Program() {
                 <h3 className="text-[#0066FF] font-bold text-lg mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-3">{item.desc}</p>
+                <p
+                  dangerouslySetInnerHTML={{ __html: item.desc }}
+                  className="text-gray-600 text-sm mb-3"
+                ></p>
                 <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
                   <FaCalendar className="text-[#0066FF]" /> {item.date}
                 </div>
@@ -263,7 +280,7 @@ export default function Program() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            src="/program_qurban.png"
+            src="/program_muharram.png"
             loading="lazy"
             width="500"
             height="500"
@@ -277,15 +294,14 @@ export default function Program() {
             className="w-full lg:w-1/2 text-center lg:text-left"
           >
             <h2 className="mt-4 text-2xl font-bold text-[#0066FF] lg:text-2xl">
-              Qurban Idul Adha 1446 H DKM Paramadina
+              Muharram 1447 H
             </h2>
             <p className="mb-6 mt-2 leading-relaxed text-gray-500">
-              Qurban Idul Adha 1446 H merupakan program tahunan DKM dalam rangka
-              Hari Raya Idul Adha yang bertujuan memfasilitasi mahasiswa dan
-              civitas akademika Paramadina untuk berkurban serta menyalurkannya
-              kepada yang membutuhkan. Yuk, jangan sia-siakan kesempatan emas
-              ini untuk mempersembahkan ibadah qurban terbaik kita hanya karena
-              Allah.
+              Program Muharram tahun ini bertema “Jalan Menuju Cahaya” yang
+              mengajak kita merenungi makna hijrah Nabi Muhammad SAW dari Makkah
+              ke Madinah. Melalui acara ini, umat Islam, khususnya generasi
+              muda, diajak memahami hijrah sebagai jalan perubahan, mempererat
+              ukhuwah, dan tumbuh bersama dalam cahaya Islam.
             </p>
             <p className="text-gray-600 mb-4">
               Lihat selengkapnya di Instagram kami di{" "}
