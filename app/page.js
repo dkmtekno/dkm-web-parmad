@@ -147,7 +147,7 @@ export default function Home() {
         {/* Konten tengah */}
         <div className="z-20 text-center text-white px-4">
           <motion.h1
-            className="text-2xl md:text-5xl font-bold mx-0 lg:mx-12"
+            className="text-1xl md:text-5xl font-bold mx-0 lg:mx-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
@@ -167,12 +167,12 @@ export default function Home() {
           </p>
           <div className="mt-6 md:mt-12 flex flex-col md:flex-row mx-auto items-center justify-center gap-4">
             <Link href="#lihatselengkapnya">
-              <button className="bg-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-blue-700 w-full md:w-auto">
+              <button className="bg-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-blue-700 w-full md:w-auto text-xs md:text-base">
                 Lihat Selengkapnya
               </button>
             </Link>
             <Link href="/tentang-kami">
-              <button className="text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-[#0066FF] hover:text-white transition w-full md:w-auto">
+              <button className="text-[#0066FF] border border-[#0066FF] px-12 py-2 md:px-8 md:py-2 rounded-[12px] hover:bg-[#0066FF] hover:text-white transition w-full md:w-auto text-xs md:text-base">
                 Tentang Kami
               </button>
             </Link>
@@ -189,7 +189,7 @@ export default function Home() {
         className="py-12 text-center px-4 z-20"
         id="lihatselengkapnya"
       >
-        <h2 className="text-2xl lg:text-4xl font-bold text-[#0066FF] mb-4">
+        <h2 className="text-2xl lg:text-4xl font-bold text-[#0066FF] mt-12 mb-4">
           Selamat Datang di Naeema DKM Paramadina
         </h2>
         <p className="max-w-5xl mx-auto text-gray-600">

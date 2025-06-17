@@ -369,11 +369,6 @@ export default function divisiOrganisasi() {
             tiktokUrl={"willynn_"}
           />
           <ProfileCard
-            name="Syahrul Naufal Effendy"
-            subtitle="Anggota Humas Eksternal"
-            imageUrl="/default_profile.png"
-          />
-          <ProfileCard
             name="Fathur Rizqie Saepudin Septrya"
             subtitle="Anggota Humas Eksternal"
             imageUrl="/default_profile.png"
