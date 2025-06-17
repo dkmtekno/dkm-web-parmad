@@ -147,13 +147,12 @@ export default function Home() {
         {/* Konten tengah */}
         <div className="z-20 text-center text-white px-4">
           <motion.h1
-            className="text-1xl md:text-5xl font-bold mx-0 lg:mx-12"
+            className="text-2xl md:text-5xl font-bold mx-0 lg:mx-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
             {displayedText}
-            {/* Kursor selalu muncul setelah teks yang sedang diketik */}
             <motion.span
               className="inline-block"
               animate={{ opacity: [0, 1] }}
