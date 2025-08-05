@@ -3,6 +3,16 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import {
+  FaChevronDown,
+  FaHandsHelping,
+  FaKaaba,
+  FaMoon,
+  FaMosque,
+  FaQuran,
+  FaStarAndCrescent,
+} from "react-icons/fa";
+
 function TestimonialCard({ name, prodi, testimoni }) {
   return (
     <motion.div
@@ -104,11 +114,26 @@ export default function Home() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setPosition({ x: clientX, y: clientY });
+  };
+
+  const handleScroll = () => {
+    const section = document.getElementById("lihatselengkapnya");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="font-sans bg-[#F0F6FF]">
       {/* HERO SECTION */}
       <section
-        className="h-screen bg-cover bg-center flex items-center justify-center relative rounded-bl-[20px] rounded-br-[20px] lg:rounded-bl-[50px] lg:rounded-br-[50px]"
+        onMouseMove={handleMouseMove}
+        className="h-screen bg-cover bg-center flex items-center justify-center relative overflow-hidden rounded-bl-[20px] rounded-br-[20px] lg:rounded-bl-[50px] lg:rounded-br-[50px]"
         style={{
           backgroundImage: "url('/bg_hero.png')",
         }}
@@ -116,38 +141,34 @@ export default function Home() {
         {/* Overlay hitam transparan */}
         <div className="absolute inset-0 bg-black/40 z-0 rounded-bl-[20px] rounded-br-[20px] lg:rounded-bl-[50px] lg:rounded-br-[50px]" />
 
-        {/* Ornamen kiri */}
+        {/* Ornamen kiri & kanan */}
         <img
           src="/logo_left_hero.png"
           alt="Left Ornament"
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 max-w-[50px] md:max-w-[150px]"
         />
-
         <img
           loading="lazy"
           src="/Vector_2.png"
           alt="Garis Vector"
           className="absolute left-0 top-1/2 -translate-y-1/2 w-full"
         />
-
         <img
           loading="lazy"
           src="/Vector_1.png"
           alt="Garis Vector"
           className="absolute left-0 top-1/2 -translate-y-1/2 w-full"
         />
-
-        {/* Ornamen kanan */}
         <img
           src="/logo_right_hero.png"
           alt="Right Ornament"
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[100px] md:max-w-[150px]"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 max-w-[50px] md:max-w-[150px]"
         />
 
-        {/* Konten tengah */}
+        {/* Konten Tengah */}
         <div className="z-20 text-center text-white px-4">
           <motion.h1
-            className="text-2xl md:text-5xl font-bold mx-0 lg:mx-12"
+            className="text-xl md:text-5xl font-bold mx-0 lg:mx-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
@@ -161,21 +182,138 @@ export default function Home() {
               |
             </motion.span>
           </motion.h1>
-          <p className="text-1xl md:text-2xl text-orange-300  mt-2 font-semibold">
+          <p className="text-1xl md:text-2xl text-orange-300 md:mt-12 mt-6 font-semibold">
             #NaeemaDKMParamadina
           </p>
-          <div className="mt-6 md:mt-12 flex flex-col md:flex-row mx-auto items-center justify-center gap-4">
-            <Link href="#lihatselengkapnya">
-              <button className="bg-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-blue-700 w-full md:w-auto text-xs md:text-base">
-                Lihat Selengkapnya
-              </button>
-            </Link>
-            <Link href="/tentang-kami">
-              <button className="text-[#0066FF] border border-[#0066FF] px-12 py-2 md:px-8 md:py-2 rounded-[12px] hover:bg-[#0066FF] hover:text-white transition w-full md:w-auto text-xs md:text-base">
-                Tentang Kami
-              </button>
-            </Link>
-          </div>
+        </div>
+        <div className="hidden md:block">
+          {[
+            // 1-6 (icon awal)
+            {
+              icon: <FaMoon />,
+              color: "text-yellow-300",
+              size: "text-4xl",
+              top: "10%",
+              left: "15%",
+              factorX: 30,
+              factorY: 20,
+            },
+            {
+              icon: <FaKaaba />,
+              color: "text-green-400",
+              size: "text-5xl",
+              top: "25%",
+              right: "12%",
+              factorX: 20,
+              factorY: 15,
+            },
+            {
+              icon: <FaMosque />,
+              color: "text-white",
+              size: "text-4xl",
+              bottom: "20%",
+              left: "10%",
+              factorX: 25,
+              factorY: 20,
+            },
+            {
+              icon: <FaQuran />,
+              color: "text-blue-300",
+              size: "text-4xl",
+              bottom: "30%",
+              right: "18%",
+              factorX: 28,
+              factorY: 18,
+            },
+            {
+              icon: <FaHandsHelping />,
+              color: "text-orange-200",
+              size: "text-3xl",
+              top: "50%",
+              left: "20%",
+              factorX: 18,
+              factorY: 12,
+            },
+
+            // 7-12 (icon kembar variasi posisi)
+            {
+              icon: <FaMosque />,
+              color: "text-white",
+              size: "text-2xl",
+              top: "15%",
+              right: "25%",
+              factorX: 22,
+              factorY: 18,
+            },
+            {
+              icon: <FaKaaba />,
+              color: "text-green-300",
+              size: "text-3xl",
+              bottom: "10%",
+              left: "30%",
+              factorX: 20,
+              factorY: 14,
+            },
+            {
+              icon: <FaMoon />,
+              color: "text-yellow-100",
+              size: "text-xl",
+              top: "60%",
+              right: "8%",
+              factorX: 40,
+              factorY: 22,
+            },
+            {
+              icon: <FaHandsHelping />,
+              color: "text-orange-100",
+              size: "text-2xl",
+              bottom: "15%",
+              right: "30%",
+              factorX: 25,
+              factorY: 15,
+            },
+            {
+              icon: <FaStarAndCrescent />,
+              color: "text-yellow-400",
+              size: "text-3xl",
+              bottom: "5%",
+              left: "5%",
+              factorX: 30,
+              factorY: 20,
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              className={`absolute ${item.color} ${item.size} pointer-events-none`}
+              style={{
+                top: item.top,
+                left: item.left,
+                right: item.right,
+                bottom: item.bottom,
+              }}
+              animate={{
+                x: position.x / item.factorX,
+                y: position.y / item.factorY,
+              }}
+              transition={{ type: "spring", stiffness: 60, damping: 10 }}
+            >
+              {item.icon}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Icon panah ke bawah */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 cursor-pointer">
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.2 }}
+            onClick={handleScroll}
+          >
+            <FaChevronDown
+              size={24}
+              className="text-white opacity-80 hover:opacity-100 transition"
+            />
+          </motion.div>
         </div>
       </section>
 
