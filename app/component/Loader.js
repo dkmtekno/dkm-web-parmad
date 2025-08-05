@@ -1,12 +1,25 @@
 // components/Loader.js
+import Image from 'next/image';
 import React from 'react';
 
 export default function Loader() {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="relative w-12 h-12">
+        {/* Shadow */}
         <div className="absolute top-[60px] left-0 w-12 h-[5px] bg-blue-300 opacity-50 rounded-full animate-[shadow_0.5s_linear_infinite]"></div>
-        <div className="absolute w-full h-full bg-blue-400 rounded animate-[jump_0.5s_linear_infinite]"></div>
+
+        {/* Kotak Biru */}
+        <div className="absolute w-full h-full bg-blue-400 rounded animate-[jump_0.5s_linear_infinite] flex items-center justify-center">
+          {/* Gambar di tengah kotak */}
+          <Image
+            src="/logo_loaders.png"
+            alt="Logo"
+            width={30}
+            height={30}
+            className="object-contain"
+          />
+        </div>
       </div>
       <style jsx global>{`
         @keyframes jump {
