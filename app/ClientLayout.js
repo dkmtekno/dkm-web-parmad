@@ -23,7 +23,7 @@ export default function ClientLayout({ children }) {
       setLoading(true);
       const timer = setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 2000);
 
       return () => clearTimeout(timer);
     }
