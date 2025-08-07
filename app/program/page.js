@@ -4,6 +4,20 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaDownload, FaCalendar, FaMapPin, FaClock } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import { useEffect } from "react";
+
+function formatTanggalIndonesia(isoDate) {
+  const tanggal = new Date(isoDate);
+  const bulanIndo = [
+    "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+    "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+  ];
+  const hari = tanggal.getDate();
+  const bulan = bulanIndo[tanggal.getMonth()];
+  const tahun = tanggal.getFullYear();
+  return `${hari} ${bulan} ${tahun}`;
+}
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,84 +37,124 @@ const itemVariants = {
 
 export default function Program() {
   const [page, setPage] = useState(1);
+  const [programs, setPrograms] = useState([]);
 
-  const dataPage1 = [
-    {
-      title: "Peringatan Isra Mi’raj",
-      desc: "Peringatan Isra Mi’raj DKM Paramadina: Kajian, hadroh, dan refleksi keimanan bersama.",
-      date: "21 Februari 2025",
-      time: "15.00 - 18.00 WIB",
-      location: "Aula Gedung TP Rachmat",
-    },
-    {
-      title: "Tayangan Konten Wawasan Islami",
-      desc: "Konten islami harian selama Ramadhan di Instagram DKM Paramadina.",
-      date: "28 Februari 2025 - 30 Maret 2025",
-      time: "13.00 - 15.00 WIB",
-      location: "Universitas Paramadina",
-    },
-    {
-      title: "Qur’an Menjelang Maghrib (QURMA)",
-      desc: "Tilawah bersama harian Ramadhan untuk khatam Al-Qur’an berjamaah tujuh juz.",
-      date: "28 Februari 2025 - 30 Maret 2025",
-      time: "15.30 - 17.00 WIB",
-      location: "Gedung A Selasar Lantai 3",
-    },
-    {
-      title: "Bedah Buku & Bukber DKM",
-      desc: "Bedah Buku & Buka Bersama: Pererat ukhuwah, kajian, tilawah, dan kebersamaan Ramadhan.",
-      date: "21 Maret 2025",
-      time: "16.00 - 20.00 WIB",
-      location: "Aula Gedung TP Rachmat",
-    },
-    {
-      title: "Konten PHBI",
-      desc: "Konten PHBI: Wawasan islami hari besar Islam dan nasional via Instagram.",
-      date: "Waktu fleksibel",
-      time: "13.00 - 15.00",
-      location: "Universitas Paramadina",
-    },
-    {
-      title: "Kajian Kitab Turats",
-      desc: "Diskusi bulanan kitab klasik Islam dengan pendekatan kontemporer kampus.",
-      date: "8 Mei 2025",
-      time: "18.15 - selesai",
-      location: "Ruangan Toledo Lantai 5",
-    },
-  ];
+  useEffect(() => {
+    const fetchPrograms = async () => {
+      try {
+        const res = await fetch("/api/program");
 
-  const dataPage2 = [
-    {
-      title: "Yaasiinan & Muhadoroh",
-      desc: "Yasinan dan Muhadoroh rutin Jumat malam, tingkatkan spiritual, ukhuwah, dan dakwah.",
-      date: "Setiap Malam Jum'at",
-      time: "Ba'da Maghrib",
-      location: "Universitas Paramadina",
-    },
-    {
-      title: "Qurban Idul Adha 1446 H",
-      desc: "Idul Adha: Makna ikhlas, pengorbanan, dan ketaatan Nabi Ibrahim-Ismail.",
-      date: "7 Juni 2025",
-      time: "09.00 - Selesai",
-      location: "Universitas Paramadina",
-    },
-    {
-      title: "Curhat DKM Paramadina",
-      desc: "Sampaikan curhat dan saranmu di sini! Kunjungi websitenya ya! <a href='https://curhat-dkm.vercel.app/' target='_blank' rel='noopener noreferrer' style='color: #0066FF;'>Website Curhat DKM</a>",
-      date: "Setiap hari Jum'at",
-      time: "11.00 - Selesai",
-      location: "Universitas Paramadina",
-    },
-    {
-      title: "Muharram 1447 H",
-      desc: "Jalan Menuju Cahaya, momen hijrah dan ukhuwah untuk tumbuh bersama.",
-      date: "Coming Soon",
-      time: "Not yet",
-      location: "Universitas Paramadina",
-    },
-  ];
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
 
-  const pageData = page === 1 ? dataPage1 : dataPage2;
+        const text = await res.text();
+
+        if (!text) {
+          throw new Error("Empty response body");
+        }
+
+        const data = JSON.parse(text);
+        setPrograms(data);
+      } catch (err) {
+        console.error("Failed to fetch program data", err);
+      }
+    };
+
+    fetchPrograms();
+  }, []);
+
+  // const dataPage1 = [
+  //   {
+  //     title: "Peringatan Isra Mi’raj",
+  //     desc: "Peringatan Isra Mi’raj DKM Paramadina: Kajian, hadroh, dan refleksi keimanan bersama.",
+  //     date: "21 Februari 2025",
+  //     time: "15.00 - 18.00 WIB",
+  //     location: "Aula Gedung TP Rachmat",
+  //   },
+  //   {
+  //     title: "Tayangan Konten Wawasan Islami",
+  //     desc: "Konten islami harian selama Ramadhan di Instagram DKM Paramadina.",
+  //     date: "28 Februari 2025 - 30 Maret 2025",
+  //     time: "13.00 - 15.00 WIB",
+  //     location: "Universitas Paramadina",
+  //   },
+  //   {
+  //     title: "Qur’an Menjelang Maghrib (QURMA)",
+  //     desc: "Tilawah bersama harian Ramadhan untuk khatam Al-Qur’an berjamaah tujuh juz.",
+  //     date: "28 Februari 2025 - 30 Maret 2025",
+  //     time: "15.30 - 17.00 WIB",
+  //     location: "Gedung A Selasar Lantai 3",
+  //   },
+  //   {
+  //     title: "Bedah Buku & Bukber DKM",
+  //     desc: "Bedah Buku & Buka Bersama: Pererat ukhuwah, kajian, tilawah, dan kebersamaan Ramadhan.",
+  //     date: "21 Maret 2025",
+  //     time: "16.00 - 20.00 WIB",
+  //     location: "Aula Gedung TP Rachmat",
+  //   },
+  //   {
+  //     title: "Konten PHBI",
+  //     desc: "Konten PHBI: Wawasan islami hari besar Islam dan nasional via Instagram.",
+  //     date: "Waktu fleksibel",
+  //     time: "13.00 - 15.00",
+  //     location: "Universitas Paramadina",
+  //   },
+  //   {
+  //     title: "Kajian Kitab Turats",
+  //     desc: "Diskusi bulanan kitab klasik Islam dengan pendekatan kontemporer kampus.",
+  //     date: "8 Mei 2025",
+  //     time: "18.15 - selesai",
+  //     location: "Ruangan Toledo Lantai 5",
+  //   },
+  // ];
+
+  // const dataPage2 = [
+  //   {
+  //     title: "Yaasiinan & Muhadoroh",
+  //     desc: "Yasinan dan Muhadoroh rutin Jumat malam, tingkatkan spiritual, ukhuwah, dan dakwah.",
+  //     date: "Setiap Malam Jum'at",
+  //     time: "Ba'da Maghrib",
+  //     location: "Universitas Paramadina",
+  //   },
+  //   {
+  //     title: "Qurban Idul Adha 1446 H",
+  //     desc: "Idul Adha: Makna ikhlas, pengorbanan, dan ketaatan Nabi Ibrahim-Ismail.",
+  //     date: "7 Juni 2025",
+  //     time: "09.00 - Selesai",
+  //     location: "Universitas Paramadina",
+  //   },
+  //   {
+  //     title: "Curhat DKM Paramadina",
+  //     desc: "Sampaikan curhat dan saranmu di sini! Kunjungi websitenya ya! <a href='https://curhat-dkm.vercel.app/' target='_blank' rel='noopener noreferrer' style='color: #0066FF;'>Website Curhat DKM</a>",
+  //     date: "Setiap hari Jum'at",
+  //     time: "11.00 - Selesai",
+  //     location: "Universitas Paramadina",
+  //   },
+  //   {
+  //     title: "Muharram 1447 H",
+  //     desc: "Jalan Menuju Cahaya, momen hijrah dan ukhuwah untuk tumbuh bersama.",
+  //     date: "Coming Soon",
+  //     time: "Not yet",
+  //     location: "Universitas Paramadina",
+  //   },
+  // ];
+
+  // const pageData = page === 1 ? dataPage1 : dataPage2;
+
+  const itemsPerPage = 6;
+  const paginatedPrograms = programs.slice(
+    (page - 1) * itemsPerPage,
+    page * itemsPerPage
+  );
+  const totalPages = Math.ceil(programs.length / itemsPerPage);
+
+  const handleScroll = () => {
+    const section = document.getElementById("lihatselengkapnya");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <main className="font-sans bg-[#F0F6FF] relative z-10">
@@ -134,7 +188,10 @@ export default function Program() {
           </p>
           <div className="mt-6 md:mt-12 flex flex-col md:flex-row gap-4">
             <Link href="#program">
-              <button className="bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700 w-full md:w-auto">
+              <button
+                className="bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700 w-full md:w-auto"
+                onClick={handleScroll}
+              >
                 Lihat Selengkapnya
               </button>
             </Link>
@@ -195,21 +252,21 @@ export default function Program() {
             animate="show"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {pageData.map((item, i) => (
+            {paginatedPrograms.map((item, i) => (
               <motion.div
-                key={i}
+                key={item.id || i}
                 variants={itemVariants}
                 className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300"
               >
                 <h3 className="text-[#0066FF] font-bold text-lg mb-2">
-                  {item.title}
+                  <Link href={`/program/${item.slug}`}>{item.title}</Link>
                 </h3>
                 <p
-                  dangerouslySetInnerHTML={{ __html: item.desc }}
+                  dangerouslySetInnerHTML={{ __html: item.shortDesc }}
                   className="text-gray-600 text-sm mb-3"
                 ></p>
                 <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
-                  <FaCalendar className="text-[#0066FF]" /> {item.date}
+                  <FaCalendar className="text-[#0066FF]" /> {formatTanggalIndonesia(item.date)}
                 </div>
                 <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
                   <FaClock className="text-[#0066FF]" /> {item.time}
@@ -223,19 +280,22 @@ export default function Program() {
 
           {/* Pagination */}
           <div className="flex justify-center mt-8 gap-2">
-            {[1, 2].map((num) => (
-              <button
-                key={num}
-                onClick={() => setPage(num)}
-                className={`w-9 h-9 flex items-center justify-center border rounded-full transition ${
-                  page === num
-                    ? "bg-[#0066FF] text-white border-[#0066FF]"
-                    : "text-[#0066FF] border-[#0066FF] hover:bg-[#0066FF] hover:text-white"
-                }`}
-              >
-                {num}
-              </button>
-            ))}
+            {Array.from({ length: totalPages }).map((_, index) => {
+              const num = index + 1;
+              return (
+                <button
+                  key={num}
+                  onClick={() => setPage(num)}
+                  className={`w-9 h-9 flex items-center justify-center border rounded-full transition ${
+                    page === num
+                      ? "bg-[#0066FF] text-white border-[#0066FF]"
+                      : "text-[#0066FF] border-[#0066FF] hover:bg-[#0066FF] hover:text-white"
+                  }`}
+                >
+                  {num}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
