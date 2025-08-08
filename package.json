@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/plus-jakarta-sans": "^5.2.5",
+    "@google/generative-ai": "^0.24.1",
     "@prisma/client": "^6.13.0",
     "cloudinary": "^2.7.0",
     "framer-motion": "^12.9.2",
