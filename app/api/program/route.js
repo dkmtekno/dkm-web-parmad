@@ -38,40 +38,61 @@ export async function POST(req) {
   const title = formData.get("title");
   const rawDesc = formData.get("desc");
   const shortDesc = formData.get("shortDesc");
+  const summaryDesc = formData.get("summaryDesc") || rawDesc.substring(0, 300);
   const desc = convertDescToHTML(rawDesc);
   const date = new Date(formData.get("date"));
   const time = formData.get("time");
   const location = formData.get("location");
 
-  const files = formData.getAll("gallery"); // multiple files
-  const galleryUrls = [];
+  // --- Upload Thumbnails ---
+  let thumbnailUrl = "";
+  const thumbnailFile = formData.get("thumbnails");
+  if (thumbnailFile && thumbnailFile.size > 0) {
+    const thumbBuffer = Buffer.from(await thumbnailFile.arrayBuffer());
+    const thumbBase64 = thumbBuffer.toString("base64");
 
-  for (const file of files) {
-    const arrayBuffer = await file.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
+    const thumbRes = await cloudinary.uploader.upload(
+      `data:${thumbnailFile.type};base64,${thumbBase64}`,
+      {
+        folder: "thumbnails",
+      }
+    );
+    thumbnailUrl = thumbRes.secure_url;
+  }
+
+  // --- Upload Gallery ---
+  const galleryUrls = [];
+  const galleryFiles = formData.getAll("gallery");
+  for (const file of galleryFiles) {
+    if (!file || file.size === 0) continue;
+    const buffer = Buffer.from(await file.arrayBuffer());
     const base64 = buffer.toString("base64");
 
-    const uploadRes = await cloudinary.uploader.upload(
+    const galleryRes = await cloudinary.uploader.upload(
       `data:${file.type};base64,${base64}`,
       {
         folder: "programs",
       }
     );
-    galleryUrls.push(uploadRes.secure_url);
+    galleryUrls.push(galleryRes.secure_url);
   }
 
+  // --- Simpan ke DB ---
   const newProgram = await prisma.program.create({
     data: {
       slug,
       title,
       desc,
       shortDesc,
+      summaryDesc,
       date,
       time,
       location,
       gallery: galleryUrls,
+      thumbnails: thumbnailUrl,
     },
   });
 
   return Response.json(newProgram);
 }
+
