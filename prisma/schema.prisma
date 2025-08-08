@@ -14,14 +14,16 @@ datasource db {
 }
 
 model Program {
-  id        String   @id @default(cuid())
-  slug      String   @unique
-  title     String
-  shortDesc String
-  desc      String
-  date      DateTime
-  time      String
-  location  String
-  gallery   String[] // Array of image URLs
-  createdAt DateTime @default(now())
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  shortDesc   String
+  summaryDesc String
+  desc        String
+  date        DateTime
+  time        String
+  location    String
+  gallery     String[]
+  thumbnails  String
+  createdAt   DateTime @default(now())
 }
