@@ -13,13 +13,15 @@ export default function ClientLayout({ children }) {
   const [loading, setLoading] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
 
+  // daftar path yang tidak mau pakai navbar & footer
+  const noLayoutPaths = ["/program/tambah"];
+
   useEffect(() => {
-    // Tunggu sampai client mount, untuk hindari hydration error
     setHasMounted(true);
   }, []);
 
   useEffect(() => {
-    if (hasMounted) { // Loading hanya dijalankan setelah client siap
+    if (hasMounted) {
       setLoading(true);
       const timer = setTimeout(() => {
         setLoading(false);
@@ -29,7 +31,9 @@ export default function ClientLayout({ children }) {
     }
   }, [pathname, hasMounted]);
 
-  if (!hasMounted) return null; // Jangan render apapun sampai client siap
+  if (!hasMounted) return null;
+
+  const isNoLayoutPage = noLayoutPaths.includes(pathname);
 
   return (
     <div className="relative antialiased min-h-screen">
@@ -37,11 +41,11 @@ export default function ClientLayout({ children }) {
         <Loader />
       ) : (
         <>
-          <Navbar />
-          <BackgroundVector />
+          {!isNoLayoutPage && <Navbar />}
+          {!isNoLayoutPage && <BackgroundVector />}
           {children}
-          <BubbleMenu />
-          <Footer />
+          {!isNoLayoutPage && <BubbleMenu />}
+          {!isNoLayoutPage && <Footer />}
         </>
       )}
     </div>
