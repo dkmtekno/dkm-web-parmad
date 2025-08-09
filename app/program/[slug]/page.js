@@ -12,7 +12,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import {
+  FaArrowCircleLeft,
+  FaArrowCircleRight,
+  FaUserPlus,
+} from "react-icons/fa";
 import Link from "next/link";
 
 export default function ProgramDetail() {
@@ -51,7 +55,7 @@ export default function ProgramDetail() {
 
   return (
     <main className="max-w-6xl mx-auto py-20 px-6">
-      <section className="px-4 py-24 lg:py-[100px] flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10">
+      <section className="pb-24 lg:py-[100px] flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +63,7 @@ export default function ProgramDetail() {
           viewport={{ once: true }}
           className="lg:w-1/2"
         >
-          <h1 className="mb-4 text-1xl lg:text-4xl font-bold !leading-snug text-[#0066FF]">
+          <h1 className="mb-4 text-2xl lg:text-4xl font-bold !leading-snug text-[#0066FF]">
             {program?.title}
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
@@ -70,12 +74,12 @@ export default function ProgramDetail() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          draggable="false"
           src={program?.thumbnails}
           loading="lazy"
           width="600"
           height="600"
-          className="rounded-3xl lg:w-2/5"
+          className="rounded-3xl lg:2/5"
         />
       </section>
       <h1 className="text-2xl font-bold text-[#0066FF] mb-4">
@@ -85,35 +89,19 @@ export default function ProgramDetail() {
         className="text-gray-700 mb-6 leading-relaxed text-sm"
         dangerouslySetInnerHTML={{ __html: program.desc }}
       />
-      {/* <p className="text-gray-600 mb-2">
-        <strong>Tanggal:</strong>{" "}
-        {new Date(program.date).toLocaleDateString("id-ID", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        })}
-      </p>
-      <p className="text-gray-600 mb-2">
-        <strong>Waktu:</strong> {program.time}
-      </p>
-      <p className="text-gray-600 mb-6">
-        <strong>Lokasi:</strong> {program.location}
-      </p> */}
-
       {program.gallery?.length > 0 && (
         <div className="w-full relative mt-10">
-          {/* Tombol Navigasi di LUAR sisi kiri dan kanan */}
           <button
             ref={prevRef}
-            className="absolute top-1/2 -translate-y-1/2 md:-left-24 -left-0 z-10 p-2 bg-white/70 rounded-full hover:bg-white transition"
+            className="absolute top-1/2 -translate-y-1/2 md:-left-24 -left-0 z-10 p-2 bg-white/70 cursor-pointer rounded-full hover:bg-white transition"
           >
-            <FaArrowCircleLeft size={32} />
+            <FaArrowCircleLeft className="text-xl md:text-4xl" />
           </button>
           <button
             ref={nextRef}
-            className="absolute top-1/2 -translate-y-1/2 md:-right-24 -right-0 z-10 p-2 bg-white/70 rounded-full hover:bg-white transition"
+            className="absolute top-1/2 -translate-y-1/2 md:-right-24 -right-0 z-10 p-2 bg-white/70 cursor-pointer rounded-full hover:bg-white transition"
           >
-            <FaArrowCircleRight size={32} />
+            <FaArrowCircleRight className="text-xl md:text-4xl" />
           </button>
 
           {/* Swiper Container */}
@@ -174,6 +162,31 @@ export default function ProgramDetail() {
           />
         </div>
       )}
+
+      <motion.section
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="bg-[#0066FF] text-[#DAE9FF] text-center py-20 lg:rounded-[37.5px] rounded-[20px] max-w-5xl mx-auto mt-[50px] lg:mt-28 px-6 relative z-20"
+      >
+        <h2 className="text-xl md:text-3xl font-semibold mb-4">
+          Jangan sia-siakan waktu untuk berkembang{" "}
+          <span className="text-[#FFAA00]">tanpa tujuan</span>.
+        </h2>
+        <p className="text-1xl md:text-xl font-semibold mb-4">
+          Di DKM Paramadina, fokus belajar, asah skill, berkarya, dan bermanfaat
+          bagi umat.
+        </p>
+        <div className="flex justify-center">
+          <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
+            <button className="mt-2 px-10 py-2 cursor-pointer rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold flex items-center gap-2 transition hover:brightness-110">
+              <FaUserPlus size={16} />
+              Gabung Program
+            </button>
+          </Link>
+        </div>
+      </motion.section>
     </main>
   );
 }
