@@ -23,7 +23,7 @@ model Program {
   date        DateTime
   time        String
   location    String
-  gallery     String[]
+  gallery     String[] @default([])
   thumbnails  String
   createdAt   DateTime @default(now())
 }
