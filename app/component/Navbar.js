@@ -20,18 +20,19 @@ export default function Navbar() {
   }, []);
 
   const getLinkClass = (href) => {
-    const isActive = pathname === href;
+    const isActive = pathname === href || pathname.startsWith(`${href}/`);
+
     if (scrolled) {
       return isActive
-        ? "text-orange-500"
+        ? "text-orange-500 font-bold"
         : "text-white hover:text-[#0066FF] transition";
     } else if (isHome) {
       return isActive
-        ? "text-orange-500"
+        ? "text-orange-500 font-bold"
         : "text-white hover:text-[#0066FF] transition";
     } else {
       return isActive
-        ? "text-orange-500"
+        ? "text-orange-500 font-bold"
         : "text-[#0066FF] hover:text-[#0066FF] transition";
     }
   };
