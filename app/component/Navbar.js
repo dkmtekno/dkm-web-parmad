@@ -1,15 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [programs, setPrograms] = useState([]);
+  const [open, setOpen] = useState(false);
 
   const isHome = pathname === "/";
+
+  useEffect(() => {
+    async function fetchPrograms() {
+      try {
+        const res = await fetch("/api/program");
+        if (!res.ok) throw new Error("Failed to fetch programs");
+        const data = await res.json();
+        setPrograms(data);
+      } catch (error) {
+        console.error(error);
+      } 
+    }
+    fetchPrograms();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,9 +90,53 @@ export default function Navbar() {
         >
           Divisi Organisasi
         </Link>
-        <Link href="/program" className={getLinkClass("/program")}>
-          Program
-        </Link>
+
+        {pathname.startsWith("/program") ? (
+          <div className="relative">
+            <button
+              onClick={() => setOpen((prev) => !prev)}
+              className={`cursor-pointer px-4 inline-flex items-center font-medium ${getLinkClass(
+                "/program"
+              )}`}
+            >
+              Program
+              <svg
+                className="ml-1 h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            {open && (
+              <ul className="absolute bg-white shadow-lg rounded-md mt-2 w-48 z-50">
+                {programs.map((p) => (
+                  <li key={p.id}>
+                    <a
+                      href={`/program/${p.slug}`}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      {p.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ) : (
+          <Link href="/program" className={getLinkClass("/program")}>
+            Program
+          </Link>
+        )}
+
         <Link href="/kontak-kami" className={getLinkClass("/kontak-kami")}>
           Kontak Kami
         </Link>
