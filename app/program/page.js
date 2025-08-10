@@ -9,15 +9,24 @@ import { useEffect } from "react";
 function formatTanggalIndonesia(isoDate) {
   const tanggal = new Date(isoDate);
   const bulanIndo = [
-    "Januari", "Februari", "Maret", "April", "Mei", "Juni",
-    "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
   ];
   const hari = tanggal.getDate();
   const bulan = bulanIndo[tanggal.getMonth()];
   const tahun = tanggal.getFullYear();
   return `${hari} ${bulan} ${tahun}`;
 }
-
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -63,84 +72,6 @@ export default function Program() {
 
     fetchPrograms();
   }, []);
-
-  // const dataPage1 = [
-  //   {
-  //     title: "Peringatan Isra Mi’raj",
-  //     desc: "Peringatan Isra Mi’raj DKM Paramadina: Kajian, hadroh, dan refleksi keimanan bersama.",
-  //     date: "21 Februari 2025",
-  //     time: "15.00 - 18.00 WIB",
-  //     location: "Aula Gedung TP Rachmat",
-  //   },
-  //   {
-  //     title: "Tayangan Konten Wawasan Islami",
-  //     desc: "Konten islami harian selama Ramadhan di Instagram DKM Paramadina.",
-  //     date: "28 Februari 2025 - 30 Maret 2025",
-  //     time: "13.00 - 15.00 WIB",
-  //     location: "Universitas Paramadina",
-  //   },
-  //   {
-  //     title: "Qur’an Menjelang Maghrib (QURMA)",
-  //     desc: "Tilawah bersama harian Ramadhan untuk khatam Al-Qur’an berjamaah tujuh juz.",
-  //     date: "28 Februari 2025 - 30 Maret 2025",
-  //     time: "15.30 - 17.00 WIB",
-  //     location: "Gedung A Selasar Lantai 3",
-  //   },
-  //   {
-  //     title: "Bedah Buku & Bukber DKM",
-  //     desc: "Bedah Buku & Buka Bersama: Pererat ukhuwah, kajian, tilawah, dan kebersamaan Ramadhan.",
-  //     date: "21 Maret 2025",
-  //     time: "16.00 - 20.00 WIB",
-  //     location: "Aula Gedung TP Rachmat",
-  //   },
-  //   {
-  //     title: "Konten PHBI",
-  //     desc: "Konten PHBI: Wawasan islami hari besar Islam dan nasional via Instagram.",
-  //     date: "Waktu fleksibel",
-  //     time: "13.00 - 15.00",
-  //     location: "Universitas Paramadina",
-  //   },
-  //   {
-  //     title: "Kajian Kitab Turats",
-  //     desc: "Diskusi bulanan kitab klasik Islam dengan pendekatan kontemporer kampus.",
-  //     date: "8 Mei 2025",
-  //     time: "18.15 - selesai",
-  //     location: "Ruangan Toledo Lantai 5",
-  //   },
-  // ];
-
-  // const dataPage2 = [
-  //   {
-  //     title: "Yaasiinan & Muhadoroh",
-  //     desc: "Yasinan dan Muhadoroh rutin Jumat malam, tingkatkan spiritual, ukhuwah, dan dakwah.",
-  //     date: "Setiap Malam Jum'at",
-  //     time: "Ba'da Maghrib",
-  //     location: "Universitas Paramadina",
-  //   },
-  //   {
-  //     title: "Qurban Idul Adha 1446 H",
-  //     desc: "Idul Adha: Makna ikhlas, pengorbanan, dan ketaatan Nabi Ibrahim-Ismail.",
-  //     date: "7 Juni 2025",
-  //     time: "09.00 - Selesai",
-  //     location: "Universitas Paramadina",
-  //   },
-  //   {
-  //     title: "Curhat DKM Paramadina",
-  //     desc: "Sampaikan curhat dan saranmu di sini! Kunjungi websitenya ya! <a href='https://curhat-dkm.vercel.app/' target='_blank' rel='noopener noreferrer' style='color: #0066FF;'>Website Curhat DKM</a>",
-  //     date: "Setiap hari Jum'at",
-  //     time: "11.00 - Selesai",
-  //     location: "Universitas Paramadina",
-  //   },
-  //   {
-  //     title: "Muharram 1447 H",
-  //     desc: "Jalan Menuju Cahaya, momen hijrah dan ukhuwah untuk tumbuh bersama.",
-  //     date: "Coming Soon",
-  //     time: "Not yet",
-  //     location: "Universitas Paramadina",
-  //   },
-  // ];
-
-  // const pageData = page === 1 ? dataPage1 : dataPage2;
 
   const itemsPerPage = 6;
   const paginatedPrograms = programs.slice(
@@ -266,7 +197,8 @@ export default function Program() {
                   className="text-gray-600 text-sm mb-3"
                 ></p>
                 <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
-                  <FaCalendar className="text-[#0066FF]" /> {formatTanggalIndonesia(item.date)}
+                  <FaCalendar className="text-[#0066FF]" />{" "}
+                  {formatTanggalIndonesia(item.date)}
                 </div>
                 <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
                   <FaClock className="text-[#0066FF]" /> {item.time}
@@ -340,7 +272,7 @@ export default function Program() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            src="/program_muharram.png"
+            src="/JHP.png"
             loading="lazy"
             width="500"
             height="500"
@@ -354,14 +286,14 @@ export default function Program() {
             className="w-full lg:w-1/2 text-center lg:text-left"
           >
             <h2 className="mt-4 text-2xl font-bold text-[#0066FF] lg:text-2xl">
-              Muharram 1447 H
+              Jam’iyyatul Huffadz Paramadina
             </h2>
             <p className="mb-6 mt-2 leading-relaxed text-gray-500">
-              Program Muharram tahun ini bertema “Jalan Menuju Cahaya” yang
-              mengajak kita merenungi makna hijrah Nabi Muhammad SAW dari Makkah
-              ke Madinah. Melalui acara ini, umat Islam, khususnya generasi
-              muda, diajak memahami hijrah sebagai jalan perubahan, mempererat
-              ukhuwah, dan tumbuh bersama dalam cahaya Islam.
+              Program JHP oleh Divisi Kajian & Dakwah serta HR DKM Paramadina
+              fokus pada Tahsin, Tahfidz, dan Tasmi’ untuk membangun budaya
+              Qurani di kampus, mempererat ukhuwah, serta menumbuhkan semangat
+              istiqamah dan keterhubungan spiritual mahasiswa dengan Al-Qur’an.
+              Terbuka untuk semua tingkat kemampuan.
             </p>
             <p className="text-gray-600 mb-4">
               Lihat selengkapnya di Instagram kami di{" "}
