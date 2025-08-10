@@ -276,7 +276,7 @@ export default function Program() {
             loading="lazy"
             width="500"
             height="500"
-            className="rounded-3xl lg:w-2/5"
+            className="lg:w-2/5"
           />
           <motion.div
             initial={{ opacity: 0, x: 50 }}

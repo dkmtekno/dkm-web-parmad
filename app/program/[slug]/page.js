@@ -188,7 +188,7 @@ export default function ProgramDetail() {
           bagi umat.
         </p>
         <div className="flex justify-center">
-          <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
+          <Link href={`https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%ingin%mengatahui%20dari%20program%20${program?.title}.`}>
             <button className="mt-2 px-10 py-2 cursor-pointer rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold flex items-center gap-2 transition hover:brightness-110">
               <FaUserPlus size={16} />
               Gabung Program
