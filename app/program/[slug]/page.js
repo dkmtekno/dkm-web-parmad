@@ -19,6 +19,7 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import BackgroundVector from "@/app/component/BackgroundVector";
 
 export default function ProgramDetail() {
   const { slug } = useParams(); // tidak perlu React.use() kalau pakai client component
@@ -40,12 +41,13 @@ export default function ProgramDetail() {
   }, [slug]);
 
   if (!program) {
-    return (
-      <main className="max-w-4xl mx-auto py-20 px-6 text-center">
-        <h1 className="text-2xl font-semibold text-gray-500">Memuat data...</h1>
-      </main>
-    );
-  }
+  return (
+    <div className="h-screen">
+      <BackgroundVector />
+    </div>
+  );
+}
+
 
   const handleScroll = () => {
     const section = document.getElementById("lihatselengkapnya");
