@@ -182,7 +182,6 @@ function Input({
           value={value}
           onChange={onChange}
           className="w-full border border-gray-300 rounded-xl px-3 py-2 text-black"
-          required
         />
       )}
     </div>
