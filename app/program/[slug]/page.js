@@ -18,6 +18,7 @@ import {
   FaUserPlus,
 } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ProgramDetail() {
   const { slug } = useParams(); // tidak perlu React.use() kalau pakai client component
@@ -66,9 +67,17 @@ export default function ProgramDetail() {
           <h1 className="mb-4 text-2xl lg:text-4xl font-bold !leading-snug text-[#0066FF]">
             {program?.title}
           </h1>
-          <p className="font-medium text-gray-500 lg:text-lg">
+          <p className="font-medium text-gray-500 lg:text-sm">
             {program?.summaryDesc}
           </p>
+          {slug === "bedah-buku-bukber-dkm" && (
+            <div className="py-4">
+              <p className="font-bold text-gray-500 lg:text-1sm">
+                Supported By
+              </p>
+              <Image src="/morris.png" alt="morris" width={100} height={100} draggable="false" />
+            </div>
+          )}
         </motion.div>
         <motion.img
           initial={{ opacity: 0, scale: 0.9 }}
