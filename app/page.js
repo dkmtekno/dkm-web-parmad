@@ -135,7 +135,7 @@ export default function Home() {
         onMouseMove={handleMouseMove}
         className="h-screen bg-cover bg-center flex items-center justify-center relative overflow-hidden rounded-bl-[20px] rounded-br-[20px] lg:rounded-bl-[50px] lg:rounded-br-[50px]"
         style={{
-          backgroundImage: "url('/bg_hero.png')",
+          backgroundImage: "url('/bg_hero.webp')",
         }}
       >
         {/* Overlay hitam transparan */}
