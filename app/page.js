@@ -377,23 +377,26 @@ export default function Home() {
           {divisiList.map((divisi, index) => (
             <motion.div
               key={index}
-              className="bg-white shadow-md p-8 rounded-xl text-left"
+              className="bg-white shadow-md p-8 rounded-xl text-left flex flex-col justify-between"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <img
-                src={divisi.icon}
-                alt={divisi.title}
-                className="mb-4"
-                width="60"
-                height="60"
-              />
-              <h1 className="font-semibold text-[#2C2F33] text-xl">
-                {divisi.title}
-              </h1>
-              <p className="text-gray-500 text-sm mt-1">{divisi.task}</p>
+              <div>
+                <img
+                  src={divisi.icon}
+                  alt={divisi.title}
+                  className="mb-4"
+                  width="60"
+                  height="60"
+                />
+                <h1 className="font-semibold text-[#2C2F33] text-xl">
+                  {divisi.title}
+                </h1>
+                <p className="text-gray-500 text-sm mt-1">{divisi.task}</p>
+              </div>
+
               <p className="text-xs text-[#0066FF] mt-6">
                 #NaeemaDKMParamadina
               </p>

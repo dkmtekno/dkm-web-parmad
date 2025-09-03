@@ -41,13 +41,12 @@ export default function ProgramDetail() {
   }, [slug]);
 
   if (!program) {
-  return (
-    <div className="h-screen">
-      <BackgroundVector />
-    </div>
-  );
-}
-
+    return (
+      <div className="h-screen">
+        <BackgroundVector />
+      </div>
+    );
+  }
 
   const handleScroll = () => {
     const section = document.getElementById("lihatselengkapnya");
@@ -77,7 +76,13 @@ export default function ProgramDetail() {
               <p className="font-bold text-gray-500 lg:text-1sm">
                 Supported By
               </p>
-              <Image src="/morris.png" alt="morris" width={100} height={100} draggable="false" />
+              <Image
+                src="/morris.png"
+                alt="morris"
+                width={100}
+                height={100}
+                draggable="false"
+              />
             </div>
           )}
         </motion.div>
@@ -104,15 +109,15 @@ export default function ProgramDetail() {
         <div className="w-full relative mt-10">
           <button
             ref={prevRef}
-            className="absolute top-1/2 -translate-y-1/2 md:-left-24 -left-0 z-10 p-2 bg-white/70 cursor-pointer rounded-full hover:bg-white transition"
+            className="absolute top-2/5 md:top-1/2 -translate-y-1/2 md:-left-24 -left-0 z-10 p-2 bg-white/70 cursor-pointer rounded-full hover:bg-white transition"
           >
-            <FaArrowCircleLeft className="text-xl md:text-4xl" />
+            <FaArrowCircleLeft className="text-sm md:text-4xl" />
           </button>
           <button
             ref={nextRef}
-            className="absolute top-1/2 -translate-y-1/2 md:-right-24 -right-0 z-10 p-2 bg-white/70 cursor-pointer rounded-full hover:bg-white transition"
+            className="absolute top-2/5 md:top-1/2 -translate-y-1/2 md:-right-24 -right-0 z-10 p-2 bg-white/70 cursor-pointer rounded-full hover:bg-white transition"
           >
-            <FaArrowCircleRight className="text-xl md:text-4xl" />
+            <FaArrowCircleRight className="text-sm md:text-4xl" />
           </button>
 
           {/* Swiper Container */}
@@ -122,6 +127,10 @@ export default function ProgramDetail() {
               slidesPerView={3}
               slidesPerGroup={1}
               modules={[Navigation, Pagination]}
+              breakpoints={{
+                0: { slidesPerView: 2 }, // layar kecil (mobile)
+                768: { slidesPerView: 3 }, // tablet ke atas
+              }}
               onInit={(swiper) => {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
@@ -190,7 +199,9 @@ export default function ProgramDetail() {
           bagi umat.
         </p>
         <div className="flex justify-center">
-          <Link href={`https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%ingin%mengatahui%20dari%20program%20${program?.title}.`}>
+          <Link
+            href={`https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%ingin%mengatahui%20dari%20program%20${program?.title}.`}
+          >
             <button className="mt-2 px-10 py-2 cursor-pointer rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold flex items-center gap-2 transition hover:brightness-110">
               <FaUserPlus size={16} />
               Gabung Program
