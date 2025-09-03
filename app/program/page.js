@@ -120,7 +120,7 @@ export default function Program() {
           <div className="mt-6 md:mt-12 flex flex-col md:flex-row gap-4">
             <Link href="#program">
               <button
-                className="bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700 w-full md:w-auto"
+                className="bg-[#0066FF] cursor-pointer text-white px-8 py-2 rounded-[12px] hover:bg-blue-700 w-full md:w-auto"
                 onClick={handleScroll}
               >
                 Lihat Selengkapnya
@@ -130,7 +130,7 @@ export default function Program() {
               href="https://docs.google.com/document/d/1bkpf7kJdR1HSJKrXHyx_bLyCtTARPQNYxF8gfVbmFWY/edit?usp=sharing"
               target="_blank"
             >
-              <button className="flex items-center justify-center text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-[#0066FF] w-full md:w-auto hover:text-white transition">
+              <button className="flex items-center cursor-pointer justify-center text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-[#0066FF] w-full md:w-auto hover:text-white transition">
                 <FaDownload className="pr-2 text-2xl" /> Unduh Program Naeema
               </button>
             </Link>
@@ -218,7 +218,7 @@ export default function Program() {
                 <button
                   key={num}
                   onClick={() => setPage(num)}
-                  className={`w-9 h-9 flex items-center justify-center border rounded-full transition ${
+                  className={`w-9 h-9 flex items-center cursor-pointer justify-center border rounded-full transition ${
                     page === num
                       ? "bg-[#0066FF] text-white border-[#0066FF]"
                       : "text-[#0066FF] border-[#0066FF] hover:bg-[#0066FF] hover:text-white"
@@ -317,7 +317,7 @@ export default function Program() {
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
         <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
-          <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
+          <button className="mt-2 px-12 py-2 cursor-pointer rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
             Yuk Ikutan
           </button>
         </Link>

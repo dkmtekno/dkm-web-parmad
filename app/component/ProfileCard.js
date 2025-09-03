@@ -104,7 +104,7 @@ export default function ProfileCard({
               media.url ? (
                 <Link key={idx} href={media.url} target="_blank">
                   <button
-                    className="bg-blue-100 p-2 rounded-full hover:bg-blue-200 transition"
+                    className="bg-blue-100 p-2 cursor-pointer rounded-full hover:bg-blue-200 transition"
                     aria-label={media.label}
                   >
                     {media.icon}

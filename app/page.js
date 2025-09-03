@@ -621,7 +621,7 @@ export default function Home() {
             dan bermanfaat loh!
           </p>
           <Link href="/program">
-            <button className="mt-4 bg-[#0066FF] text-white px-4 py-2 rounded-[12px] hover:bg-blue-700">
+            <button className="mt-4 bg-[#0066FF] cursor-pointer text-white px-4 py-2 rounded-[12px] hover:bg-blue-700">
               Lihat Program DKM Paramadina
             </button>
           </Link>
@@ -809,7 +809,7 @@ export default function Home() {
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
         <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
-          <button className="mt-2 px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
+          <button className="mt-2 cursor-pointer px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
             Yuk Ikutan
           </button>
         </Link>

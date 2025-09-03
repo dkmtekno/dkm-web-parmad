@@ -42,7 +42,7 @@ export default function BubbleMenu() {
         <motion.button
           onClick={toggleMenu}
           whileTap={{ scale: 0.9, rotate: 180 }}
-          className="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center shadow-lg hover:bg-blue-600 transition absolute right-0 bottom-0"
+          className="w-14 h-14 cursor-pointer rounded-full bg-blue-500 flex items-center justify-center shadow-lg hover:bg-blue-600 transition absolute right-0 bottom-0"
         >
           {isOpen ? (
             <FiX color="white" size={28} />
