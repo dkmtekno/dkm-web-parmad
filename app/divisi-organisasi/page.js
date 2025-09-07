@@ -3,6 +3,7 @@ import React from "react";
 import ProfileCard from "../component/ProfileCard";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import FilterDivisi from "../component/FilterDivisi";
 
 export default function divisiOrganisasi() {
   return (
@@ -69,14 +70,15 @@ export default function divisiOrganisasi() {
           transition={{ duration: 0.8 }}
         />
       </section>
+      <FilterDivisi />
 
       <motion.section
-        className="py-12 px-6 lg:px-0"
+        className="md:py-[150px] py-12 px-6 lg:px-0"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        id="divisi"
+        id="ketum"
       >
         <div className="max-w-6xl mx-auto lg:text-left text-center">
           <h3 className="text-[#0066FF] text-3xl font-bold">Ketum & Waketum</h3>
@@ -107,11 +109,12 @@ export default function divisiOrganisasi() {
       </motion.section>
 
       <motion.section
-        className="py-12 px-6 lg:px-0"
+        className="md:py-[150px] py-12 px-6 lg:px-0"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
+        id="sekretaris"
       >
         <div className="max-w-6xl mx-auto lg:text-left text-center">
           <h3 className="text-[#0066FF] text-3xl font-bold">Sekretaris</h3>
@@ -140,11 +143,12 @@ export default function divisiOrganisasi() {
       </motion.section>
 
       <motion.section
-        className="py-12 px-6 lg:px-0"
+        className="md:py-[150px] py-12 px-6 lg:px-0"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
+        id="bendahara"
       >
         <div className="max-w-6xl mx-auto lg:text-left text-center">
           <h3 className="text-[#0066FF] text-3xl font-bold">Bendahara</h3>
@@ -172,11 +176,12 @@ export default function divisiOrganisasi() {
       </motion.section>
 
       <motion.section
-        className="py-12 px-6 lg:px-0"
+        className="md:py-[150px] py-12 px-6 lg:px-0"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
+        id="kajian-dakwah"
       >
         <div className="max-w-6xl mx-auto lg:text-left text-center">
           <h3 className="text-[#0066FF] text-3xl font-bold">Kajian & Dakwah</h3>
@@ -278,7 +283,14 @@ export default function divisiOrganisasi() {
         </div>
       </motion.section>
 
-      <section className="py-12 px-6 lg:px-0 relative z-20">
+      <motion.section
+        className="md:py-[150px] py-12 px-6 lg:px-0 relative z-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        id="humas"
+      >
         <div className="max-w-6xl mx-auto text-center lg:text-left">
           <h3 className="text-[#0066FF] text-3xl font-bold">
             Hubungan Masyarakat
@@ -375,9 +387,16 @@ export default function divisiOrganisasi() {
             instagramUrl={"fathrzqie"}
           />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="py-12 px-6 lg:px-0 relative z-10">
+      <motion.section
+        className="md:py-[150px] py-12 px-6 lg:px-0 relative z-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        id="hr"
+      >
         <div className="absolute inset-0 -z-10">
           <img
             loading="lazy"
@@ -412,12 +431,6 @@ export default function divisiOrganisasi() {
             linkedinUrl={"alifvia-mandalika-5713b7276"}
           />
           <ProfileCard
-            name="Muhammad Afif Ardiansyah"
-            subtitle="Anggota Human Resource"
-            imageUrl="/ardian.png"
-            instagramUrl={"aarrdiiann_"}
-          />
-          <ProfileCard
             name="Fadil Rizky Hapta"
             subtitle="Anggota Human Resource"
             imageUrl="/fadil.png"
@@ -442,13 +455,21 @@ export default function divisiOrganisasi() {
             instagramUrl={"usala.fiyah"}
           />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="py-12 px-6 lg:px-0">
+      <motion.section
+        className="md:py-[150px] py-12 px-6 lg:px-0"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        id="digital-kreatif"
+      >
         <div className="max-w-6xl mx-auto text-center lg:text-left">
-          <h3 className="text-[#0066FF] text-3xl font-bold">
+          <h3 className="text-[#0066FF] text-3xl font-bold">Digital</h3>
+          <h5 className="text-[#0066FF] text-1xl font-semibold">
             Produksi Kreatif
-          </h3>
+          </h5>
           <p className="text-gray-500 text-sm mt-2">
             Mengembangkan konsep dan ide kreatif untuk DKM, termasuk desain,
             pembuatan dan editing video, serta strategi branding.
@@ -492,10 +513,23 @@ export default function divisiOrganisasi() {
             imageUrl="/aldi.png"
             instagramUrl={"aldimfadh_"}
           />
+          <ProfileCard
+            name="Fauziah Nurulfarhi"
+            subtitle="Anggota Produksi Kreatif"
+            imageUrl="/uzi.png"
+            instagramUrl={"fziahnrll"}
+          />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="py-12 px-6 lg:px-0 relative z-10">
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        id="digital-teknologi"
+        className="md:py-[150px] py-12 px-6 lg:px-0 relative z-10"
+      >
         <div className="absolute inset-0 -z-10">
           <img
             loading="lazy"
@@ -505,7 +539,8 @@ export default function divisiOrganisasi() {
           />
         </div>
         <div className="max-w-6xl mx-auto text-center lg:text-left">
-          <h3 className="text-[#0066FF] text-3xl font-bold">Teknologi</h3>
+          <h3 className="text-[#0066FF] text-3xl font-bold">Digital</h3>
+          <h5 className="text-[#0066FF] text-1xl font-semibold">Teknologi</h5>
           <p className="text-gray-500 text-sm mt-2">
             Mengelola dan mengembangkan teknologi informasi dan sistem yang
             digunakan DKM, meliputi perancangan, pengembangan, dan pemeliharaan
@@ -514,12 +549,6 @@ export default function divisiOrganisasi() {
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
         <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
-          <ProfileCard
-            name="Muhammad Ariel Dien"
-            subtitle="Kepala Divisi Digital"
-            imageUrl="/ariel.png"
-            instagramUrl={"dienariel"}
-          />
           <ProfileCard
             name="Ilham Saputra"
             subtitle="Anggota Teknologi"
@@ -539,16 +568,17 @@ export default function divisiOrganisasi() {
             imageUrl="/husein.png"
             instagramUrl={"fadhilhusein"}
           />
-          <ProfileCard
-            name="Fauziah Nurulfarhi"
-            subtitle="Anggota Teknologi"
-            imageUrl="/uzi.png"
-            instagramUrl={"fziahnrll"}
-          />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="py-12 px-6 lg:px-0">
+      <motion.section
+        className="py-12 px-6 lg:px-0"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        id="bpo"
+      >
         <div className="max-w-6xl mx-auto text-center lg:text-left">
           <h3 className="text-[#0066FF] text-3xl font-bold">
             Badan Pengawas Organisasi DKM
@@ -581,7 +611,8 @@ export default function divisiOrganisasi() {
             imageUrl="/hatfina.png"
           />
         </div>
-      </section>
+      </motion.section>
+
       <motion.section
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
