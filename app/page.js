@@ -77,7 +77,8 @@ export default function Home() {
       task: "Mengelola keuangan DKM, termasuk pengelolaan anggaran, pengeluaran DKM.",
     },
     {
-      title: "Produksi Kreatif",
+      title: "Digital",
+      subtitle: "Produksi Kreatif",
       icon: "/prokre.png",
       task: "Mengembangkan konsep dan ide kreatif untuk DKM, termasuk desain, pembuatan dan editing video, serta strategi branding.",
     },
@@ -87,7 +88,8 @@ export default function Home() {
       task: "Mengadakan dan mengelola kajian rutin, mengembangkan konsep dan jadwal kegiatan kajian dan dakwah sesuai kebutuhan, membentuk dan memfasilitasi komunitas penghafal Al-Quran dan menyediakan bimbingan terkait keagamaan di DKM Paramadina.",
     },
     {
-      title: "Teknologi",
+      title: "Digital",
+      subtitle: "Teknologi",
       icon: "/teknologi.png",
       task: "Mengelola dan mengembangkan teknologi informasi dan sistem yang digunakan DKM, meliputi perancangan, pengembangan, dan pemeliharaan sistem teknologi informasi.",
     },
@@ -391,8 +393,11 @@ export default function Home() {
                   width="60"
                   height="60"
                 />
-                <h1 className="font-semibold text-[#2C2F33] text-xl">
+                <h1 className="font-bold text-[#2C2F33] text-xl">
                   {divisi.title}
+                </h1>
+                <h1 className="font-semibold text-[#0066FF] text-sm">
+                  {divisi.subtitle || ""}
                 </h1>
                 <p className="text-gray-500 text-sm mt-1">{divisi.task}</p>
               </div>
