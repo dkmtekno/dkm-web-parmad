@@ -572,7 +572,7 @@ export default function divisiOrganisasi() {
       </motion.section>
 
       <motion.section
-        className="py-12 px-6 lg:px-0"
+        className="md:py-[150px] py-12 px-6 lg:px-0"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
