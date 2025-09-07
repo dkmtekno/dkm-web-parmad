@@ -111,13 +111,13 @@ export default function ProgramDetail() {
             ref={prevRef}
             className="absolute top-2/5 md:top-1/2 -translate-y-1/2 md:-left-24 -left-0 z-10 p-2 bg-white/70 cursor-pointer rounded-full hover:bg-white transition"
           >
-            <FaArrowCircleLeft className="text-sm md:text-4xl" />
+            <FaArrowCircleLeft className="text-sm md:text-4xl text-[#0066FF]" />
           </button>
           <button
             ref={nextRef}
             className="absolute top-2/5 md:top-1/2 -translate-y-1/2 md:-right-24 -right-0 z-10 p-2 bg-white/70 cursor-pointer rounded-full hover:bg-white transition"
           >
-            <FaArrowCircleRight className="text-sm md:text-4xl" />
+            <FaArrowCircleRight className="text-sm md:text-4xl text-[#0066FF]" />
           </button>
 
           {/* Swiper Container */}
