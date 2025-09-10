@@ -23,7 +23,7 @@ export default function VideoWithThumbnail() {
         </div>
       ) : (
         <video
-          src="/dkm_okup_parmad.mp4" 
+          src="/okup_dkm.mp4" 
           controls
           autoPlay
           className="w-full h-auto"
