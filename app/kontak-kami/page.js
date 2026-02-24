@@ -41,7 +41,7 @@ export default function KontakKami() {
             donasi, hingga program sosial. Silakan hubungi kami kapan saja.
           </p>
           <div className="mt-6 flex gap-4">
-            <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
+            <Link href="https://wa.me/6285888179140?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
               <button className="flex items-center gap-2 cursor-pointer bg-[#0066FF] text-white px-8 py-2 rounded-[12px] hover:bg-blue-700">
                 <FaWhatsapp className="text-white" />
                 Hubungi Whatsapp
@@ -72,7 +72,7 @@ export default function KontakKami() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
-        <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
+        <Link href="https://wa.me/6285888179140?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
           <button className="mt-2 px-12 py-2 cursor-pointer rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
             Yuk Ikutan
           </button>

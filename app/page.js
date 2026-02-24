@@ -814,7 +814,7 @@ export default function Home() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Udah siap gaul bareng di DKM Paramadina?
         </h2>
-        <Link href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
+        <Link href="https://wa.me/6285888179140?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina.">
           <button className="mt-2 cursor-pointer px-12 py-2 rounded-full bg-[#DAE9FF] text-[#0066FF] text-sm font-semibold transition hover:brightness-110">
             Yuk Ikutan
           </button>
