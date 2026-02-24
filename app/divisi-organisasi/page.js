@@ -584,8 +584,10 @@ export default function divisiOrganisasi() {
             Badan Pengawas Organisasi DKM
           </h3>
           <p className="text-gray-500 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Mengawasi dan mengevaluasi jalannya organisasi DKM agar tetap
+            transparan, akuntabel, dan sesuai dengan visi, misi, serta aturan
+            yang berlaku, termasuk melakukan penilaian kinerja pengurus dan
+            memberikan rekomendasi perbaikan organisasi.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
