@@ -246,7 +246,7 @@ function SocialIcons({ isHome, scrolled }) {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/6281285092798?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina."
+        href="https://wa.me/6285888179140?text=Assalamualaikum,%20Saya%20mohon%20bantuan%20dari%20DKM%20Paramadina."
         target="_blank"
         rel="noopener noreferrer"
         className="group"
