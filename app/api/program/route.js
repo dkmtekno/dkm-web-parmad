@@ -1,6 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import { v2 as cloudinary } from "cloudinary";
 
+export const dynamic = "force-dynamic";
+
 const prisma = new PrismaClient();
 
 cloudinary.config({
@@ -27,7 +29,11 @@ export async function GET() {
     orderBy: { createdAt: "desc" },
   });
 
-  return Response.json(programs);
+  return Response.json(programs, {
+    headers: {
+      "Cache-Control": "no-store, max-age=0, must-revalidate",
+    },
+  });
 }
 
 // Parse form-data secara manual karena kita tidak pakai bodyParser

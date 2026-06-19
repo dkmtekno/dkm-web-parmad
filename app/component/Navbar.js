@@ -16,7 +16,7 @@ export default function Navbar() {
   useEffect(() => {
     async function fetchPrograms() {
       try {
-        const res = await fetch("/api/program");
+        const res = await fetch("/api/program", { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to fetch programs");
         const data = await res.json();
         setPrograms(data);

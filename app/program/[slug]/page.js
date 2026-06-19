@@ -32,7 +32,7 @@ export default function ProgramDetail() {
   const paginationRef = useRef(null);
 
   useEffect(() => {
-    fetch("/api/program")
+    fetch("/api/program", { cache: "no-store" })
       .then((res) => res.json())
       .then((data) => {
         const selected = data.find((item) => item.slug === slug);

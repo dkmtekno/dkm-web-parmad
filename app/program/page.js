@@ -51,7 +51,7 @@ export default function Program() {
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
-        const res = await fetch("/api/program");
+        const res = await fetch("/api/program", { cache: "no-store" });
 
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -177,38 +177,41 @@ export default function Program() {
         </div>
 
         <div className="max-w-6xl mx-auto mt-10">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="show"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {paginatedPrograms.map((item, i) => (
-              <motion.div
-                key={item.id || i}
-                variants={itemVariants}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300"
-              >
-                <h3 className="text-[#0066FF] font-bold text-lg mb-2">
-                  <Link href={`/program/${item.slug}`}>{item.title}</Link>
-                </h3>
-                <p
-                  dangerouslySetInnerHTML={{ __html: item.shortDesc }}
-                  className="text-gray-600 text-sm mb-3"
-                ></p>
-                <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
-                  <FaCalendar className="text-[#0066FF]" />{" "}
-                  {formatTanggalIndonesia(item.date)}
-                </div>
-                <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
-                  <FaClock className="text-[#0066FF]" /> {item.time}
-                </div>
-                <div className="text-sm text-gray-500 flex items-center gap-2">
-                  <FaMapPin className="text-[#0066FF]" /> {item.location}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+          {programs.length > 0 && (
+            <motion.div
+              key={page}
+              variants={containerVariants}
+              initial="hidden"
+              animate="show"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {paginatedPrograms.map((item, i) => (
+                <motion.div
+                  key={item.id || i}
+                  variants={itemVariants}
+                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300"
+                >
+                  <h3 className="text-[#0066FF] font-bold text-lg mb-2">
+                    <Link href={`/program/${item.slug}`}>{item.title}</Link>
+                  </h3>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: item.shortDesc }}
+                    className="text-gray-600 text-sm mb-3"
+                  ></p>
+                  <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
+                    <FaCalendar className="text-[#0066FF]" />{" "}
+                    {formatTanggalIndonesia(item.date)}
+                  </div>
+                  <div className="text-sm text-gray-500 flex items-center gap-2 mb-1">
+                    <FaClock className="text-[#0066FF]" /> {item.time}
+                  </div>
+                  <div className="text-sm text-gray-500 flex items-center gap-2">
+                    <FaMapPin className="text-[#0066FF]" /> {item.location}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
 
           {/* Pagination */}
           <div className="flex justify-center mt-8 gap-2">
