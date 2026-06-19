@@ -221,11 +221,10 @@ export default function Program() {
                 <button
                   key={num}
                   onClick={() => setPage(num)}
-                  className={`w-9 h-9 flex items-center cursor-pointer justify-center border rounded-full transition ${
-                    page === num
+                  className={`w-9 h-9 flex items-center cursor-pointer justify-center border rounded-full transition ${page === num
                       ? "bg-[#0066FF] text-white border-[#0066FF]"
                       : "text-[#0066FF] border-[#0066FF] hover:bg-[#0066FF] hover:text-white"
-                  }`}
+                    }`}
                 >
                   {num}
                 </button>
@@ -289,7 +288,7 @@ export default function Program() {
             className="w-full lg:w-1/2 text-center lg:text-left"
           >
             <h2 className="mt-4 text-2xl font-bold text-[#0066FF] lg:text-2xl">
-              Jam’iyyatul Huffadz Paramadina
+              Jam’iyyatul Huffadz Paramadina (JHP)
             </h2>
             <p className="mb-6 mt-2 leading-relaxed text-gray-500">
               Program JHP oleh Divisi Kajian & Dakwah serta HR DKM Paramadina
