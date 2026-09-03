@@ -68,34 +68,32 @@ export default function Home() {
       task: "Pemimpin organisasi yang bertanggung jawab mengarahkan kebijakan, mengelola operasional dan memastikan seluruh program berjalan selaras dengan visi dakwah kampus.",
     },
     {
-      title: "Sekretaris",
+      title: "Secretary",
       icon: "/sekre.png",
       task: "Mengelola administrasi dan membantu memastikan kelancaran operasional DKM.",
     },
     {
-      title: "Bendahara",
+      title: "Finance",
       icon: "/bendahara.png",
       task: "Mengelola keuangan DKM, termasuk pengelolaan anggaran, pengeluaran DKM.",
     },
     {
-      title: "Digital",
-      subtitle: "Produksi Kreatif",
+      title: "Creative",
       icon: "/prokre.png",
       task: "Mengembangkan konsep dan ide kreatif untuk DKM, termasuk desain, pembuatan dan editing video, serta strategi branding.",
     },
     {
-      title: "Kajian & Dakwah",
+      title: "Islamic Development & Da’wah",
       icon: "/kajian_dakwah.png",
-      task: "Mengadakan dan mengelola kajian rutin, mengembangkan konsep dan jadwal kegiatan kajian dan dakwah sesuai kebutuhan, membentuk dan memfasilitasi komunitas penghafal Al-Quran dan menyediakan bimbingan terkait keagamaan di DKM Paramadina.",
+      task: "Wadah pembinaan keislaman melalui kajian, pelatihan, dan dakwah yang relevan untuk memperkuat nilai spiritual dan intelektual mahasiswa.",
     },
     {
-      title: "Digital",
-      subtitle: "Teknologi",
+      title: "Digital Technology",
       icon: "/teknologi.png",
       task: "Mengelola dan mengembangkan teknologi informasi dan sistem yang digunakan DKM, meliputi perancangan, pengembangan, dan pemeliharaan sistem teknologi informasi.",
     },
     {
-      title: "Hubungan Masyarakat",
+      title: "Public Relations",
       icon: "/humas.png",
       task: "Menjalin hubungan baik dengan publik dan media, serta mempromosikan citra positif DKM di internal dan eksternal kampus Paramadina.",
     },
@@ -103,6 +101,11 @@ export default function Home() {
       title: "Human Resource",
       icon: "/hrd.png",
       task: "Mengelola sumber daya manusia DKM termasuk pengembangan dan pengelolaan anggota serta mengadakan kegiatan PHBI. ",
+    },
+    {
+      title: "Social Media Development",
+      icon: "/sosmed.webp",
+      task: "Mengelola strategi komunikasi digital dan produksi konten media sosial. Divisi ini memastikan pesan dakwah tersampaikan secara konsisten dan relevan di ruang digital.",
     },
     {
       title: "Badan Pengawas",
@@ -186,7 +189,7 @@ export default function Home() {
             </motion.span>
           </motion.h1>
           <p className="text-1xl md:text-2xl text-orange-300 md:mt-12 mt-6 font-semibold">
-            #NaeemaDKMParamadina
+            #JejakDKMParamadina
           </p>
         </div>
         <div className="hidden md:block">
@@ -330,7 +333,7 @@ export default function Home() {
         id="lihatselengkapnya"
       >
         <h2 className="text-2xl lg:text-4xl font-bold text-[#0066FF] mt-12 mb-4">
-          Selamat Datang di Naeema DKM Paramadina
+          Selamat Datang di Jejak DKM Paramadina
         </h2>
         <p className="max-w-5xl mx-auto text-gray-600">
           DKM Paramadina adalah organisasi kerohanian Islam yang menjadi wadah
@@ -373,7 +376,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="text-left text-3xl font-semibold text-[#0066FF] max-w-6xl mx-auto my-12"
         >
-          Divisi Naeema DKM Paramadina 2025/2026
+          Divisi DKM Paramadina 2026/2027
         </motion.h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -403,9 +406,7 @@ export default function Home() {
                 <p className="text-gray-500 text-sm mt-1">{divisi.task}</p>
               </div>
 
-              <p className="text-xs text-[#0066FF] mt-6">
-                #NaeemaDKMParamadina
-              </p>
+              <p className="text-xs text-[#0066FF] mt-6">#JejakDKMParamadina</p>
             </motion.div>
           ))}
         </div>
