@@ -10,18 +10,20 @@ import {
   HRIcon,
   KreatifIcon,
   TeknologiIcon,
+  SosmedIcon,
   BPOIcon,
 } from "./icons";
 
 const divisions = [
   { name: "Ketum & Waketum", id: "ketum", icon: KetumIcon },
-  { name: "Sekretaris", id: "sekretaris", icon: SekretarisIcon },
-  { name: "Bendahara", id: "bendahara", icon: BendaharaIcon },
-  { name: "Kajian & Dakwah", id: "kajian-dakwah", icon: KajianDakwahIcon },
-  { name: "Humas", id: "humas", icon: HumasIcon },
+  { name: "Secretary", id: "sekretaris", icon: SekretarisIcon },
+  { name: "Finance", id: "bendahara", icon: BendaharaIcon },
+  { name: "Islamic Development & Da’wah", id: "kajian-dakwah", icon: KajianDakwahIcon },
+  { name: "Public Relations", id: "humas", icon: HumasIcon },
   { name: "Human Resource", id: "hr", icon: HRIcon },
-  { name: "Produksi Kreatif", id: "digital-kreatif", icon: KreatifIcon },
-  { name: "Teknologi", id: "digital-teknologi", icon: TeknologiIcon },
+  { name: "Creative", id: "digital-kreatif", icon: KreatifIcon },
+  { name: "Digital Technology", id: "digital-teknologi", icon: TeknologiIcon },
+  { name: "Social Media Development", id: "sosmed", icon: SosmedIcon },
   { name: "Badan Pengawas", id: "bpo", icon: BPOIcon },
 ];
 
