@@ -78,7 +78,7 @@ export default function tentangKami() {
           viewport={{ once: true }}
           className="lg:text-5xl text-3xl font-bold mb-4 bg-gradient-to-r from-[#DAE9FF] via-[#0066FF] to-[#DAE9FF] bg-clip-text text-transparent"
         >
-          Naeema DKM Paramadina
+          Jejak DKM Paramadina
         </motion.h2>
 
         <motion.p
@@ -88,12 +88,13 @@ export default function tentangKami() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto text-gray-600"
         >
-          Naeema memiliki konotasi positif yang sering dikaitkan dengan berkah,
-          kebaikan, kenyamanan atau kesenangan. Kabinet "Naeema" diharapkan
-          menjadi organisasi yang membawa rahmat dan manfaat, tidak hanya bagi
-          anggotanya tetapi juga bagi seluruh umat dan lingkungan sekitar.
-          Keberkahan bukan hanya tentang hasil, tetapi juga tentang proses yang
-          dilakukan dengan niat yang tulus dan cara yang benar.
+          Setiap kepengurusan meninggalkan jejak dalam perjalanan DKM
+          Paramadina. Dari satu periode ke periode berikutnya, setiap langkah
+          menjadi bagian dari proses untuk terus bertumbuh, berkolaborasi, dan
+          memberikan manfaat. Jejak ini hadir melalui dedikasi para pengurus,
+          mulai dari Ketua dan Wakil Ketua Umum hingga seluruh divisi yang
+          bersama-sama menghidupkan berbagai program dan gerakan keislaman di
+          lingkungan kampus.
         </motion.p>
         <div className="my-5 mx-auto bg-[#0066FF] w-40 h-2 rounded-full"></div>
       </section>
@@ -105,7 +106,7 @@ export default function tentangKami() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          src="/syalki.png"
+          src="/azmi.webp"
           loading="lazy"
           width="500"
           height="500"
@@ -122,19 +123,21 @@ export default function tentangKami() {
             Ketua Umum DKM Paramadina
           </p>
           <h2 className="mb-4 text-4xl font-bold text-[#0066FF] lg:text-5xl">
-            Muhammad Syalky
+            Azmi Fairuz Habibi
           </h2>
           <p className="mt-2 mb-4 text-gray-700">
-            Syalky merupakan mahasiswa aktif Program Studi Ilmu Komunikasi
-            angkatan 2023 yang berpengalaman di berbagai organisasi kampus
-            maupun luar kampus. Sebagai Ketua Umum DKM Paramadina, ia bertugas
-            memimpin seluruh kegiatan organisasi, mengarahkan program strategis,
-            serta memastikan DKM hadir sebagai rumah dakwah yang ramah, terbuka
-            dan berdampak luas di lingkungan kampus.
+            Azmi Fairuz Habibi merupakan mahasiswa aktif Program Studi Ilmu
+            Komunikasi Universitas Paramadina yang memiliki ketertarikan pada
+            bidang kepemimpinan, komunikasi, dan pengembangan organisasi.
+            Sebagai Ketua Umum DKM Paramadina, ia bertugas memimpin dan
+            mengarahkan seluruh kegiatan organisasi, mengembangkan program
+            strategis, serta memastikan DKM dapat menjadi wadah dakwah yang
+            inklusif, ramah, dan terbuka bagi seluruh civitas akademika, baik
+            mahasiswa maupun nonmahasiswa.
           </p>
           <div className="flex gap-4 text-gray-600">
             <a
-              href="https://www.instagram.com/muhammadsyalki"
+              href="https://www.instagram.com/mi_fairuzh/"
               target="_blank"
               className="text-3xl"
             >
@@ -152,9 +155,9 @@ export default function tentangKami() {
               </svg>
             </a>
             <a
-              href="https://www.tiktok.com/@muhammadsyalki"
               target="_blank"
               className="text-3xl"
+              style={{ opacity: "0.3" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -170,9 +173,9 @@ export default function tentangKami() {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/in/muhammad-syalky-3aabb3277/"
               target="_blank"
               className="text-3xl"
+              style={{ opacity: "0.3" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -203,19 +206,20 @@ export default function tentangKami() {
             Wakil Ketua Umum DKM Paramadina
           </p>
           <h2 className="mb-4 text-4xl font-bold text-[#0066FF] lg:text-5xl">
-            Nur'izzah Syakaromansyah
+            Tsaqilah Azri
           </h2>
           <p className="mt-2 mb-4 text-gray-700">
-            Syaka merupakan mahasiswa aktif di Program Studi Psikologi angkatan
-            2023 yang berpengalaman di berbagai organisasi kampus maupun luar
-            kampus. Sebagai Wakil Ketua Umum, Syaka berperan dalam mengelola
-            operasional organisasi, mengkoordinasikan antar divisi, serta
-            menjaga keharmonisan kerja tim agar seluruh program berjalan efektif
-            dan selaras dengan nilai-nilai Islam.
+            Tsaqilah Azri adalah Mahasiswa Program Studi Hubungan Internasional
+            angkatan 2024. Aktif terlibat dalam berbagai kegiatan organisasi di
+            lingkup kampus maupun di luar kampus. Saat Ini Menjabat sebagai
+            Wakil Ketua Umum DKM Periode 2026/2027 dengan tugas membantu Ketua
+            Umum dalam mengarahkan visi dan program kerja organisasi,
+            menyelaraskan koordinasi antar bidang, dalam menjaga ruang diskusi
+            antar pengurus dalam pengambilan keputusan strategis.
           </p>
           <div className="flex justify-start lg:justify-end gap-4 text-gray-600">
             <a
-              href="https://www.instagram.com/syakaromansyh"
+              href="https://www.instagram.com/tsazri23/"
               target="_blank"
               className="text-3xl"
             >
@@ -248,8 +252,8 @@ export default function tentangKami() {
             </a>
             <a
               target="_blank"
-              href="https://www.linkedin.com/in/nur-izzah-syakaromansyah-145392289/"
               className="text-3xl"
+              style={{ opacity: "0.3" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -267,7 +271,7 @@ export default function tentangKami() {
           </div>
         </motion.div>
         <img
-          src="/syaka.png"
+          src="/qila.webp"
           loading="lazy"
           width="500"
           height="500"
