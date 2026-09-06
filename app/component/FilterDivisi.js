@@ -15,6 +15,7 @@ import {
 } from "./icons";
 
 const divisions = [
+  { name: "Badan Pengawas", id: "bpo", icon: BPOIcon },
   { name: "Ketum & Waketum", id: "ketum", icon: KetumIcon },
   { name: "Secretary", id: "sekretaris", icon: SekretarisIcon },
   { name: "Finance", id: "bendahara", icon: BendaharaIcon },
@@ -24,7 +25,6 @@ const divisions = [
   { name: "Creative", id: "digital-kreatif", icon: KreatifIcon },
   { name: "Digital Technology", id: "digital-teknologi", icon: TeknologiIcon },
   { name: "Social Media Development", id: "sosmed", icon: SosmedIcon },
-  { name: "Badan Pengawas", id: "bpo", icon: BPOIcon },
 ];
 
 export default function FilterDivisi() {
