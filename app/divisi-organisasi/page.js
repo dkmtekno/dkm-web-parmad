@@ -39,11 +39,11 @@ export default function divisiOrganisasi() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="mb-4 text-1xl lg:text-2xl font-bold !leading-snug text-gray-700">
-            2025/2026
+            Di balik
             <br />
             <span className="text-[#0066FF] lg:text-6xl text-3xl">
               {" "}
-              Kabinet Naeema
+              DKM Paramadina
             </span>
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
@@ -59,7 +59,7 @@ export default function divisiOrganisasi() {
           </Link>
         </motion.div>
         <motion.img
-          src="/divisi_organisasi.png"
+          src="/divisi_organisasi.webp"
           loading="lazy"
           width="700"
           height="700"
@@ -71,6 +71,45 @@ export default function divisiOrganisasi() {
         />
       </section>
       <FilterDivisi />
+
+      <motion.section
+        className="md:py-[150px] py-12 px-6 lg:px-0"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        id="bpo"
+      >
+        <div className="max-w-6xl mx-auto text-center lg:text-left">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
+            Badan Pengawas Organisasi DKM
+          </h3>
+          <p className="text-gray-500 text-sm mt-2">
+            Mengawasi dan mengevaluasi jalannya organisasi DKM agar tetap
+            transparan, akuntabel, dan sesuai dengan visi, misi, serta aturan
+            yang berlaku, termasuk melakukan penilaian kinerja pengurus dan
+            memberikan rekomendasi perbaikan organisasi.
+          </p>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
+        </div>
+        <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
+          <ProfileCard
+            name="Muhammad Syalky"
+            subtitle="Badan Pengawas Organisasi DKM"
+            imageUrl="/syalki.webp"
+            instagramUrl={"muhammadsyalki"}
+            tiktokUrl={"muhammadsyalki"}
+            linkedinUrl={"muhammad-syalky-3aabb3277"}
+          />
+          <ProfileCard
+            name="Nur'izzah Syakaromansyah"
+            subtitle="Badan Pengawas Organisasi DKM"
+            imageUrl="/syaka.webp"
+            instagramUrl={"syakaromansyh"}
+            linkedinUrl={"nur-izzah-syakaromansyah-145392289"}
+          />
+        </div>
+      </motion.section>
 
       <motion.section
         className="md:py-[150px] py-12 px-6 lg:px-0"
@@ -91,19 +130,17 @@ export default function divisiOrganisasi() {
         </div>
         <div className="flex lg:justify-start justify-center gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
-            name="Muhammad Syalki"
+            name="Azmi Fairuz Habibi"
             subtitle="Ketua Umum DKM Paramadina"
-            imageUrl="/syalki.png"
-            instagramUrl={"muhammadsyalki"}
-            tiktokUrl={"muhammadsyalki"}
-            linkedinUrl={"muhammad-syalky-3aabb3277"}
+            imageUrl="/azmi.webp"
+            instagramUrl={"mi_fairuzh"}
           />
           <ProfileCard
-            name="Nur'izzah Syakaromansyah"
+            name="Tsaqilah Azri"
             subtitle="Wakil Ketua Umum DKM Paramadina"
-            imageUrl="/syaka.png"
-            instagramUrl={"syakaromansyh"}
-            linkedinUrl={"nur-izzah-syakaromansyah-145392289"}
+            imageUrl="/qil.webp"
+            instagramUrl={"tsazri23 "}
+            linkedinUrl={"tsaqilah-azri-46293a343"}
           />
         </div>
       </motion.section>
@@ -117,27 +154,30 @@ export default function divisiOrganisasi() {
         id="sekretaris"
       >
         <div className="max-w-6xl mx-auto lg:text-left text-center">
-          <h3 className="text-[#0066FF] text-3xl font-bold">Sekretaris</h3>
+          <h3 className="text-[#0066FF] text-3xl font-bold">Secretary</h3>
           <p className="text-gray-500 text-sm mt-2">
-            Mengelola administrasi dan membantu memastikan kelancaran
-            operasional DKM.
+            Mengelola administrasi dan dokumentasi organisasi secara sistematis.
+            Divisi ini memastikan seluruh surat, arsip kegiatan, dan memastikan
+            seluruh surat, arsip kegiatan, dan dokumen resmi tersusun secara
+            sistematis dan terdokumentasi dengan baik. Sehingga koordinasi dan
+            operasional organisasi berjalan lancar.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
         <div className="flex lg:justify-start justify-center gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
-            name="Ahmad Maulana"
+            name="Farida Maimunah"
             subtitle="Sekretaris I"
-            imageUrl="/alan.png"
-            instagramUrl={"lanslogy"}
+            imageUrl="/far.webp"
+            instagramUrl={"faridam12_"}
+            linkedinUrl={"farida-maimunah-141465252"}
           />
 
           <ProfileCard
-            name="Farida Maimunah"
+            name="Nayla Tiara Divni"
             subtitle="Sekretaris II"
-            imageUrl="/faridah.png"
-            instagramUrl={"faridam12_"}
-            linkedinUrl={"farida-maimunah-141465252"}
+            imageUrl="/nayla.webp"
+            instagramUrl={"nelaatrd_"}
           />
         </div>
       </motion.section>
@@ -151,26 +191,27 @@ export default function divisiOrganisasi() {
         id="bendahara"
       >
         <div className="max-w-6xl mx-auto lg:text-left text-center">
-          <h3 className="text-[#0066FF] text-3xl font-bold">Bendahara</h3>
+          <h3 className="text-[#0066FF] text-3xl font-bold">Finance</h3>
           <p className="text-gray-500 text-sm mt-2">
-            Mengelola keuangan DKM, termasuk pengelolaan anggaran, pengeluaran
-            DKM.
+            Mengelola pendanaan dan keuangan organisasi. Divisi ini mengatur
+            pemasukan dan pengeluaran, menyusun laporan keuangan, serta
+            memastikan setiap program terlaksana sesuai perencanaan anggaran
+            dengan pencatatan yang jelas dan akuntabel.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto lg:mx-0"></div>
         </div>
         <div className="flex lg:justify-start justify-center gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
-            name="Sofia Nuril Fairuzi"
+            name="Ahmad Maulana"
             subtitle="Bendahara I"
-            imageUrl="/sofia.png"
-            instagramUrl={"sofianurilfrzi"}
-            linkedinUrl={"sofia-nuril-fairuzi-60a1b4314"}
+            imageUrl="/alanparmad.webp"
+            instagramUrl={"ulmaul.27"}
           />
           <ProfileCard
-            name="Ratu Islam Al-Kautsar"
+            name="Alif Shidqi Putra Amir"
             subtitle="Bendahara II"
-            imageUrl="/ratu.png"
-            instagramUrl={"ratuuktsrr"}
+            imageUrl="/alif.webp"
+            instagramUrl={"v4lhalladxd"}
           />
         </div>
       </motion.section>
@@ -184,101 +225,97 @@ export default function divisiOrganisasi() {
         id="kajian-dakwah"
       >
         <div className="max-w-6xl mx-auto lg:text-left text-center">
-          <h3 className="text-[#0066FF] text-3xl font-bold">Kajian & Dakwah</h3>
+          <h3 className="text-[#0066FF] text-3xl font-bold">
+            Islamic Development & Da'wah
+          </h3>
           <p className="text-gray-500 text-sm mt-2">
-            Mengadakan dan mengelola kajian rutin, mengembangkan konsep dan
-            jadwal kegiatan kajian dan dakwah sesuai kebutuhan, membentuk dan
-            memfasilitasi komunitas penghafal Al-Quran dan menyediakan bimbingan
-            terkait keagamaan di DKM Paramadina.
+            Menjadikan DKM Paramadina sebagai wadah pusat pembinaan dan
+            pengembangan keislaman yang terbuka bagi semua. Divisi ini
+            mengembangkan program kajian dan pembinaan melalui kegiatan
+            pelatihan dasar untuk memperkuat nilai spiritual dan intelektual
+            mahasiswa, serta menghadirkan dakwah yang relevan dengan kehidupan
+            kampus.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
         <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
-            name="Novita Fitri Apriliana"
-            subtitle="Kepala Divisi Kajian & Dakwah"
-            imageUrl="/novita.png"
-            instagramUrl={"novitanfa_"}
+            name="Muhammad Rafiq Mizan"
+            subtitle="Kepala Divisi Islamic Development & Da'wah"
+            imageUrl="/mizan.webp"
+            instagramUrl={"rafiq_mizan"}
           />
           <ProfileCard
-            name="Adjie Putra Wijaya"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/adjie.png"
-            instagramUrl={"djiewy"}
-          />
-          <ProfileCard
-            name="Muhammad Rayan Bramantyo"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/bram.png"
-            instagramUrl={"askingtheo"}
-          />
-          <ProfileCard
-            name="Fathi Ainurabbani"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/fathi.png"
-            instagramUrl={"fathi.ainur"}
-          />
-          <ProfileCard
-            name="Tubagus Arya"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/arya.png"
-            instagramUrl={"7.alqdry_"}
-            tiktokUrl={"tubagusaryahaidar"}
-          />
-          <ProfileCard
-            name="Hasbin Najib"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/hasbi.png"
-            instagramUrl={"hahaasbinajib"}
-          />
-          <ProfileCard
-            name="Muhammad Raihan Ramadhan"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/dhan.png"
-            instagramUrl={"mrhan.dhan"}
-            linkedinUrl={"muhammadraihanramadhan"}
-          />
-          <ProfileCard
-            name="Muhammad Elvan Rosyadi"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/elvan.png"
-            instagramUrl={"elvan_rosyadi"}
-          />
-          <ProfileCard
-            name="Azmi Fairuz Habibi"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/azmi.png"
-            instagramUrl={"mi_fairuzh"}
-          />
-          <ProfileCard
-            name="Hafizudin"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/hafiz.png"
-            instagramUrl={"hafizudin.1301"}
+            name="Hasbi Najib"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/hasbi.webp"
+            instagramUrl={"haasbinajib"}
           />
           <ProfileCard
             name="Diaz Badrussalam"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/diaz.png"
-            instagramUrl={"yas_assalam"}
-          />
-          <ProfileCard
-            name="Tsaqilah Azri"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/tsaqillah.png"
-            instagramUrl={"tsazri23"}
-          />
-          <ProfileCard
-            name="Fayyaza Shofa Zakiyah"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/shofa.png"
-            instagramUrl={"shopa.aa"}
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/az.webp"
+            instagramUrl={"diaz_badrussalam"}
           />
           <ProfileCard
             name="Aufa Zuhada"
-            subtitle="Anggota Kajian & Dakwah"
-            imageUrl="/default_profile.png"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/aufa.webp"
             instagramUrl={"aufazh_"}
+          />
+          <ProfileCard
+            name="Hafizudin"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/fish.webp"
+            instagramUrl={"7.alqdry_"}
+            tiktokUrl={"hafizudin.1301"}
+          />
+          <ProfileCard
+            name="Nurindah"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/nurindah.webp"
+            instagramUrl={"nusiiw14_"}
+          />
+          <ProfileCard
+            name="Muhammad Labib Buhairil Ma’arif"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/labib.webp"
+          />
+          <ProfileCard
+            name="Maisaroh"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/maisaroh.webp"
+            instagramUrl={"mai_srh11"}
+          />
+          <ProfileCard
+            name="Hilwa Sukma S"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/sukma.webp"
+            instagramUrl={"hilwaa.en"}
+          />
+          <ProfileCard
+            name="Alya Tsabitah Izzati"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/alya.webp"
+            instagramUrl={"alyaa_ja20"}
+          />
+          <ProfileCard
+            name="Muhammad Ilham Fajar"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/fajar.webp"
+            instagramUrl={"ilham.fajar02"}
+          />
+          <ProfileCard
+            name="Cinta Nayla Maharani Adi"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/cinta.webp"
+            instagramUrl={"cintanayl"}
+          />
+          <ProfileCard
+            name="Siti Hanifah"
+            subtitle="Anggota Islamic Development & Da'wah"
+            imageUrl="/siti.webp"
+            instagramUrl={"seavloussky"}
           />
         </div>
       </motion.section>
@@ -293,98 +330,39 @@ export default function divisiOrganisasi() {
       >
         <div className="max-w-6xl mx-auto text-center lg:text-left">
           <h3 className="text-[#0066FF] text-3xl font-bold">
-            Hubungan Masyarakat
+            Public Relations
           </h3>
           <p className="text-gray-500 text-sm mt-2">
-            Menjalin hubungan baik dengan publik dan media, serta mempromosikan
-            citra positif DKM di internal dan eksternal kampus Paramadina.
+            Mengelola komunikasi dan membangun hubungan dengan berbagai pihak,
+            baik internal maupun eksternal. Divisi ini menjaga citra organisasi
+            sekaligus memperluas jejaring dan kolaborasi strategis.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
         <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
-            name="Aqila Irza Ghania"
-            subtitle="Kepala Divisi Hubungan Masyarakat"
-            imageUrl="/aqillah.png"
-            instagramUrl={"aqilairzag"}
-            linkedinUrl={"aqila-irza-ghania-20618a271"}
-          />
-          <ProfileCard
-            name="Osama Hisbullah"
-            subtitle="Anggota Humas Internal"
-            imageUrl="/osama.png"
-            instagramUrl={"mr_osem_3"}
-          />
-          <ProfileCard
-            name="Nazwa Siti Fadhilah"
-            subtitle="Anggota Humas Internal"
-            imageUrl="/nazwa.png"
-            instagramUrl={"nazwasfadilah"}
-            linkedinUrl={"nazwa-f-b86a5a238"}
-          />
-          <ProfileCard
-            name="Rizki Aulia Ramadhani"
-            subtitle="Anggota Humas Internal"
-            imageUrl="/rizki.png"
-            instagramUrl={"llia.zk"}
-          />
-          <ProfileCard
-            name="Rahmaisa Aulia"
-            subtitle="Anggota Humas Internal"
-            imageUrl="/rahma.png"
-            instagramUrl={"rrahmawl"}
-          />
-          <ProfileCard
             name="Sheiza Istiana Ashri"
-            subtitle="Anggota Humas Internal"
-            imageUrl="/sheiza.png"
-            instagramUrl={"caacaicaa_"}
+            subtitle="Kepala Divisi Public Relations"
+            imageUrl="/sheiza.webp"
+            instagramUrl={"caacaicaa__"}
           />
           <ProfileCard
-            name="Ahmad Haikal Wahab"
-            subtitle="Anggota Humas Eksternal"
-            imageUrl="/haikal.png"
-            instagramUrl={"ahmdhaikal15"}
+            name="Aulia Mutia Zahra"
+            subtitle="Anggota Public Relations"
+            imageUrl="/aulia.webp"
+            instagramUrl={"aulz_hr"}
           />
           <ProfileCard
-            name="Muhammad Valen Akmal Fatnadi"
-            subtitle="Anggota Humas Eksternal"
-            imageUrl="/valen.png"
-            instagramUrl={"mvalenaf"}
+            name="Fika Hapsah Mardani"
+            subtitle="Anggota Public Relations"
+            imageUrl="/fika.webp"
+            instagramUrl={"fikaahapsah"}
           />
           <ProfileCard
-            name="Akmal Raudhi"
-            subtitle="Anggota Humas Eksternal"
-            imageUrl="/akmal.png"
-            instagramUrl={"akmalraudhi"}
-            tiktokUrl={"susumilkteaa"}
-          />
-          <ProfileCard
-            name="Salma Benina"
-            subtitle="Anggota Humas Eksternal"
-            imageUrl="/salma.png"
-            instagramUrl={"sallmaao"}
-            linkedinUrl={"salma-benina-8857622a0"}
-          />
-          <ProfileCard
-            name="Sabrina Shafa Salsabila"
-            subtitle="Anggota Humas Eksternal"
-            imageUrl="/shafa.png"
-            instagramUrl={"salssabrinas"}
-            tiktokUrl={"saltedcamellenak"}
-          />
-          <ProfileCard
-            name="Willyan Afif"
-            subtitle="Anggota Humas Eksternal"
-            imageUrl="/willy.png"
-            instagramUrl={"willyanafif"}
-            tiktokUrl={"willynn_"}
-          />
-          <ProfileCard
-            name="Fathur Rizqie Saepudin Septrya"
-            subtitle="Anggota Humas Eksternal"
-            imageUrl="/default_profile.png"
-            instagramUrl={"fathrzqie"}
+            name="Aisyah Putri Marbun"
+            subtitle="Anggota Public Relations"
+            imageUrl="/putri.webp"
+            instagramUrl={"aisyaaa.sha"}
           />
         </div>
       </motion.section>
@@ -410,49 +388,54 @@ export default function divisiOrganisasi() {
         <div className="max-w-6xl mx-auto text-center lg:text-left">
           <h3 className="text-[#0066FF] text-3xl font-bold">Human Resource</h3>
           <p className="text-gray-500 text-sm mt-2">
-            Mengelola sumber daya manusia DKM termasuk pengembangan dan
-            pengelolaan anggota serta mengadakan kegiatan PHBI.
+            Berfokus pada pengembangan kualitas anggota. Melalui sistem
+            pembinaan dan evaluasi yang berkelanjutan, divisi ini membangun
+            budaya kerja yang disiplin, kolaboratif, dan bertanggung jawab.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
         <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
-            name="Destria Maharani"
-            subtitle="Kepala Divisi Human Resource"
-            imageUrl="/destria.png"
-            instagramUrl={"dstr.mhrni"}
-            linkedinUrl={"destria-maharani-84a99134b"}
-          />
-          <ProfileCard
-            name="Alifvia Mandalika"
-            subtitle="Anggota Human Resource"
-            imageUrl="/alifvia.png"
-            instagramUrl={"813vy"}
-            linkedinUrl={"alifvia-mandalika-5713b7276"}
-          />
-          <ProfileCard
             name="Fadil Rizky Hapta"
-            subtitle="Anggota Human Resource"
-            imageUrl="/fadil.png"
+            subtitle="Kepala Divisi Human Resource"
+            imageUrl="/fadil.webp"
             instagramUrl={"rzhpt_"}
-          />
-          <ProfileCard
-            name="Aulia Puspa Negara"
-            subtitle="Anggota Human Resource"
-            imageUrl="/puspa.png"
-            instagramUrl={"puspa_595"}
           />
           <ProfileCard
             name="Suci Ramadhani"
             subtitle="Anggota Human Resource"
-            imageUrl="/suci.png"
+            imageUrl="/suci.webp"
             instagramUrl={"_vbsuciwa"}
           />
           <ProfileCard
-            name="Fadelia Nabila Aisyah Putri"
+            name="Aden Ala Azmi"
             subtitle="Anggota Human Resource"
-            imageUrl="/fadel.png"
-            instagramUrl={"usala.fiyah"}
+            imageUrl="/aden.webp"
+            instagramUrl={"aden_azmii"}
+          />
+          <ProfileCard
+            name="Rahmat Hidayat"
+            subtitle="Anggota Human Resource"
+            imageUrl="/rahmat.webp"
+            instagramUrl={"hidaydrahmat"}
+          />
+          <ProfileCard
+            name="Muhammad Azhar Falah"
+            subtitle="Anggota Human Resource"
+            imageUrl="/azhar.webp"
+            instagramUrl={"mazhrfal_"}
+          />
+          <ProfileCard
+            name="Rael Isma Rabbani"
+            subtitle="Anggota Human Resource"
+            imageUrl="/rael.webp"
+            instagramUrl={"kaismara_"}
+          />
+          <ProfileCard
+            name="Octavio Egi F"
+            subtitle="Anggota Human Resource"
+            imageUrl="/vio.webp"
+            instagramUrl={"octavioegi90"}
           />
         </div>
       </motion.section>
@@ -466,58 +449,57 @@ export default function divisiOrganisasi() {
         id="digital-kreatif"
       >
         <div className="max-w-6xl mx-auto text-center lg:text-left">
-          <h3 className="text-[#0066FF] text-3xl font-bold">Digital</h3>
-          <h5 className="text-[#0066FF] text-1xl font-semibold">
-            Produksi Kreatif
-          </h5>
+          <h3 className="text-[#0066FF] text-3xl font-bold">Creative</h3>
           <p className="text-gray-500 text-sm mt-2">
-            Mengembangkan konsep dan ide kreatif untuk DKM, termasuk desain,
-            pembuatan dan editing video, serta strategi branding.
+            Menangani kebutuhan desain, publikasi visual, dan dokumentasi
+            termasuk pembuatan materi grafis serta editing foto dan video
+            kegiatan. Divisi ini menjaga konsistensi identitas visual DKM dan
+            mengarsipkan hasil karya secara terstruktur.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
         <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
-            name="Muhammad Ariel Dien"
-            subtitle="Kepala Divisi Digital"
-            imageUrl="/ariel.png"
-            instagramUrl={"dienariel"}
-          />
-          <ProfileCard
-            name="Muhammad Rafiq Mizan"
-            subtitle="Anggota Produksi Kreatif"
-            imageUrl="/mizan.png"
-            instagramUrl={"rafiq_mizan"}
-          />
-          <ProfileCard
-            name="Muhammad Farhan"
-            subtitle="Anggota Produksi Kreatif"
-            imageUrl="/farhan.png"
-            instagramUrl={"mf_habsyi"}
-          />
-          <ProfileCard
             name="Hilya Aufa Mufida"
-            subtitle="Anggota Produksi Kreatif"
-            imageUrl="/hilya.png"
+            subtitle="Kepala Divisi Creative"
+            imageUrl="/yaya.webp"
             instagramUrl={"hlyyyaaah"}
           />
           <ProfileCard
-            name="Gde Reval Ariefa Antariksa"
-            subtitle="Anggota Produksi Kreatif"
-            imageUrl="/reval.png"
-            instagramUrl={"gde.reval"}
+            name="Muhammad Farhan"
+            subtitle="Anggota Creative"
+            imageUrl="/aan.webp"
+            instagramUrl={"mf_habsyi"}
           />
           <ProfileCard
-            name="Aldi Muhammad Fadhilah"
-            subtitle="Anggota Produksi Kreatif"
-            imageUrl="/aldi.png"
-            instagramUrl={"aldimfadh_"}
+            name="Meiliani Nurul Azzahra"
+            subtitle="Anggota Creative"
+            imageUrl="/mei.webp"
+            instagramUrl={"_meii_0"}
           />
           <ProfileCard
-            name="Fauziah Nurulfarhi"
-            subtitle="Anggota Produksi Kreatif"
-            imageUrl="/uzi.png"
-            instagramUrl={"fziahnrll"}
+            name="Saskia Awulayatika"
+            subtitle="Anggota Creative"
+            imageUrl="/saskia.webp"
+            instagramUrl={"sasqawulaya"}
+          />
+          <ProfileCard
+            name="Raisa Lutfiya Aqeela"
+            subtitle="Anggota Creative"
+            imageUrl="/raisa.webp"
+            instagramUrl={"raisaltfy"}
+          />
+          <ProfileCard
+            name="Muhammad Sabila Rosyad"
+            subtitle="Anggota Creative"
+            imageUrl="/sabila.webp"
+            instagramUrl={"mhmd.rsyaad"}
+          />
+          <ProfileCard
+            name="Reva Suci Aulia"
+            subtitle="Anggota Creative"
+            imageUrl="/reva.webp"
+            instagramUrl={"repaliaulia_"}
           />
         </div>
       </motion.section>
@@ -539,34 +521,42 @@ export default function divisiOrganisasi() {
           />
         </div>
         <div className="max-w-6xl mx-auto text-center lg:text-left">
-          <h3 className="text-[#0066FF] text-3xl font-bold">Digital</h3>
-          <h5 className="text-[#0066FF] text-1xl font-semibold">Teknologi</h5>
+          <h3 className="text-[#0066FF] text-3xl font-bold">
+            Digital Technology
+          </h3>
           <p className="text-gray-500 text-sm mt-2">
-            Mengelola dan mengembangkan teknologi informasi dan sistem yang
-            digunakan DKM, meliputi perancangan, pengembangan, dan pemeliharaan
-            sistem teknologi informasi.
+            Mengelola dan mengembangkan website serta sistem digital DKM,
+            termasuk pembaruan konten, keamanan data, dan pengembangan fitur
+            untuk mendukung efektivitas operasional serta transformasi digital
+            organisasi.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
         <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
             name="Ilham Saputra"
-            subtitle="Anggota Teknologi"
-            imageUrl="/ilham.png"
+            subtitle="Ketua Digital Technology"
+            imageUrl="/ilham.webp"
             instagramUrl={"_ilham.spt"}
             linkedinUrl={"ilham-saputra-b39b5b1b8"}
           />
           <ProfileCard
-            name="Akmal Abdiel Dewa Mutawakkil"
-            subtitle="Anggota Teknologi"
-            imageUrl="/abdiel.png"
-            instagramUrl={"akmal_abdiel"}
+            name="Haical Sheva Juansyah"
+            subtitle="Anggota Digital Technology"
+            imageUrl="/haical.webp"
+            instagramUrl={"__juansyah__"}
           />
           <ProfileCard
-            name="Fadhil Husein"
-            subtitle="Anggota Teknologi"
-            imageUrl="/husein.png"
-            instagramUrl={"fadhilhusein"}
+            name="Muhammad Jawsyan"
+            subtitle="Anggota Digital Technology"
+            imageUrl="/jawsyan.webp"
+            instagramUrl={"j2k14a"}
+          />
+          <ProfileCard
+            name="Muhammad Raihan Ramadhan"
+            subtitle="Anggota Digital Technology"
+            imageUrl="../default_profile.png"
+            instagramUrl={"raihan.adhan"}
           />
         </div>
       </motion.section>
@@ -577,40 +567,61 @@ export default function divisiOrganisasi() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        id="bpo"
+        id="sosmed"
       >
         <div className="max-w-6xl mx-auto text-center lg:text-left">
           <h3 className="text-[#0066FF] text-3xl font-bold">
-            Badan Pengawas Organisasi DKM
+            Social Media Development
           </h3>
           <p className="text-gray-500 text-sm mt-2">
-            Mengawasi dan mengevaluasi jalannya organisasi DKM agar tetap
-            transparan, akuntabel, dan sesuai dengan visi, misi, serta aturan
-            yang berlaku, termasuk melakukan penilaian kinerja pengurus dan
-            memberikan rekomendasi perbaikan organisasi.
+            Mengelola strategi komunikasi digital dan produksi konten media
+            sosial. Divisi ini memastikan pesan dakwah tersampaikan secara
+            konsisten dan relevan di ruang digital.
           </p>
           <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
         </div>
         <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
-            name="Muhammad Alif Akbar"
-            subtitle="Badan Pengawas Organisasi DKM"
-            imageUrl="/alif.png"
+            name="Akmal Abdiel Dewa Mutawakkil"
+            subtitle="Ketua Divisi Social Media Development"
+            imageUrl="/akmal.webp"
+            instagramUrl={"Akmal_Abdiel"}
           />
           <ProfileCard
-            name="Fitri Aisyah Mahdiyah"
-            subtitle="Badan Pengawas Organisasi DKM"
-            imageUrl="/aisyah.png"
+            name="Muhammad Faiq Willyan Afif"
+            subtitle="Anggota Social Media Development"
+            imageUrl="/willy.webp"
+            instagramUrl={"willyanafif"}
           />
           <ProfileCard
-            name="Salsa Mukminah"
-            subtitle="Badan Pengawas Organisasi DKM"
-            imageUrl="/salsa.png"
+            name="Aldi Muhammad Fadhilah"
+            subtitle="Anggota Social Media Development"
+            imageUrl="/aldi.webp"
+            instagramUrl={"aldimfadh_"}
           />
           <ProfileCard
-            name="Hatfina Maula"
-            subtitle="Badan Pengawas Organisasi DKM"
-            imageUrl="/hatfina.png"
+            name="Muhammad Nabil Syauqie"
+            subtitle="Anggota Social Media Development"
+            imageUrl="/nabil.webp"
+            instagramUrl={"nabile.syauqie"}
+          />
+          <ProfileCard
+            name="Muhammad Rizky Maulana Rabbani"
+            subtitle="Anggota Social Media Development"
+            imageUrl="/rizky.webp"
+            instagramUrl={"skibanie"}
+          />
+          <ProfileCard
+            name="Khalid Jazuli Elghifari"
+            subtitle="Anggota Social Media Development"
+            imageUrl="/khalid.webp"
+            instagramUrl={"jzuly_"}
+          />
+          <ProfileCard
+            name="Syabna Nuri Fatikasari"
+            subtitle="Anggota Social Media Development"
+            imageUrl="/nuri.webp"
+            instagramUrl={"nasybnz_"}
           />
         </div>
       </motion.section>
