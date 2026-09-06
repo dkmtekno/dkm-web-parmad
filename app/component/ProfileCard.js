@@ -93,7 +93,7 @@ export default function ProfileCard({
           <div className="text-blue-600 font-semibold text-sm">{name}</div>
           <div className="text-xs text-black/70 mb-2">{subtitle}</div>
           <img
-            src={imageUrl}
+            src={`/divisi-organisasi/${imageUrl}`}
             alt={name}
             width="500"
             height="500"
