@@ -189,7 +189,7 @@ export default function Home() {
             </motion.span>
           </motion.h1>
           <p className="text-1xl md:text-2xl text-orange-300 md:mt-12 mt-6 font-semibold">
-            #JejakDKMParamadina
+            #BelajarBertumbuhBerkontribusi
           </p>
         </div>
         <div className="hidden md:block">
@@ -333,7 +333,7 @@ export default function Home() {
         id="lihatselengkapnya"
       >
         <h2 className="text-2xl lg:text-4xl font-bold text-[#0066FF] mt-12 mb-4">
-          Selamat Datang di Jejak DKM Paramadina
+          Selamat Datang di DKM Paramadina
         </h2>
         <p className="max-w-5xl mx-auto text-gray-600">
           DKM Paramadina adalah organisasi kerohanian Islam yang menjadi wadah
@@ -406,7 +406,7 @@ export default function Home() {
                 <p className="text-gray-500 text-sm mt-1">{divisi.task}</p>
               </div>
 
-              <p className="text-xs text-[#0066FF] mt-6">#JejakDKMParamadina</p>
+              <p className="text-xs text-[#0066FF] mt-6">#BelajarBertumbuhBerkontribusi</p>
             </motion.div>
           ))}
         </div>
