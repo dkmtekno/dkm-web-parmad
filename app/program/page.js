@@ -141,7 +141,7 @@ export default function Program() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          src="/hero_kajian.png"
+          src="/hero_kajian.webp"
           loading="lazy"
           width="700"
           height="700"
