@@ -57,7 +57,7 @@ export default function ProgramDetail() {
 
   return (
     <main className="max-w-6xl mx-auto py-20 px-6">
-      <section className="pb-24 lg:py-[100px] flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-10">
+      <section className="pb-24 lg:py-[100px] flex flex-col lg:flex-row items-center max-w-6xl mx-auto gap-12">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function ProgramDetail() {
           <h1 className="mb-4 text-2xl lg:text-4xl font-bold !leading-snug text-[#0066FF]">
             {program?.title}
           </h1>
-          <p className="font-medium text-gray-500 lg:text-sm">
+          <p className="font-medium text-gray-500 lg:text-md">
             {program?.summaryDesc}
           </p>
           {slug === "bedah-buku-bukber-dkm" && (
@@ -98,11 +98,11 @@ export default function ProgramDetail() {
           className="rounded-3xl lg:2/5"
         />
       </section>
-      <h1 className="text-2xl font-bold text-[#0066FF] mb-4">
-        Detail <span className="text-black">program</span>
+      <h1 className="text-3xl font-bold text-[#0066FF] mb-4">
+        Detail <span className="text-black">Program</span>
       </h1>
       <p
-        className="text-gray-700 mb-6 leading-relaxed text-sm"
+        className="text-gray-700 mb-6 leading-relaxed text-md"
         dangerouslySetInnerHTML={{ __html: program.desc }}
       />
       {program.gallery?.length > 0 && (
