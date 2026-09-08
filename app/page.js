@@ -70,12 +70,12 @@ export default function Home() {
     {
       title: "Secretary",
       icon: "/sekre.png",
-      task: "Mengelola administrasi dan membantu memastikan kelancaran operasional DKM.",
+      task: "Mengelola administrasi, surat, arsip, dan dokumentasi organisasi secara sistematis untuk mendukung koordinasi serta memastikan operasional organisasi berjalan tertib dan lancar.",
     },
     {
       title: "Finance",
       icon: "/bendahara.png",
-      task: "Mengelola keuangan DKM, termasuk pengelolaan anggaran, pengeluaran DKM.",
+      task: "Mengelola pendanaan dan keuangan organisasi, mencatat pemasukan serta pengeluaran, menyusun laporan, dan memastikan anggaran program digunakan secara transparan dan akuntabel.",
     },
     {
       title: "Creative",
