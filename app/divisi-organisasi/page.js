@@ -627,6 +627,59 @@ export default function divisiOrganisasi() {
       </motion.section>
 
       <motion.section
+        className="md:py-[150px] py-12 px-6 lg:px-0"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        id="sosmed"
+      >
+        <div className="max-w-6xl mx-auto text-center lg:text-left">
+          <h3 className="text-[#0066FF] text-3xl font-bold">
+            Koordinator Cikarang
+          </h3>
+          <p className="text-gray-500 text-sm mt-2">
+            Bertanggung jawab mengoordinasikan kegiatan dan operasional di
+            wilayah Cikarang serta memastikan seluruh program berjalan selaras
+            dengan visi organisasi.
+          </p>
+          <div className="bg-[#0066FF] w-40 h-1 rounded-full mt-4 mx-auto md:mx-auto lg:mx-0"></div>
+        </div>
+        <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
+          <ProfileCard
+            name="Muhammad Gufron Musyaffa"
+            subtitle="Koordinator Cikarang"
+            imageUrl="/gufron.webp"
+            instagramUrl={"Akmal_Abdiel"}
+          />
+          <ProfileCard
+            name="Arizal Hudha Pratama"
+            subtitle="Koordinator Cikarang"
+            imageUrl="/arizal.webp"
+            instagramUrl={"willyanafif"}
+          />
+          <ProfileCard
+            name="Nasep Zulkarnain"
+            subtitle="Koordinator Cikarang"
+            imageUrl="/nasep.webp"
+            instagramUrl={"aldimfadh_"}
+          />
+          <ProfileCard
+            name="Reza Fahrurozi"
+            subtitle="Koordinator Cikarang"
+            imageUrl="/rozi.webp"
+            instagramUrl={"nabile.syauqie"}
+          />
+          <ProfileCard
+            name="Rizky Eka Saputra"
+            subtitle="Koordinator Cikarang"
+            imageUrl="/eka.webp"
+            instagramUrl={"skibanie"}
+          />
+        </div>
+      </motion.section>
+
+      <motion.section
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
