@@ -76,7 +76,7 @@ export default function Program() {
   const itemsPerPage = 6;
   const paginatedPrograms = programs.slice(
     (page - 1) * itemsPerPage,
-    page * itemsPerPage
+    page * itemsPerPage,
   );
   const totalPages = Math.ceil(programs.length / itemsPerPage);
 
@@ -104,18 +104,18 @@ export default function Program() {
           className="lg:w-1/2"
         >
           <h1 className="mb-4 text-1xl lg:text-2xl font-bold !leading-snug text-gray-700">
-            Program 2025/2026
+            Program 2026/2027
             <br />
             <span className="text-[#0066FF] lg:text-6xl text-3xl">
-              Kabinet Naeema
+              DKM Paramadina
             </span>
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
             Program kerja dibawah kabinet ini dirancang untuk menjawab kebutuhan
             mahasiswa dalam aspek keagamaan dan sosial secara seimbang. Tidak
             hanya menghadirkan kegiatan keislaman yang mendalam dan inklusif,
-            Kabinet Naeema juga mendorong gerakan sosial yang peduli dan solutif
-            terhadap lingkungan sekitar.
+            juga mendorong gerakan sosial yang peduli dan solutif terhadap
+            lingkungan sekitar.
           </p>
           <div className="mt-6 md:mt-12 flex flex-col md:flex-row gap-4">
             <Link href="#program">
@@ -131,7 +131,7 @@ export default function Program() {
               target="_blank"
             >
               <button className="flex items-center cursor-pointer justify-center text-[#0066FF] border border-[#0066FF] px-8 py-2 rounded-[12px] hover:bg-[#0066FF] w-full md:w-auto hover:text-white transition">
-                <FaDownload className="pr-2 text-2xl" /> Unduh Program Naeema
+                <FaDownload className="pr-2 text-2xl" /> Unduh Program DKM
               </button>
             </Link>
           </div>
@@ -221,10 +221,11 @@ export default function Program() {
                 <button
                   key={num}
                   onClick={() => setPage(num)}
-                  className={`w-9 h-9 flex items-center cursor-pointer justify-center border rounded-full transition ${page === num
+                  className={`w-9 h-9 flex items-center cursor-pointer justify-center border rounded-full transition ${
+                    page === num
                       ? "bg-[#0066FF] text-white border-[#0066FF]"
                       : "text-[#0066FF] border-[#0066FF] hover:bg-[#0066FF] hover:text-white"
-                    }`}
+                  }`}
                 >
                   {num}
                 </button>
