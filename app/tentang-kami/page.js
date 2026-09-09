@@ -154,11 +154,7 @@ export default function tentangKami() {
                 />
               </svg>
             </a>
-            <a
-              target="_blank"
-              className="text-3xl"
-              style={{ opacity: "0.3" }}
-            >
+            <a target="_blank" className="text-3xl" style={{ opacity: "0.3" }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -172,11 +168,7 @@ export default function tentangKami() {
                 />
               </svg>
             </a>
-            <a
-              target="_blank"
-              className="text-3xl"
-              style={{ opacity: "0.3" }}
-            >
+            <a target="_blank" className="text-3xl" style={{ opacity: "0.3" }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -251,9 +243,9 @@ export default function tentangKami() {
               </svg>
             </a>
             <a
+              href="https://www.linkedin.com/in/tsaqilah-azri-46293a343"
               target="_blank"
               className="text-3xl"
-              style={{ opacity: "0.3" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
