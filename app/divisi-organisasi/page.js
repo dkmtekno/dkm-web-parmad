@@ -39,7 +39,9 @@ export default function divisiOrganisasi() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="mb-4 text-1xl lg:text-2xl font-bold !leading-snug text-gray-700">
-            Di balik
+            <span className="relative text-1xl lg:text-3xl font-lobster text-transparent bg-clip-text bg-gradient-to-r from-[#0D47A1] via-[#1976D2] to-[#42A5F5] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 ease-in-out">
+                Di balik
+              </span>
             <br />
             <span className="text-[#0066FF] lg:text-6xl text-3xl">
               {" "}

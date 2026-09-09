@@ -1,11 +1,18 @@
 import "./globals.css";
 import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
+import { Lobster as FontMedium } from "next/font/google";
 import ClientLayout from "./ClientLayout";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const fontLobster = FontMedium({
+  subsets: ["latin"],
+  variable: "--font-lobster",
+  weight: ["400"],
 });
 
 export const metadata = {
@@ -18,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${fontSans.variable} antialiased`}
+        className={`${fontSans.variable} ${fontLobster.variable} antialiased`}
         style={{ backgroundColor: "#F0F6FF" }}
       >
          <ClientLayout>{children}</ClientLayout>
