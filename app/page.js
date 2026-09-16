@@ -63,6 +63,11 @@ export default function Home() {
 
   const divisiList = [
     {
+      title: "Badan Pengawas",
+      icon: "/bpo.png",
+      task: "Badan Pengawas adalah elemen struktural dalam DKM yang berfungsi untuk memastikan seluruh kegiatan organisasi berjalan sesuai prinsip, visi dan aturan organisasi, serta berperan sebagai pengontrol internal.",
+    },
+    {
       title: "Ketum & Waketum",
       icon: "/ketum_waketum.png",
       task: "Pemimpin organisasi yang bertanggung jawab mengarahkan kebijakan, mengelola operasional dan memastikan seluruh program berjalan selaras dengan visi dakwah kampus.",
@@ -106,11 +111,6 @@ export default function Home() {
       title: "Social Media Development",
       icon: "/sosmed.webp",
       task: "Mengelola strategi komunikasi digital dan produksi konten media sosial. Divisi ini memastikan pesan dakwah tersampaikan secara konsisten dan relevan di ruang digital.",
-    },
-    {
-      title: "Badan Pengawas",
-      icon: "/bpo.png",
-      task: "Badan Pengawas adalah elemen struktural dalam DKM yang berfungsi untuk memastikan seluruh kegiatan organisasi berjalan sesuai prinsip, visi dan aturan organisasi, serta berperan sebagai pengontrol internal.",
     },
   ];
 
