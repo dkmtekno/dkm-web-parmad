@@ -40,8 +40,8 @@ export default function divisiOrganisasi() {
         >
           <h1 className="mb-4 text-1xl lg:text-2xl font-bold !leading-snug text-gray-700">
             <span className="relative text-1xl lg:text-3xl font-lobster text-transparent bg-clip-text bg-gradient-to-r from-[#0D47A1] via-[#1976D2] to-[#42A5F5] bg-[length:200%_100%] bg-left hover:bg-right transition-all duration-700 ease-in-out">
-                Di balik
-              </span>
+              Di balik
+            </span>
             <br />
             <span className="text-[#0066FF] lg:text-6xl text-3xl">
               {" "}
@@ -649,15 +649,27 @@ export default function divisiOrganisasi() {
         </div>
         <div className="flex justify-center lg:justify-start gap-6 flex-wrap max-w-6xl mx-auto my-6">
           <ProfileCard
+            name="Arizal Hudha Pratama"
+            subtitle="Koordinator Cikarang"
+            imageUrl="/arizal.webp"
+            instagramUrl={"willyanafif"}
+          />
+          <ProfileCard
             name="Muhammad Gufron Musyaffa"
             subtitle="Koordinator Cikarang"
             imageUrl="/gufron.webp"
             instagramUrl={"Akmal_Abdiel"}
           />
           <ProfileCard
-            name="Arizal Hudha Pratama"
+            name="Reza Fahrurozi"
             subtitle="Koordinator Cikarang"
-            imageUrl="/arizal.webp"
+            imageUrl="/rozi.webp"
+            instagramUrl={"nabile.syauqie"}
+          />
+          <ProfileCard
+            name="Siti Radinta Al Aishya"
+            subtitle="Koordinator Cikarang"
+            imageUrl="/radinta.webp"
             instagramUrl={"willyanafif"}
           />
           <ProfileCard
@@ -665,12 +677,6 @@ export default function divisiOrganisasi() {
             subtitle="Koordinator Cikarang"
             imageUrl="/nasep.webp"
             instagramUrl={"aldimfadh_"}
-          />
-          <ProfileCard
-            name="Reza Fahrurozi"
-            subtitle="Koordinator Cikarang"
-            imageUrl="/rozi.webp"
-            instagramUrl={"nabile.syauqie"}
           />
           <ProfileCard
             name="Rizky Eka Saputra"
